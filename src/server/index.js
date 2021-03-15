@@ -11,6 +11,7 @@ import serialize from 'serialize-javascript';
 import validator from 'express-validator';
 
 const app = express();
+const port = process.env.PORT || 5000;
 
 app.use(function(req, res, next) {
   res.setHeader("Cache-Control", "no-cache, no-store, must-revalidate"); // HTTP 1.1.
@@ -82,4 +83,4 @@ app.use((req, res, next) => {  //<-- заменить если появится 
      next (err);
 });
 
-app.listen(8888, () => {console.log('connected!')});
+app.listen(port, () => {console.log('connected!')});
