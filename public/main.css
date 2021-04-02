@@ -1,5 +1,51 @@
+@font-face {
+    font-family: 'Roboto-Light';
+    src: url(/fonts/Roboto-Light.eot);
+    src: url(/fonts/Roboto-Light.eot?#iefix) format('embedded-opentype'),
+    url(/fonts/Roboto-Light.woff) format('woff'),
+    url(/fonts/Roboto-Light.ttf) format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Roboto-Regular';
+    src: url(/fonts/Roboto-Regular.eot);
+    src: url(/fonts/Roboto-Regular.eot?#iefix) format('embedded-opentype'),
+    url(/fonts/Roboto-Regular.woff) format('woff'),
+    url(/fonts/Roboto-Regular.ttf) format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Manrope-Light';
+    src: url(/fonts/Manrope-Light.eot);
+    src: url(/fonts/Manrope-Light.eot?#iefix) format('embedded-opentype'),
+    url(/fonts/Manrope-Light.woff) format('woff'),
+    url(/fonts/Manrope-Light.ttf) format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Manrope-Medium';
+    src: url(/fonts/Manrope-Medium.eot);
+    src: url(/fonts/Manrope-Medium.eot?#iefix) format('embedded-opentype'),
+    url(/fonts/Manrope-Medium.woff) format('woff'),
+    url(/fonts/Manrope-Medium.ttf) format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Manrope-Bold';
+    src: url(/fonts/Manrope-Bold.eot);
+    src: url(/fonts/Manrope-Bold.eot?#iefix) format('embedded-opentype'),
+    url(/fonts/Manrope-Bold.woff) format('woff'),
+    url(/fonts/Manrope-Bold.ttf) format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
 body {
-  background-color: pink;
-  color: white;
+  font-family: 'Manrope-Medium';
+  background-color: #fafafa;
 }
 
