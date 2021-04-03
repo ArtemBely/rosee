@@ -47,5 +47,83 @@
 body {
   font-family: 'Manrope-Medium';
   background-color: #fafafa;
+  padding: 0;
+  margin: 0;
 }
-
+.wrap_header{
+	position: relative;
+	display: grid;
+	grid-template-columns:10% 1fr 2fr repeat(5, 1fr) 7%;
+	grid-column-gap:35px;
+	margin-top:25px;
+	justify-items:center;
+	align-items:center;
+}
+.header_logo{
+	width: 86px;
+	height: 25px;
+	grid-column:2/3;
+}
+.nav_header{
+	font-weight: 400;
+	font-size: 19px;
+	line-height: 30px;
+	color: #525252;
+	font-family: 'Roboto-Regular';
+	text-decoration:none;
+}
+.cosmeticMasks{
+	margin-top:50px;
+	position: relative;
+	display: grid;
+	grid-template-columns:10% 3fr 5fr 7%;
+	grid-template-rows:250px 180px 100px;
+	grid-column-gap:35px;
+}
+.masks_title{
+	grid-column:2/4;
+	grid-row:1/2;
+	font-weight: 600;
+	font-size: 40px;
+	line-height: 65px;
+	color: #242424;
+}
+.masks_subtitle{
+	grid-column:2/4;
+	grid-row:2/3;
+	font-weight: 400;
+	font-size: 20px;
+	line-height: 32px;
+	color: #000000;
+}
+#masks_order{
+	background: #00C187;
+	border: 3px solid #00C187;
+	box-sizing: border-box;
+	border-radius: 10px;
+	font-weight: 400;
+	font-size: 22px;
+	line-height: 38px;
+	color: #FFFFFF;
+	text-decoration:none;
+	width: 170px;
+	height: 70px;
+	grid-column:2/3;
+	grid-row:3/4;
+	padding:10px 0;
+	text-align:center;
+	vertical-align: middle;
+	margin-top:25px;
+}
+#masks_buy{
+	font-weight: 400;
+	font-size: 22px;
+	line-height: 38px;
+	color: #000000;
+	text-decoration:underline;
+	margin-left:230px;
+	margin-top:35px;
+	grid-column:2/4;
+	grid-row:3/4;
+	
+}
