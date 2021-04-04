@@ -57,7 +57,8 @@ app.get('*', (req, res, next) => {
                         <body>
                        <div id="app">
                      ${markup}
-                  </div>
+                   </div>
+                  <script src='https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.5.0/lottie.js'></script>
                 </body>
             </html>`;
 

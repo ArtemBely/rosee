@@ -125,5 +125,72 @@ body {
 	margin-top:35px;
 	grid-column:2/4;
 	grid-row:3/4;
-	
 }
+.main_wrap {
+  overflow-x: hidden;
+}
+#lottie-1 {
+  grid-column: 3 / 4;
+  grid-row: 1 / 5;
+  width: 167%;
+  position: relative;
+  left: -359px;
+  z-index: -1;
+}
+.wrap_rosee {
+  grid-column: 2 / 3;
+  display: flex;
+  justify-content: start;
+  width: 100%;
+}
+.every_p {
+  font-size: 50px;
+  line-height: 70px;
+  font-weight: 700;
+  color: #242424;
+  opacity: 0.2;
+}
+.order_bottom {
+    text-decoration: none;
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 38px;
+    color: #000000;
+    opacity: 0.3;
+    border: 3px solid #00c187;
+    border-radius: 10px;
+    width: 175px;
+    position: relative;
+    height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    fony-family: 'Manrope';
+    top: -20px;
+}
+.buy_present {
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 38px;
+  color: #000000;
+  opacity: 0.2;
+  position: relative;
+  left: 226px;
+  top: -73px;
+}
+.everyWeek {
+  position: relative;
+  grid-template-columns: 12% 1fr 1fr;
+  display: grid;
+}
+.every_p2 {
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 38px;
+  color: #000000;
+  opacity: 0.2;
+  position: relative;
+  top: -27px;
+}
+
+
