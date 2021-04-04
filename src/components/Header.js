@@ -5,7 +5,7 @@ import rosee from '../../public/images/rosée.png';
 function Header() {
   return(
     <div className='wrap_header'>
-		<img src={rosee} className='header_logo'/>
+		<p className='wrap_rosee'><img src={rosee} className='header_logo'/></p>
 		<p></p>
 		<NavLink to='#' className='nav_header' id='advantages' activeClassName='active_header'>Преимущества</NavLink>
 		<NavLink to='#' className='nav_header' id='inside' activeClassName='active_header'>Что внутри</NavLink>
