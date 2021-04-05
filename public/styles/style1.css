@@ -49,6 +49,7 @@ body {
   background-color: #fafafa;
   padding: 0;
   margin: 0;
+  overflow-x: hidden;
 }
 .wrap_header{
 	position: relative;
@@ -126,9 +127,6 @@ body {
 	grid-column:2/4;
 	grid-row:3/4;
 }
-.main_wrap {
-  overflow-x: hidden;
-}
 #lottie-1 {
   grid-column: 3 / 4;
   grid-row: 1 / 5;
@@ -136,6 +134,7 @@ body {
   position: relative;
   left: -359px;
   z-index: -1;
+  transition: 0.5s;
 }
 .wrap_rosee {
   grid-column: 2 / 3;
