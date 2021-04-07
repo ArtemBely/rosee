@@ -1,0 +1,16 @@
+.wrap_advantages {
+  width: 100%;
+  display: grid;
+  justify-content: center;
+}
+.wrap_inside {
+  display: flex;
+  justify-content: center;
+  z-index: -1;
+}
+.com_ins {
+  width: 408px;
+  height: 532px;
+  position: relative;
+  left: 142px;
+}

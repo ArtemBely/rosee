@@ -59,6 +59,12 @@ body {
 	margin-top:25px;
 	justify-items:center;
 	align-items:center;
+  width: 1320px;
+}
+.wrapMain_header {
+  display: flex;
+  justify-content: center;
+  width: 100%;
 }
 .header_logo{
 	width: 86px;
@@ -73,8 +79,14 @@ body {
 	font-family: 'Roboto-Regular';
 	text-decoration:none;
 }
+.wrap_cosmeticMasks {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
 .cosmeticMasks{
 	margin-top:50px;
+  width: 1320px;
 	position: relative;
 	display: grid;
 	grid-template-columns:10% 3fr 5fr 7%;
@@ -82,7 +94,7 @@ body {
 	grid-column-gap:35px;
 }
 .masks_title{
-	grid-column:2/4;
+	grid-column:1/3;
 	grid-row:1/2;
 	font-weight: 600;
 	font-size: 40px;
@@ -90,7 +102,9 @@ body {
 	color: #242424;
 }
 .masks_subtitle{
-	grid-column:2/4;
+  position: relative;
+  top: -22px;
+	grid-column:1/3;
 	grid-row:2/3;
 	font-weight: 400;
 	font-size: 20px;
@@ -109,12 +123,12 @@ body {
 	text-decoration:none;
 	width: 170px;
 	height: 70px;
-	grid-column:2/3;
+	grid-column:1/2;
 	grid-row:3/4;
 	padding:10px 0;
 	text-align:center;
 	vertical-align: middle;
-	margin-top:25px;
+	margin-top:-21px;
 }
 #masks_buy{
 	font-weight: 400;
@@ -123,24 +137,33 @@ body {
 	color: #000000;
 	text-decoration:underline;
 	margin-left:230px;
-	margin-top:35px;
-	grid-column:2/4;
+	margin-top:-8px;
+	grid-column:1/3;
 	grid-row:3/4;
 }
 #lottie-1 {
   grid-column: 3 / 4;
   grid-row: 1 / 5;
-  width: 167%;
   position: relative;
-  left: -359px;
   z-index: -1;
   transition: 0.5s;
+  width: 180%;
+  left: -141px;
 }
 .wrap_rosee {
-  grid-column: 2 / 3;
+  grid-column: 1 / 4;
   display: flex;
   justify-content: start;
   width: 100%;
+}
+#header_buy {
+  left: 22px;
+}
+#delivery {
+  left: 26px;
+}
+#inside {
+  left: 17px;
 }
 .every_p {
   font-size: 50px;
@@ -181,6 +204,7 @@ body {
   position: relative;
   grid-template-columns: 12% 1fr 1fr;
   display: grid;
+  width: 1320px;
 }
 .every_p2 {
   font-size: 24px;
@@ -190,4 +214,9 @@ body {
   opacity: 0.2;
   position: relative;
   top: -27px;
+}
+.wrap_everyWeek {
+  width: 100%;
+  display: flex;
+  justify-content: center;
 }

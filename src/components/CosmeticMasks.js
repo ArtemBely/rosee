@@ -98,13 +98,15 @@ componentDidMount() {
 
   render() {
     return(
-      <div className='cosmeticMasks'>
-      <p className='masks_title' ref={this.every}>Еженедельная доставка <br/> косметических масок,<br/> отобранных вручную</p>
-      <p className='masks_subtitle'>Каждую неделю отправляем маски <br/> для ухода за кожей лица. Маски подбираем <br/> вручную, упаковываем в плотную бумагу. <br/>Отправка по всей России.</p>
-      <NavLink to='#' id='masks_order'>Заказать</NavLink>
-          <NavLink to='#' id='masks_buy'>Купить в подарок</NavLink>
-          <div id='lottie-1' ref={this.animation}>
-          </div>
+      <div className='wrap_cosmeticMasks'>
+        <div className='cosmeticMasks'>
+        <p className='masks_title' ref={this.every}>Еженедельная доставка <br/> косметических масок,<br/> отобранных вручную</p>
+        <p className='masks_subtitle'>Каждую неделю отправляем маски <br/> для ухода за кожей лица. Маски подбираем <br/> вручную, упаковываем в плотную бумагу. <br/>Отправка по всей России.</p>
+        <NavLink to='#' id='masks_order'>Заказать</NavLink>
+            <NavLink to='#' id='masks_buy'>Купить в подарок</NavLink>
+            <div id='lottie-1' ref={this.animation}>
+            </div>
+        </div>
       </div>
     )
   }
