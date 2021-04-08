@@ -4,6 +4,7 @@ import CosmeticMasks from './CosmeticMasks';
 import EveryWeek from './EveryWeek';
 import Advantages from './Advantages';
 import MasksInside from './MasksInside';
+import Envelope from './Envelope';
 
 
 class Main extends React.Component{
@@ -11,10 +12,11 @@ class Main extends React.Component{
     return(
       <div>
           <Header />
-		  <CosmeticMasks />
+    		  <CosmeticMasks />
           <EveryWeek />
-		  <Advantages />
-		  <MasksInside />
+    		  <Advantages />
+    		  <MasksInside />
+			  <Envelope />
       </div>
     )
   }
