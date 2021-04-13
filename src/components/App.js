@@ -6,6 +6,7 @@ import '../../public/styles/style2.css';
 import '../../public/styles/style3.css';
 import '../../public/styles/style4.css';
 import '../../public/styles/style5.css';
+import '../../public/styles/style6.css';
 
 class App extends React.Component {
   render() {
