@@ -1,0 +1,134 @@
+.wrap_Promotions{
+	display: flex;
+	justify-content: center;
+	width: 100%;
+}
+.promotions{
+	margin-top:620px;
+	position:relative;
+	display:grid;
+	grid-template-columns:repeat(3, 420px);
+	grid-gap:30px;
+	grid-template-rows:100px repeat(2, 215px);
+	width: 1320px;
+}
+.promotions_title{
+	grid-column:1/2;
+	grid-row:1/2;
+	font-size: 50px;
+	line-height: 70px;
+	color: #5B5464;
+	font-weight: 600;
+	margin:0;
+	position: relative;
+	top: 32px;
+}
+.masks_promotions{
+	width: 419px;
+	height: 213px;
+}
+.wrap_promotions1{
+	grid-column:1/2;
+	grid-row:2/3;
+}
+.wrap_promotions2{
+	grid-column:1/2;
+	grid-row:3/4;
+}
+.wrap_promotions3{
+	grid-column:2/3;
+	grid-row:2/3;
+}
+.wrap_promotions4{
+	grid-column:2/3;
+	grid-row:3/4;
+}
+.wrap_promotions5{
+	grid-column:3/4;
+	grid-row:2/3;
+}
+.wrap_promotions6{
+	grid-column:3/4;
+	grid-row:3/4;
+}
+.wrap_Footer{
+	display: flex;
+	justify-content: center;
+	width: 100%;
+	background: url('../images/Group 34.png') no-repeat center;
+	background-size: cover;
+	position: relative;
+	margin-top: -200px;
+}
+.footer{
+	position: relative;
+	display: grid;
+	grid-template-columns:1fr 3fr repeat(5, 1fr);
+	grid-column-gap:35px;
+	margin-top:200px;
+	margin-bottom:33px;
+	justify-items:center;
+	align-items:center;
+	padding-top:400px;
+	padding-bottom:20px;
+	width: 1320px;
+}
+.wrap_footer_rosee{
+	grid-column:1/2;
+	justify-content: start;
+	width: 100%;
+}
+.footer_logo{
+	width: 89px;
+	height: 27px;
+}
+.nav_footer{
+	font-weight: 400;
+	font-size: 21px;
+	line-height: 34px;
+	color: #FFFFFF;
+	font-family: 'Roboto-Regular';
+	text-decoration:none;
+}
+#footer_buy {
+	position: relative;
+	left: 33px;
+}
+#footer_delivery {
+	position: relative;
+	left: 40px;
+}
+#footer_inside {
+	position: relative;
+	left: 28px;
+}
+.wrap_questions2 {
+	position: relative;
+  display: flex;
+  justify-content: center;
+  top: 80px;
+	z-index: 1;
+}
+.questions2 {
+	width: 1320px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+.first_section {
+	grid-column: 1 / 2;
+}
+.have_a_quest {
+	font-weight: 600;
+  font-size: 50px;
+  line-height: 70px;
+  color: #5D8655;
+}
+.have_a_quest2 {
+	font-weight: 400;
+	font-size: 25px;
+	line-height: 41px;
+	width: 500px;
+	position: relative;
+	top: -43px;
+	font-family: 'Manrope-Light';
+}

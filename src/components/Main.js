@@ -7,6 +7,9 @@ import MasksInside from './MasksInside';
 import Envelope from './Envelope';
 import DeliveryIsFree from './DeliveryIsFree';
 import Buy from './Buy';
+import Promotions from './Promotions';
+import Questions from './Questions';
+import Footer from './Footer';
 
 class Main extends React.Component{
   render() {
@@ -20,6 +23,9 @@ class Main extends React.Component{
 			    <Envelope />
           <DeliveryIsFree />
           <Buy />
+    		  <Promotions />
+          <Questions />
+    		  <Footer />
       </div>
     )
   }

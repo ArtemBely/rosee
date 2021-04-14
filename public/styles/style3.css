@@ -1,8 +1,8 @@
 .animationMove, .move1 {
   transform: translateY(513px) !important;
-  left: 294px !important;
+  left: 158px !important;
   transition: 0.5s;
-  width: 92% !important;
+  width: 136% !important;
 }
 .animationMove2 {
   transform: translateY(1092px) !important;
