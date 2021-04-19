@@ -11,6 +11,9 @@ constructor() {
 
   this.animation = React.createRef();
   this.every = React.createRef();
+  this.everyWeek = React.createRef();
+  this.order = React.createRef();
+  this.buy = React.createRef();
 }
 
 componentDidMount() {
@@ -79,17 +82,28 @@ componentDidMount() {
       this.animation.current.classList.remove('animationMove2');
       this.animation.current.classList.add('move1');
     }
-    if(window.innerHeight - this.animation.current.getBoundingClientRect().top < 200) {
+    if(this.animation.current.classList.contains('move1')) {
+      this.every.current.classList.add('move1');
+      this.everyWeek.current.classList.add('move2');
+      this.order.current.classList.add('move1');
+      this.buy.current.classList.add('move1');
+    }
+    if(window.innerHeight - this.animation.current.getBoundingClientRect().top < 300) {
       this.animation.current.classList.remove('animationMove2');
       this.animation.current.classList.remove('move1');
+      this.every.current.classList.remove('move1');
+      this.everyWeek.current.classList.remove('move2');
+      this.order.current.classList.remove('move1');
+      this.buy.current.classList.remove('move1');
     }
     if(this.animation.current.getBoundingClientRect().top < '-500') {
       this.animation.current.classList.add('move1');
     }
-    if(this.every.current.getBoundingClientRect().top < '-650') {
+    if(this.every.current.getBoundingClientRect().top < '-500') {
       this.animation.current.classList.remove('move1');
       this.animation.current.classList.add('animationMove2');
     }
+
   /*  else {
       this.animation.current.classList.remove('animationMove');
     }*/
@@ -101,9 +115,9 @@ componentDidMount() {
       <div className='wrap_cosmeticMasks'>
         <div className='cosmeticMasks'>
         <p className='masks_title' ref={this.every}>Еженедельная доставка <br/> косметических масок,<br/> отобранных вручную</p>
-        <p className='masks_subtitle'>Каждую неделю отправляем маски <br/> для ухода за кожей лица. Маски подбираем <br/> вручную, упаковываем в плотную бумагу. <br/>Отправка по всей России.</p>
-        <NavLink to='#' id='masks_order'>Заказать</NavLink>
-            <NavLink to='#' id='masks_buy'>Купить в подарок</NavLink>
+        <p className='masks_subtitle' ref={this.everyWeek}>Каждую неделю отправляем маски <br/> для ухода за кожей лица. Маски подбираем <br/> вручную, упаковываем в плотную бумагу. <br/>Отправка по всей России.</p>
+        <NavLink to='#' id='masks_order' ref={this.order}>Заказать</NavLink>
+            <NavLink to='#' id='masks_buy' ref={this.buy}>Купить в подарок</NavLink>
             <div id='lottie-1' ref={this.animation}>
             </div>
         </div>
