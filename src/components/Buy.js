@@ -1,4 +1,5 @@
 import React from 'react';
+import { NavLink } from 'react-router-dom';
 import tree from '../../public/images/Rectangle 285.svg';
 import face from '../../public/images/Rectangle 252.png';
 
@@ -17,8 +18,8 @@ render() {
         <img src={tree} id='tree' />
         <img src={face} id='face' />
        </div>
-       <p className='qty'><p className='sixtheen'>16 масок в месяц</p><b className='forMyself'>для себя </b>
-        или <b className='presents'> в подарок </b></p>
+       <p className='qty'><p className='sixtheen'>16 масок в месяц</p><NavLink exact to='/' className='presents' activeClassName='forMyself'>для себя </NavLink>
+        или <NavLink exact to='/present' className='presents' activeClassName='forMyself'> в подарок </NavLink></p>
        <div className='chooseSecond'>
           <p className='typeOfSkin'>Выберите тип кожи</p>
           <p className='combi'>Комбинированная</p>

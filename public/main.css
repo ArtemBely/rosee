@@ -970,9 +970,10 @@ body {
   top: -53px;
 }
 .forMyself {
-  color: #54854A;
+  color: #54854A !important;
   border-bottom: 2px dashed;
   cursor: pointer;
+  text-decoration: none;
 }
 .typeOfSkin {
   font-weight: 700;
@@ -1165,6 +1166,8 @@ body {
 .presents {
   border-bottom: 2px dashed;
   cursor: pointer;
+  text-decoration: none;
+  color: #5B5464;
 }
 
 .wrap_Promotions{

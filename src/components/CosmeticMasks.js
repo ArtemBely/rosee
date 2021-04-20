@@ -14,6 +14,7 @@ constructor() {
   this.everyWeek = React.createRef();
   this.order = React.createRef();
   this.buy = React.createRef();
+  this.indicate = React.createRef();
 }
 
 componentDidMount() {
@@ -72,7 +73,7 @@ componentDidMount() {
   });
   }, 100);
   window.addEventListener('scroll', () => {
-    console.log(this.animation.current.getBoundingClientRect().top);
+    console.log(this.indicate.current.getBoundingClientRect().top);
     if(this.animation.current.getBoundingClientRect().top > 300) {
       /*window.addEventListener('scroll', () => {
         setTimeout(() => {
@@ -88,7 +89,7 @@ componentDidMount() {
       this.order.current.classList.add('move1');
       this.buy.current.classList.add('move1');
     }
-    if(window.innerHeight - this.animation.current.getBoundingClientRect().top < 300) {
+    if(this.indicate.current.getBoundingClientRect().top > 90) {
       this.animation.current.classList.remove('animationMove2');
       this.animation.current.classList.remove('move1');
       this.every.current.classList.remove('move1');
@@ -99,7 +100,7 @@ componentDidMount() {
     if(this.animation.current.getBoundingClientRect().top < '-500') {
       this.animation.current.classList.add('move1');
     }
-    if(this.every.current.getBoundingClientRect().top < '-500') {
+    if(this.indicate.current.getBoundingClientRect().top < '-1110') {
       this.animation.current.classList.remove('move1');
       this.animation.current.classList.add('animationMove2');
     }
@@ -121,6 +122,7 @@ componentDidMount() {
             <div id='lottie-1' ref={this.animation}>
             </div>
         </div>
+        <p ref={this.indicate}></p>
       </div>
     )
   }
