@@ -87,6 +87,7 @@ body {
 .cosmeticMasks{
 	margin-top:50px;
   width: 1320px;
+  height: 1000px;
 	position: relative;
 	display: grid;
 	grid-template-columns:10% 3fr 5fr 7%;
@@ -103,12 +104,13 @@ body {
   transition: 0.5s;
 }
 .masks_subtitle{
+  top: -21px;
   position: relative;
-  top: -22px;
+  font-family: 'Manrope-Light';
 	grid-column:1/3;
 	grid-row:2/3;
 	font-weight: 400;
-	font-size: 20px;
+	font-size: 24px;
 	line-height: 32px;
 	color: #000000;
   transition: 0.5s;
@@ -127,7 +129,7 @@ body {
 	height: 70px;
 	grid-column:1/2;
 	grid-row:3/4;
-	padding:10px 0;
+	padding:17px 32px;
 	text-align:center;
 	vertical-align: middle;
 	margin-top:-21px;
@@ -139,11 +141,21 @@ body {
 	line-height: 38px;
 	color: #000000;
 	text-decoration:underline;
-	margin-left:230px;
+	margin-left:55px;
 	margin-top:-8px;
 	grid-column:1/3;
 	grid-row:3/4;
   transition: 0.5s;
+}
+.wrap_allEvery {
+  position: sticky;
+  top: 10px;
+  grid-column: 1 / 3;
+  z-index: 1;
+}
+.wrap_lottie {
+  position: sticky;
+  top: 20px;
 }
 #lottie-1 {
   grid-column: 3 / 4;
@@ -480,7 +492,7 @@ body {
   width: 136% !important;
 }
 .animationMove2 {
-  transform: translateY(1092px) !important;
+  transform: translateY(686px) !important;
   left: 28px !important;
   transition: 1.5s;
   width: 556px !important;
@@ -646,11 +658,15 @@ body {
 }
 
 .wrap_advantages {
+  position: relative;
+  top: -236px;
   width: 100%;
   display: grid;
   justify-content: center;
 }
 .wrap_inside {
+  position: relative;
+  top: -236px;
   display: flex;
   justify-content: center;
   z-index: -1;
@@ -662,6 +678,8 @@ body {
   left: 142px;
 }
 .wrapMain_Envelope{
+  position: relative;
+  top: -236px;
 	display: flex;
 	justify-content: center;
 	width: 100%;
@@ -818,12 +836,13 @@ body {
 .wrapEN_mask16{
 	grid-column:2/3;
 }
+
 .DeliverySection {
     display: grid;
     width: 100%;
     justify-content: center;
     position: absolute;
-    top: 5100px;
+    top: 5322px;
 }
 .DeliverySecrion h2 {
     font-family: 'Manrope';
@@ -927,7 +946,7 @@ body {
 }
 .wrap_Buy {
     position: relative;
-    top: 400px;
+    top: 164px;
     display: flex;
     justify-content: center;
 }
@@ -1176,7 +1195,7 @@ body {
 	width: 100%;
 }
 .promotions{
-	margin-top:620px;
+	margin-top:400px;
 	position:relative;
 	display:grid;
 	grid-template-columns:repeat(3, 420px);

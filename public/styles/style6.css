@@ -4,7 +4,7 @@
 	width: 100%;
 }
 .promotions{
-	margin-top:620px;
+	margin-top:400px;
 	position:relative;
 	display:grid;
 	grid-template-columns:repeat(3, 420px);

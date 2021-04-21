@@ -3,7 +3,7 @@
     width: 100%;
     justify-content: center;
     position: absolute;
-    top: 5100px;
+    top: 5322px;
 }
 .DeliverySecrion h2 {
     font-family: 'Manrope';
@@ -107,7 +107,7 @@
 }
 .wrap_Buy {
     position: relative;
-    top: 400px;
+    top: 164px;
     display: flex;
     justify-content: center;
 }

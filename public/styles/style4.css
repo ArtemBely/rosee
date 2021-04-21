@@ -1,9 +1,13 @@
 .wrap_advantages {
+  position: relative;
+  top: -236px;
   width: 100%;
   display: grid;
   justify-content: center;
 }
 .wrap_inside {
+  position: relative;
+  top: -236px;
   display: flex;
   justify-content: center;
   z-index: -1;
@@ -15,6 +19,8 @@
   left: 142px;
 }
 .wrapMain_Envelope{
+  position: relative;
+  top: -236px;
 	display: flex;
 	justify-content: center;
 	width: 100%;

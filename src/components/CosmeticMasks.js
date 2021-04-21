@@ -81,27 +81,25 @@ componentDidMount() {
         }, 1505);
       });*/
       this.animation.current.classList.remove('animationMove2');
-      this.animation.current.classList.add('move1');
     }
+    /*
     if(this.animation.current.classList.contains('move1')) {
       this.every.current.classList.add('move1');
       this.everyWeek.current.classList.add('move2');
       this.order.current.classList.add('move1');
       this.buy.current.classList.add('move1');
-    }
+    }*/
     if(this.indicate.current.getBoundingClientRect().top > 90) {
       this.animation.current.classList.remove('animationMove2');
-      this.animation.current.classList.remove('move1');
-      this.every.current.classList.remove('move1');
+      /*this.every.current.classList.remove('move1');
       this.everyWeek.current.classList.remove('move2');
       this.order.current.classList.remove('move1');
-      this.buy.current.classList.remove('move1');
+      this.buy.current.classList.remove('move1');*/
     }
     if(this.animation.current.getBoundingClientRect().top < '-500') {
-      this.animation.current.classList.add('move1');
+      this.animation.current.classList.add('animationMove2');
     }
     if(this.indicate.current.getBoundingClientRect().top < '-1110') {
-      this.animation.current.classList.remove('move1');
       this.animation.current.classList.add('animationMove2');
     }
 
@@ -115,11 +113,13 @@ componentDidMount() {
     return(
       <div className='wrap_cosmeticMasks'>
         <div className='cosmeticMasks'>
+        <p className='wrap_allEvery'>
         <p className='masks_title' ref={this.every}>Еженедельная доставка <br/> косметических масок,<br/> отобранных вручную</p>
         <p className='masks_subtitle' ref={this.everyWeek}>Каждую неделю отправляем маски <br/> для ухода за кожей лица. Маски подбираем <br/> вручную, упаковываем в плотную бумагу. <br/>Отправка по всей России.</p>
         <NavLink to='#' id='masks_order' ref={this.order}>Заказать</NavLink>
             <NavLink to='#' id='masks_buy' ref={this.buy}>Купить в подарок</NavLink>
-            <div id='lottie-1' ref={this.animation}>
+        </p>
+            <div className='wrap_lottie'><div id='lottie-1' ref={this.animation}></div>
             </div>
         </div>
         <p ref={this.indicate}></p>
