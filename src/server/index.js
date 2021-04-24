@@ -10,6 +10,8 @@ import bodyParser from 'body-parser';
 import serialize from 'serialize-javascript';
 import validator from 'express-validator';
 
+import orderRouter from './routes/order';
+
 const app = express();
 const port = process.env.PORT || 5000;
 
@@ -29,6 +31,8 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(express.urlencoded({ extended: false }));
 app.use(validator());
 app.use(cookieParser());
+
+app.use('/order', orderRouter);
 
 app.get('*', (req, res, next) => {
   const activeRouter = Routes.find((route) => matchPath(req.url, route)) || {};

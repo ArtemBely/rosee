@@ -33,8 +33,8 @@ render() {
           <p className='everyYear'>Ежегодно</p>
        </div>
        <div className='wrap_pay'>
-          <p className='makePayment'>Оформить</p>
-          <p className='newPrice'><b className='priceNew'>1990.-</b> <p className='month1'>в месяц</p></p>
+          <p className='makePayment'><NavLink to='/order' className='buy_link'>Оформить</NavLink></p>
+          <p className='newPrice'><b className='priceNew'>1990.-</b><p className='month1'>в месяц</p></p>
           <div className='oldPrice'>3990</div>
        </div>
       </div>

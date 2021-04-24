@@ -1323,4 +1323,13 @@ body {
 	top: -43px;
 	font-family: 'Manrope-Light';
 }
+.buy_link {
+	color: white;
+  text-decoration: none;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 
