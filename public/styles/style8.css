@@ -1,0 +1,127 @@
+.radio_pay{
+	position: relative;
+	grid-column:2/3;
+	grid-row:10/11;
+}
+.radio_pay2{
+	position: relative;
+	grid-column:2/3;
+	grid-row:10/11;
+	margin-top: 40px;
+}
+.radio_pay3{
+	position: relative;
+	grid-column:2/3;
+	grid-row:10/11;
+	margin-top: 80px;
+}
+.pay_label{
+	font-size: 20px;
+	font-weight: 400;
+	color: #242424;
+	padding-left: 30px;
+}
+.pay_input{
+	appearance: none;
+	-webkit-appearance: none;
+	position: absolute;
+}
+.pay_label:before{
+	content: "";
+	display: block;
+	width: 18px;
+	height: 18px;
+	border-radius: 50px;
+	border: 1px solid #5535F6;
+	background-color: #fff;
+	position: absolute;
+	top: 7px;
+	left: 0;
+	z-index: 1;
+}
+.pay_label:after{
+	content: "";
+	display: block;
+	width: 12px;
+	height: 12px;
+	border-radius: 50px;
+	border: 1px solid #5535F6;
+	background-color: #5535F6;
+	position: absolute;
+	top: 10px;
+	left: 3px;
+	z-index: 2;
+	opacity: 0;
+}
+.pay_input:checked + .pay_label:after{
+	opacity: 1;
+}
+#order_arrange{
+	margin-top: 170px;
+	border: 1px solid #5535F6;
+	background-color:#5535F6; ;
+	border-radius: 10px;
+	font-weight: 500;
+	font-size: 25px;
+	line-height: 50px;
+	color: #fff;
+	text-decoration:none;
+	width: 250px;
+	height: 65px;
+	grid-column:2/3;
+	grid-row:10/11;
+	text-align:center;
+	opacity: 0.5;
+	padding-top: 12px;
+}
+.arrange_text{
+	grid-column:2/3;
+	grid-row:10/11;
+	margin-top: 280px;
+	font-weight: 400;
+	font-size: 20px;
+	line-height: 38px;
+	color: #242424;
+}
+.arrange_text2{
+	color: #242424;
+	text-decoration: none;
+	border-bottom: 1px dotted #242424;
+}
+.btn_delivery{
+	background-color:#fff;
+	border: 1px solid #5535F6;
+	border-radius: 10px 0 0 10px;
+	font-weight: 500;
+	font-size: 23px;
+	line-height: 50px;
+	color: #242424;
+	width: 200px;
+	height: 65px;
+	grid-column:2/3;
+	grid-row:6/7;
+	text-align:center;
+}
+.btn_pickup{
+	background-color:#fff;
+	border: 1px solid #5535F6;
+	border-radius: 0 10px 10px 0;
+	font-weight: 500;
+	font-size: 23px;
+	line-height: 50px;
+	color: #242424;
+	width: 200px;
+	height: 65px;
+	grid-column:2/3;
+	grid-row:6/7;
+	text-align:center;
+	margin-left: 200px;
+}
+.btn_pickup:focus{
+	background-color:#5535F6;
+	color: #fff;
+}
+.btn_delivery:focus{
+	background-color:#5535F6;
+	color: #fff;
+}
