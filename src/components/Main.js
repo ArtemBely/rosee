@@ -12,6 +12,7 @@ import Questions from './Questions';
 import Footer from './Footer';
 
 class Main extends React.Component{
+
   render() {
     return(
       <div>

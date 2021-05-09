@@ -163,7 +163,7 @@ textarea:focus{
 	margin-top: 20px;
 	display: grid;
 	grid-template-columns:15% 85%;
-	grid-template-rows:150px 70px 70px 220px 120px 120px 100px 100px 230px 500px;
+	grid-template-rows:150px 70px 70px 220px 120px 120px 100px 100px 230px 500px 100px;
 	grid-row-gap:10px;
 }
 .order_title{
@@ -189,7 +189,7 @@ textarea:focus{
 }
 .order_mail{
 	grid-column:1/2;
-	grid-row:4/5;
+	grid-row:5/6;
 }
 .order_services{
 	grid-column:1/2;
@@ -205,14 +205,13 @@ textarea:focus{
 }
 .order_address{
 	grid-column:1/2;
-	grid-row:8/9;
+	grid-row:6/7;
 }
 .order_comments{
 	grid-column:1/2;
-	grid-row:9/10;
+	grid-row:7/8;
 }
 .order_payment{
 	grid-column:1/2;
-	grid-row:10/11;
+	grid-row:7/8;
 }
-

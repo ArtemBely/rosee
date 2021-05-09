@@ -1,82 +1,272 @@
 import React from 'react';
-import { NavLink } from 'react-router-dom';
+import { Route, NavLink } from 'react-router-dom';
 
 class Order extends React.Component{
 
-  constructor() {
+  constructor(props) {
 
-    super()
+    super(props);
+
+    let error;
+    let typeOfSkin;
+    let success;
+    let repeat;
+    if(__isBrowser__) {
+      error = window.__INITIAL_DATA__;
+      typeOfSkin = window.__INITIAL_TYPE__;
+      success = window.__INITIAL_STATE__;
+      repeat = window.__INITIAL_ERRORS__;
+    }
+    this.state = {
+      error,
+      typeOfSkin,
+      success,
+      repeat
+    }
   }
+
+errF = () => {
+  if(this.state && this.state.error) {
+    return(
+      <p className='validErr'>
+        {this.state.error.map(err =>
+          <p>{err}</p>
+        )}
+      </p>
+    )
+  }
+}
+
+succ = () => {
+  if(this.state && this.state.success) {
+    return(
+      <p className='validSucc'>
+        {this.state.success}
+      </p>
+    )
+  }
+}
+
+rep = () => {
+  if(this.state && this.state.repeat) {
+    return(
+      <p className='mailErr'>
+        {this.state.repeat}
+      </p>
+    )
+  }
+}
 
 render() {
   return(
-    <div className='wrap_Order'>
-      <div className='order'>
-        <h2 className='order_title'>Заказ</h2>
-        <h4 className='order_name order_text'>Имя</h4>
-        <h4 className='order_telephone order_text'>Телефон</h4>
-        <h4 className='order_mail order_text'>Почта</h4>
-        <h4 className='order_services order_text'>Услуги</h4>
-        <h4 className='order_receive order_text'>Способ получения</h4>
-        <h4 className='order_date order_text'>Дата и время</h4>
-        <h4 className='order_address order_text'>Адрес</h4>
-        <h4 className='order_comments order_text'>Комментарии</h4>
-        <h4 className='order_payment order_text'>Оплата</h4>
+    <div>
+    {this.errF()}
+    {this.succ()}
+    {this.rep()}
+    <Route path={['/order/everyMonth', '/order/everyMonthCombi', '/order/everyMonthFat', '/order/everyMonthDry']}>
+     <form action='/order/everyMonth' method='POST'>
+         <div className='wrap_Order'>
+           <div className='order'>
+             <h2 className='order_title'>Заказ</h2>
+             <h4 className='order_name order_text'>Имя и фамилия</h4>
+             <h4 className='order_telephone order_text'>Телефон</h4>
+             <h4 className='order_mail order_text'>Почта</h4>
+             <h4 className='order_address order_text'>Адрес получателя</h4>
+             <h4 className='order_comments order_text'>Комментарии</h4>
 
-        <input type='text' name='username' placeholder='Петровский-Разумовский Константин' className='name_input'/>
-        <input type='tel' name='userphone' className='telephone_input'/>
-        <input type='text' name='usermail' className='mail_input'/>
+             <input type='text' name='username' className='name_input' required/>
+             <input type='tel' name='userphone' className='telephone_input' required/>
+             <input type='text' name='email' className='mail_input' required/>
+             <input type='hidden' name='timestamp' />
 
-        <div className='radio'>
-          <input type='radio' name='letter' className='radio_input' id='radio1'/>
-          <label for='radio1' className='radio_label'>Получать письма с акциями</label>
-        </div>
-        <NavLink to='#' id='order_yandex'>Заполнить из Яндекса</NavLink>
+             <div className='radio'>
+               <input type='radio' name='letter' className='radio_input' id='radio1'/>
+               <label htmlFor='radio1' className='radio_label'>Получать письма с акциями</label>
+             </div>
 
-        <div className='checkbox'>
-          <input type='checkbox' name='services' className='checkbox_input' id='checkbox1'/>
-          <label for='checkbox1' className='checkbox_label'>Второй год гарантии <span className='label_price'> 700 р</span></label>
-        </div>
-        <div className='checkbox2'>
-          <input type='checkbox' name='services' className='checkbox_input2' id='checkbox2'/>
-          <label for='checkbox2' className='checkbox_label2'>Подарочная упаковка <span className='label_price'> 500 р</span></label>
-        </div>
-        
-        <input type='date' name='date' className='date_input'/>
-        <select name='time' className='time_select'>
-          <option value='time1'> 10:00 - 12:00</option>
-          <option value='time2'>12:00 - 14:00</option>
-          <option value='time3'>14:00 - 16:00</option>
-          <option value='time4'>16:00 - 18:00</option>
-          <option value='time1'>18:00 - 20:00</option>
-        </select>
-        <textarea name='useraddress' className='address_input'></textarea>
-        <textarea name='comments' className='comments'></textarea>
+             <textarea name='useraddress' className='address_input' required></textarea>
+             <textarea name='comments' className='comments'></textarea>
 
-        <div className='radio_pay'>
-          <input type='radio' name='pay' className='pay_input' id='pay1'/>
-          <label for='pay1' className='pay_label'>По карте онлайн</label>
-        </div>
-        <div className='radio_pay2'>
-          <input type='radio' name='pay' className='pay_input' id='pay2'/>
-          <label for='pay2' className='pay_label'>Наличными курьеру</label>
-        </div>
-        <div className='radio_pay3'>
-          <input type='radio' name='pay' className='pay_input' id='pay3'/>
-          <label for='pay3' className='pay_label'>По счёту для юрлица</label>
-        </div>
+             <div className='wrap_password_field'>
+               <p className='passwordname'>Пароль</p>
+               <input type='text' name='password' className='password_field' required/>
+             </div>
+               <Route path={['/order/everyMonth', '/order/everyMonthCombi',
+                 '/order/halfYearCombi', '/order/everyYearCombi']}>
+                 <input type='hidden' name='typeOfSkin' value={this.state && this.state.typeOfSkin ? this.state.typeOfSkin : 'Комбинированная'} />
+               </Route>
+               <Route path={['/order/everyMonthFat', '/order/halfYearFat', '/order/everyYearFat']}>
+                 <input type='hidden' name='typeOfSkin' value={this.state && this.state.typeOfSkin ? this.state.typeOfSkin : 'Жирная'} />
+               </Route>
+               <Route path={['/order/everyMonthDry', '/order/halfYearDry', '/order/everyYearDry']}>
+                 <input type='hidden' name='typeOfSkin' value={this.state && this.state.typeOfSkin ? this.state.typeOfSkin : 'Сухая'} />
+               </Route>
 
-        <NavLink to='#' id='order_arrange'>Оформить</NavLink>
-        <p className='arrange_text'>
-          Укажите <NavLink to='#' className='arrange_text2'>телефон</NavLink> для подтверждения <br/>заказа 
-          и <NavLink  to='#' className='arrange_text2'>адрес доставки</NavLink>
-        </p>
+               <Route path={['/order/everyMonth', '/order/everyMonthCombi', '/order/everyMonthFat', '/order/everyMonthDry']}>
+                 <a href='https://pay.fondy.eu/s/A5qqFUTrtDV0J'>
+                   <button type='submit' id='order_arrange'>Оформить</button>
+                 </a>
+               </Route>
+               <Route path={['/order/halfYear', '/order/halfYearCombi', '/order/halfYearFat', '/order/halfYearDry']}>
+                 <a href='https://pay.fondy.eu/s/OnCUN8IoAFd'>
+                   <button type='submit' id='order_arrange'>Оформить</button>
+                 </a>
+               </Route>
+               <Route path={['/order/everyYear', '/order/everyYearCombi', '/order/everyYearFat', '/order/everyYearDry']}>
+                 <a href='https://pay.fondy.eu/s/BQo3bkVg'>
+                   <button type='submit' id='order_arrange'>Оформить</button>
+                 </a>
+               </Route>
 
-        <button type='button' className='btn_delivery'>Доставка</button>
-        <button type='button' className='btn_pickup'>Самовывоз</button>
-        
+               <Route path={['/order/everyMonth', '/order/everyMonthCombi', '/order/everyMonthDry', '/order/everyMonthFat']}>
+                   <input type='hidden' name='typeOfPayment' value='Ежемесячная подписка' />
+               </Route>
+               <Route path={['/order/halfYear', '/order/halfYearCombi', '/order/halfYearDry', '/order/halfYearFat']}>
+                   <input type='hidden' name='typeOfPayment' value='Полугодовая подписка' />
+               </Route>
+               <Route path={['/order/everyYear', '/order/everyYearCombi', '/order/everyYearDry', '/order/everyYearFat']}>
+                   <input type='hidden' name='typeOfPayment' value='Годовая подписка' />
+               </Route>
+           </div>
+         </div>
+     </form>
+     </Route>
 
-      </div>
+     <Route path={['/order/halfYear', '/order/halfYearCombi', '/order/halfYearFat', '/order/halfYearDry']}>
+      <form action='/order/halfYear' method='POST'>
+          <div className='wrap_Order'>
+            <div className='order'>
+              <h2 className='order_title'>Заказ</h2>
+              <h4 className='order_name order_text'>Имя и фамилия</h4>
+              <h4 className='order_telephone order_text'>Телефон</h4>
+              <h4 className='order_mail order_text'>Почта</h4>
+              <h4 className='order_address order_text'>Адрес получателя</h4>
+              <h4 className='order_comments order_text'>Комментарии</h4>
+
+              <input type='text' name='username' className='name_input' required/>
+              <input type='tel' name='userphone' className='telephone_input' required/>
+              <input type='text' name='email' className='mail_input' required/>
+
+              <div className='radio'>
+                <input type='radio' name='letter' className='radio_input' id='radio1'/>
+                <label htmlFor='radio1' className='radio_label'>Получать письма с акциями</label>
+              </div>
+
+              <textarea name='useraddress' className='address_input' required></textarea>
+              <textarea name='comments' className='comments'></textarea>
+
+              <div className='wrap_password_field'>
+                <p className='passwordname'>Пароль</p>
+                <input type='text' name='password' className='password_field' required/>
+              </div>
+                <Route path={['/order/halfYear', '/order/everyMonthCombi',
+                  '/order/halfYearCombi', '/order/everyYearCombi']}>
+                  <input type='hidden' name='typeOfSkin' value={this.state && this.state.typeOfSkin ? this.state.typeOfSkin : 'Комбинированная'} />
+                </Route>
+                <Route path={['/order/everyMonthFat', '/order/halfYearFat', '/order/everyYearFat']}>
+                  <input type='hidden' name='typeOfSkin' value={this.state && this.state.typeOfSkin ? this.state.typeOfSkin : 'Жирная'} />
+                </Route>
+                <Route path={['/order/everyMonthDry', '/order/halfYearDry', '/order/everyYearDry']}>
+                  <input type='hidden' name='typeOfSkin' value={this.state && this.state.typeOfSkin ? this.state.typeOfSkin : 'Сухая'} />
+                </Route>
+
+                <Route path={['/order/everyMonth', '/order/everyMonthCombi', '/order/everyMonthFat', '/order/everyMonthDry']}>
+                  <a href='https://pay.fondy.eu/s/A5qqFUTrtDV0J'>
+                    <button type='submit' id='order_arrange'>Оформить</button>
+                  </a>
+                </Route>
+                <Route path={['/order/halfYear', '/order/halfYearCombi', '/order/halfYearFat', '/order/halfYearDry']}>
+                  <a href='https://pay.fondy.eu/s/OnCUN8IoAFd'>
+                    <button type='submit' id='order_arrange'>Оформить</button>
+                  </a>
+                </Route>
+                <Route path={['/order/everyYear', '/order/everyYearCombi', '/order/everyYearFat', '/order/everyYearDry']}>
+                  <a href='https://pay.fondy.eu/s/BQo3bkVg'>
+                    <button type='submit' id='order_arrange'>Оформить</button>
+                  </a>
+                </Route>
+
+                <Route path={['/order/everyMonth', '/order/everyMonthCombi', '/order/everyMonthDry', '/order/everyMonthFat']}>
+                    <input type='hidden' name='typeOfPayment' value='Ежемесячная подписка' />
+                </Route>
+                <Route path={['/order/halfYear', '/order/halfYearCombi', '/order/halfYearDry', '/order/halfYearFat']}>
+                    <input type='hidden' name='typeOfPayment' value='Полугодовая подписка' />
+                </Route>
+                <Route path={['/order/everyYear', '/order/everyYearCombi', '/order/everyYearDry', '/order/everyYearFat']}>
+                    <input type='hidden' name='typeOfPayment' value='Годовая подписка' />
+                </Route>
+            </div>
+          </div>
+      </form>
+      </Route>
+
+      <Route path={['/order/everyYear', '/order/everyYearCombi', '/order/everyYearFat', '/order/everyYearDry']}>
+       <form action='/order/everyYear' method='POST'>
+           <div className='wrap_Order'>
+             <div className='order'>
+               <h2 className='order_title'>Заказ</h2>
+               <h4 className='order_name order_text'>Имя и фамилия</h4>
+               <h4 className='order_telephone order_text'>Телефон</h4>
+               <h4 className='order_mail order_text'>Почта</h4>
+               <h4 className='order_address order_text'>Адрес получателя</h4>
+               <h4 className='order_comments order_text'>Комментарии</h4>
+
+               <input type='text' name='username' className='name_input' required/>
+               <input type='tel' name='userphone' className='telephone_input' required/>
+               <input type='text' name='email' className='mail_input' required/>
+
+               <div className='radio'>
+                 <input type='radio' name='letter' className='radio_input' id='radio1'/>
+                 <label htmlFor='radio1' className='radio_label'>Получать письма с акциями</label>
+               </div>
+
+               <textarea name='useraddress' className='address_input' required></textarea>
+               <textarea name='comments' className='comments'></textarea>
+
+               <div className='wrap_password_field'>
+                 <p className='passwordname'>Пароль</p>
+                 <input type='text' name='password' className='password_field' required/>
+               </div>
+                 <Route path={['/order/everyYear', '/order/everyMonthCombi',
+                   '/order/halfYearCombi', '/order/everyYearCombi']}>
+                   <input type='hidden' name='typeOfSkin' value={this.state && this.state.typeOfSkin ? this.state.typeOfSkin : 'Комбинированная'} />
+                 </Route>
+                 <Route path={['/order/everyMonthFat', '/order/halfYearFat', '/order/everyYearFat']}>
+                   <input type='hidden' name='typeOfSkin' value={this.state && this.state.typeOfSkin ? this.state.typeOfSkin : 'Жирная'} />
+                 </Route>
+                 <Route path={['/order/everyMonthDry', '/order/halfYearDry', '/order/everyYearDry']}>
+                   <input type='hidden' name='typeOfSkin' value={this.state && this.state.typeOfSkin ? this.state.typeOfSkin : 'Сухая'} />
+                 </Route>
+
+                 <Route path={['/order/everyMonth', '/order/everyMonthCombi', '/order/everyMonthFat', '/order/everyMonthDry']}>
+                   <a href='https://pay.fondy.eu/s/A5qqFUTrtDV0J'>
+                     <button type='submit' id='order_arrange'>Оформить</button>
+                   </a>
+                 </Route>
+                 <Route path={['/order/halfYear', '/order/halfYearCombi', '/order/halfYearFat', '/order/halfYearDry']}>
+                   <a href='https://pay.fondy.eu/s/OnCUN8IoAFd'>
+                     <button type='submit' id='order_arrange'>Оформить</button>
+                   </a>
+                 </Route>
+                 <Route path={['/order/everyYear', '/order/everyYearCombi', '/order/everyYearFat', '/order/everyYearDry']}>
+                   <a href='https://pay.fondy.eu/s/BQo3bkVg'>
+                     <button type='submit' id='order_arrange'>Оформить</button>
+                   </a>
+                 </Route>
+
+                 <Route path={['/order/everyMonth', '/order/everyMonthCombi', '/order/everyMonthDry', '/order/everyMonthFat']}>
+                     <input type='hidden' name='typeOfPayment' value='Ежемесячная подписка' />
+                 </Route>
+                 <Route path={['/order/halfYear', '/order/halfYearCombi', '/order/halfYearDry', '/order/halfYearFat']}>
+                     <input type='hidden' name='typeOfPayment' value='Полугодовая подписка' />
+                 </Route>
+                 <Route path={['/order/everyYear', '/order/everyYearCombi', '/order/everyYearDry', '/order/everyYearFat']}>
+                     <input type='hidden' name='typeOfPayment' value='Годовая подписка' />
+                 </Route>
+             </div>
+           </div>
+       </form>
+       </Route>
     </div>
   )
  }
