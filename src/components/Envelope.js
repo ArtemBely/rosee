@@ -1,5 +1,5 @@
 import React from 'react';
-import mask1 from '../../public/images/0180 35.png';
+import mask1 from '../../public/images/masks1.png';
 import mask2 from '../../public/images/0180 43.png';
 import mask3 from '../../public/images/0180 38.png';
 import mask4 from '../../public/images/0180 57.png';

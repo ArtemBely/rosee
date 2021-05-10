@@ -150,10 +150,11 @@
 	position: absolute;
 }
 .wrap_enter {
-	height: 600px;
-	width: 630px;
+	height: 630px;
+	width: 599px;
 	position: absolute;
 	top: 125px;
+	box-shadow: 0px 20px 50px rgba(0, 0, 0, 0.1);
 	background: linear-gradient(
 	227.91deg
 	, #FFFFFF 4.34%, #F0F0F0 104.3%);
@@ -161,4 +162,66 @@
 	border: 1px solid #808080;
 	box-sizing: border-box;
 	border-radius: 30px;
+}
+.enter_text{
+	font-family: 'Manrope-Bold';
+	font-size: 35px;
+	line-height: 43px;
+	font-weight: 700;
+	margin: 14px 0 26px 74px;
+}
+.enter_text2{
+	font-size: 18px;
+	line-height: 25px;
+	font-weight: 400;
+	margin-left: 276px;
+	margin-top: -60px;
+}
+.input_mail{
+	width: 460px;
+	height: 71px;
+	background: #FFFFFF;
+	border: 2px solid #54854A;
+	box-sizing: border-box;
+	border-radius: 10px;
+	font-size: 25px;
+	line-height: 41px;
+	color: #808080;
+	font-family: 'Manrope-Medium';
+	margin-left: 75px;
+	padding-left: 28px;
+	margin-bottom: 16px;
+}
+.input_password{
+	width: 460px;
+	height: 71px;
+	background: #FFFFFF;
+	border: 2px solid #54854A;
+	box-sizing: border-box;
+	border-radius: 10px;
+	font-size: 25px;
+	line-height: 41px;
+	color: #808080;
+	font-family: 'Manrope-Medium';
+	margin-left: 75px;
+	margin-bottom: 22px;
+	padding-left: 28px;
+}
+.enter_button{
+	width: 171px;
+	height: 68px;
+	background: #808080;
+	font-size: 31px;
+	line-height: 40px;
+	color: #FFFFFF;
+	font-family: 'Manrope-Bold';
+	margin-left: 75px;
+	border: none;
+}
+.cross{
+	width: 20px;
+	height: 20px;
+}
+.wrap_cross{
+	margin: 40px 40px 0 550px;
 }
