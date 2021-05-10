@@ -4,16 +4,39 @@ import App from '../components/App';
 import Main from '../components/Main';
 import Routes from '../components/routes';
 import express from 'express';
+import mongoose from 'mongoose';
+import session from 'express-session';
 import { renderToString } from 'react-dom/server';
 import cookieParser from 'cookie-parser';
 import bodyParser from 'body-parser';
 import serialize from 'serialize-javascript';
 import validator from 'express-validator';
+import cors from 'cors';
+import passport from 'passport';
+import flash from 'connect-flash';
 
 import orderRouter from './routes/order';
+import enterRouter from './routes/enter';
+import profileRouter from './routes/profile';
+import apiRouter from './routes/api';
 
 const app = express();
 const port = process.env.PORT || 5000;
+const CONNECTION_URI = process.env.MONGODB_URI;
+
+require('dotenv/config');
+
+mongoose.connect(
+  CONNECTION_URI || process.env.CONNECT,
+  {
+    useNewUrlParser: true,
+    useUnifiedTopology: true,
+    useCreateIndex: true
+  },
+  () => {
+    console.log('Connection with database rosee_customers completed');
+  }
+);
 
 app.use(function(req, res, next) {
   res.setHeader("Cache-Control", "no-cache, no-store, must-revalidate"); // HTTP 1.1.
@@ -31,10 +54,26 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(express.urlencoded({ extended: false }));
 app.use(validator());
 app.use(cookieParser());
+app.use(session({
+  secret: 'mysecret',
+  resave: false,
+  saveUnitialized: false
+}));
+app.use(passport.initialize());
+app.use(passport.session());
+app.use(flash());
+
+app.use(cors({
+  methods:['GET','POST'],
+  credentials: true
+}));
 
 app.use('/order', orderRouter);
+app.use('/enter', enterRouter);
+app.use('/profile', profileRouter);
+app.use('/api', apiRouter);
 
-app.get('*', (req, res, next) => {
+app.get('*', notLoggedIn, (req, res, next) => {
   const activeRouter = Routes.find((route) => matchPath(req.url, route)) || {};
   const promise = activeRouter.fetchInitialData ?
                   activeRouter.fetchInitialData(req.path) :
@@ -70,7 +109,13 @@ app.get('*', (req, res, next) => {
   }).catch(next)
 });
 
-/*
+function notLoggedIn(req, res, next) {
+  if(!req.isAuthenticated()) {
+    return next();
+  }
+  res.redirect('/profile');
+}
+
 app.use((error, req, res, next) => {
   res.status(error.status);
 
@@ -80,12 +125,12 @@ app.use((error, req, res, next) => {
     stack: error.stack
   });
 });
-*/
 
+/*
 app.use((req, res, next) => {  //<-- заменить если появится непредвиденная ошибка
    const err = new Error ('Noooo');
      err.status = 404;
      next (err);
 });
-
+*/
 app.listen(8888, () => {console.log('connected!')});

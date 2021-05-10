@@ -19,7 +19,7 @@
 }
 .mail_input{
 	grid-column:2/3;
-	grid-row:4/5;
+	grid-row:5/6;
 	width: 350px;
 	height: 40px;
 	border-radius: 10px;
@@ -29,7 +29,7 @@
 .radio{
 	position: relative;
 	grid-column:2/3;
-	grid-row:4/5;
+	grid-row:5/6;
 	margin-top: 62px;
 	height: 60px;
 }
@@ -213,7 +213,7 @@
 }
 .address_input{
 	grid-column:2/3;
-	grid-row:8/9;
+	grid-row:6/7;
 	width: 500px;
 	height: 70px;
 	border-radius: 10px;
@@ -222,7 +222,7 @@
 }
 .comments{
 	grid-column:2/3;
-	grid-row:9/10;
+	grid-row:7/8;
 	width: 500px;
 	height: 200px;
 	border-radius: 10px;
