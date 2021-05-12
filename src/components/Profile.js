@@ -91,7 +91,7 @@ class Profile extends React.Component{
           <div className='questions2'>
             <div className='first_section'>
               <p className='have_a_quest'>Если появился вопрос</p>
-              <p className='have_a_quest2'>Напишите его в форме или позвоните нам <br/> напрямую, менеджеры разберутся в ситуации <br/> и постараются решить вашу задачу</p>
+              <p className='have_a_quest2'>Напишите его в форме или <span className='call_us'>позвоните нам</span> <br/> напрямую, менеджеры разберутся в ситуации <br/> и постараются решить вашу задачу</p>
             </div>
             <div className='second_section'>
               <form action="#">

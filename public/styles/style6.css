@@ -237,58 +237,51 @@ textarea{
 }
 .order{
 	width: 1320px;
-	margin-top: 20px;
+	margin-top: 155px;
 	display: grid;
-	grid-template-columns:15% 85%;
-	grid-template-rows:150px 70px 70px 220px 120px 120px 100px 100px 230px 500px 100px;
-	grid-row-gap:10px;
+	grid-template-columns:200px 630px 400px;
+	grid-template-rows:110px 75px 70px 80px 150px 90px 210px 160px;
+	grid-row-gap:20px;
+	grid-column-gap:45px;
 }
 .order_title{
 	font-weight: 600;
-   font-size: 55px;
-   line-height: 65px;
-   color: #242424;
+   font-size: 35px;
+   line-height: 43px;
+   color: #000000;
+	margin-top: 35px;
 }
 .order_text{
-	font-weight: 600;
-   font-size: 23px;
-   line-height: 30px;
-   color: #242424;
+	font-weight: 700;
+   font-size: 25px;
+   line-height: 32px;
+   color: #000000;
 	margin: 0;
+	font-family: 'Inter-Bold';
 }
 .order_name{
 	grid-column:1/2;
 	grid-row:2/3;
+	margin-top: 15px;
 }
 .order_telephone{
 	grid-column:1/2;
 	grid-row:3/4;
+	margin-top: 15px;
 }
 .order_mail{
 	grid-column:1/2;
 	grid-row:5/6;
-}
-.order_services{
-	grid-column:1/2;
-	grid-row:5/6;
-}
-.order_receive{
-	grid-column:1/2;
-	grid-row:6/7;
-}
-.order_date{
-	grid-column:1/2;
-	grid-row:7/8;
+	margin-top: 15px;
 }
 .order_address{
 	grid-column:1/2;
 	grid-row:6/7;
+	margin-top: 5px;
 }
 .order_comments{
 	grid-column:1/2;
 	grid-row:7/8;
+	margin-top: 15px;
 }
-.order_payment{
-	grid-column:1/2;
-	grid-row:7/8;
-}
+

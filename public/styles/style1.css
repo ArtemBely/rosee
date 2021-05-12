@@ -43,7 +43,24 @@
     font-weight: normal;
     font-style: normal;
 }
-
+@font-face {
+    font-family: 'Inter-Bold';
+    src: url('../../fonts/Inter-Bold.eot');
+    src: url('../../fonts/Inter-Bold.eot?#iefix') format('embedded-opentype'),
+    url('../../fonts/Inter-Bold.woff') format('woff'),
+    url('../../fonts/Inter-Bold.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+  font-family: 'Butler-Bold';
+  src: url('../../fonts/Butler-Bold.eot');
+  src: url('../../fonts/Butler-Bold.eot?#iefix') format('embedded-opentype'),
+  url('../../fonts/Butler-Bold.woff') format('woff'),
+  url('../../fonts/Butler-Bold.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
 body {
   font-family: 'Manrope-Medium';
   padding: 0;
@@ -52,7 +69,7 @@ body {
   background-color: #fafafa;
 }
 .wrap_header{
-	position: relative;
+	position: absolute;
 	display: grid;
 	grid-template-columns:10% 1fr 2fr repeat(5, 1fr) 7%;
 	grid-column-gap:35px;
@@ -60,6 +77,7 @@ body {
 	justify-items:center;
 	align-items:center;
   width: 1320px;
+  height: 50px;
 }
 .wrapMain_header {
   display: flex;
@@ -85,7 +103,7 @@ body {
   width: 100%;
 }
 .cosmeticMasks{
-	margin-top:50px;
+	margin-top:150px;
   width: 1320px;
   height: 1000px;
 	position: relative;
