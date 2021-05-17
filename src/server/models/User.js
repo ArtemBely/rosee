@@ -7,6 +7,7 @@ const userSchema = new Schema({
    userphone:{type: String, required: true},
    email:{type: String, required: true},
    timestamp: {type: String},
+   adminComment: {type: String},
    password: {type: String, required: true},
    useraddress: {type: String, required: true},
    typeOfPayment: {type: String, required: true},

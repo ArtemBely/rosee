@@ -46,7 +46,7 @@ router.get(['/everyMonth', '/halfYear', 'everyYear', '/'], notLoggedIn, (req, re
 
 router.post(['/', '/everyMonth', '/everyYear', '/halfYear'], (req, res, done) => {
   var {
-         username, userphone, email, timestamp, letter, useraddress,
+         username, userphone, email, timestamp, adminComment, letter, useraddress,
          comments, password, typeOfSkin, typeOfPayment
       } = req.body;
 
@@ -128,6 +128,7 @@ var newUser = new User({
   userphone: userphone,
   email: email,
   timestamp: new Date().getDate() + ' ' + months[(new Date().getMonth() + 2)],
+  adminComment: '',
   password: password,
   useraddress: useraddress,
   typeOfPayment: typeOfPayment,

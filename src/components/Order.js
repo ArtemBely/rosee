@@ -78,6 +78,7 @@ render() {
              <input type='tel' name='userphone' className='telephone_input' required/>
              <input type='text' name='email' className='mail_input' required/>
              <input type='hidden' name='timestamp' />
+             <input type='hidden' name='adminComment' />
 
              <div className='radio'>
                <input type='radio' name='letter' className='radio_input' id='radio1'/>
