@@ -9,6 +9,7 @@ import '../../public/styles/style5.css';
 import '../../public/styles/style6.css';
 import '../../public/styles/style7.css';
 import '../../public/styles/style8.css';
+import '../../public/styles/style9.css';
 
 class App extends React.Component {
   render() {

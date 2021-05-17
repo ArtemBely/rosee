@@ -1,6 +1,7 @@
 import React from 'react';
 import { Route, NavLink } from 'react-router-dom';
 import rosee from '../../public/images/rosée.png';
+import cross from '../../public/images/Union.svg';
 
 class Header extends React.Component{
   constructor() {
@@ -40,10 +41,13 @@ class Header extends React.Component{
 
            <Route exact path='/enter'>
                <div className='wrap_enter'>
+                 <p className="wrap_cross"><img src={cross} className="cross"/></p>
                  <form action='/enter' className='enterForm' method='POST'>
-                    <input type='text' name='email' placeholder='Введите email' required/>
-                    <input type='text' name='password' placeholder='Пароль' required/>
-                    <button type='submit'>Войти</button>
+                    <p className="enter_text">Вход</p>
+                    <input type='text' name='email' placeholder='Введите email' className="input_mail" required/>
+                    <input type='text' name='password' placeholder='Пароль' className="input_password" required/>
+                    <button type='submit' className="enter_button">Войти</button>
+                    <p className="enter_text2">Чтобы продолжить, введите <br/> номер телефона и пароль</p>
                     {this.errReg()}
                  </form>
                </div>

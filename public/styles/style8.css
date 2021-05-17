@@ -1,78 +1,18 @@
-.radio_pay{
-	position: relative;
-	grid-column:2/3;
-	grid-row:10/11;
-}
-.radio_pay2{
-	position: relative;
-	grid-column:2/3;
-	grid-row:10/11;
-	margin-top: 40px;
-}
-.radio_pay3{
-	position: relative;
-	grid-column:2/3;
-	grid-row:10/11;
-	margin-top: 80px;
-}
-.pay_label{
-	font-size: 20px;
-	font-weight: 400;
-	color: #242424;
-	padding-left: 30px;
-}
-.pay_input{
-	appearance: none;
-	-webkit-appearance: none;
-	position: absolute;
-}
-.pay_label:before{
-	content: "";
-	display: block;
-	width: 18px;
-	height: 18px;
-	border-radius: 50px;
-	border: 1px solid #5535F6;
-	background-color: #fff;
-	position: absolute;
-	top: 7px;
-	left: 0;
-	z-index: 1;
-}
-.pay_label:after{
-	content: "";
-	display: block;
-	width: 12px;
-	height: 12px;
-	border-radius: 50px;
-	border: 1px solid #5535F6;
-	background-color: #5535F6;
-	position: absolute;
-	top: 10px;
-	left: 3px;
-	z-index: 2;
-	opacity: 0;
-}
-.pay_input:checked + .pay_label:after{
-	opacity: 1;
-}
 #order_arrange{
-	margin-top: 170px;
-	border: 1px solid #5535F6;
-	background-color:#5535F6; ;
-	border-radius: 10px;
-	font-weight: 500;
-	font-size: 25px;
-	line-height: 50px;
+	margin-top: 640px;
+	background: #808080;
+	font-weight: 700;
+	font-size: 31px;
+	line-height: 68px;
 	color: #fff;
-	text-decoration:none;
-	width: 250px;
-	height: 65px;
+	font-family: 'Manrope-Bold';
+	width: 240px;
+	height: 68px;
 	grid-column:2/3;
 	grid-row:8/9;
 	text-align:center;
-	opacity: 0.5;
-	padding-top: 12px;
+	border: none;
+	cursor: pointer;
 }
 .arrange_text{
 	grid-column:2/3;
@@ -88,59 +28,9 @@
 	text-decoration: none;
 	border-bottom: 1px dotted #242424;
 }
-.btn_delivery{
-	background-color:#fff;
-	border: 1px solid #5535F6;
-	border-radius: 10px 0 0 10px;
-	font-weight: 500;
-	font-size: 23px;
-	line-height: 50px;
-	color: #242424;
-	width: 200px;
-	height: 65px;
-	grid-column:2/3;
-	grid-row:6/7;
-	text-align:center;
-}
-.btn_pickup{
-	background-color:#fff;
-	border: 1px solid #5535F6;
-	border-radius: 0 10px 10px 0;
-	font-weight: 500;
-	font-size: 23px;
-	line-height: 50px;
-	color: #242424;
-	width: 200px;
-	height: 65px;
-	grid-column:2/3;
-	grid-row:6/7;
-	text-align:center;
-	margin-left: 200px;
-}
-.btn_pickup:focus{
-	background-color:#5535F6;
-	color: #fff;
-}
-.btn_delivery:focus{
-	background-color:#5535F6;
-	color: #fff;
-}
 .wrap_password_field {
 	grid-column: 1/2;
 	grid-row: 4/5;
-}
-.password_field {
-	width: 250px;
-  height: 40px;
-  border-radius: 10px;
-  background-color: #afafaf21;
-  font-size: 18px;
-  position: relative;
-	left: 197px;
-}
-.passwordname {
-  position: relative;
-  top: 48px;
 }
 .chooseType {
 	color: #54854A;
@@ -150,10 +40,11 @@
 	position: absolute;
 }
 .wrap_enter {
-	height: 600px;
+	height: 599px;
 	width: 630px;
 	position: absolute;
 	top: 125px;
+	box-shadow: 0px 20px 50px rgba(0, 0, 0, 0.1);
 	background: linear-gradient(
 	227.91deg
 	, #FFFFFF 4.34%, #F0F0F0 104.3%);
@@ -161,4 +52,71 @@
 	border: 1px solid #808080;
 	box-sizing: border-box;
 	border-radius: 30px;
+}
+.enter_text{
+	font-family: 'Manrope-Bold';
+	font-size: 35px;
+	line-height: 43px;
+	font-weight: 700;
+	margin: 14px 0 26px 85px;
+}
+.enter_text2{
+	font-size: 18px;
+	line-height: 25px;
+	font-weight: 400;
+	margin-left: 286px;
+	margin-top: -60px;
+}
+.input_mail{
+	width: 460px;
+	height: 71px;
+	background: #FFFFFF;
+	border: 2px solid #54854A;
+	box-sizing: border-box;
+	border-radius: 10px;
+	font-size: 25px;
+	line-height: 41px;
+	color: #808080;
+	font-family: 'Manrope-Medium';
+	margin-left: 85px;
+	padding-left: 28px;
+	margin-bottom: 16px;
+}
+.input_password{
+	width: 460px;
+	height: 71px;
+	background: #FFFFFF;
+	border: 2px solid #54854A;
+	box-sizing: border-box;
+	border-radius: 10px;
+	font-size: 25px;
+	line-height: 41px;
+	color: #808080;
+	font-family: 'Manrope-Medium';
+	margin-left: 85px;
+	margin-bottom: 22px;
+	padding-left: 28px;
+}
+.enter_button{
+	width: 171px;
+	height: 68px;
+	background: #808080;
+	font-size: 31px;
+	line-height: 40px;
+	color: #FFFFFF;
+	font-family: 'Manrope-Bold';
+	margin-left: 85px;
+	border: none;
+	cursor: pointer;
+}
+
+.enter_button:focus{
+	background: #54854A;
+}
+.cross{
+	width: 20px;
+	height: 20px;
+}
+.wrap_cross{
+	margin: 40px 40px 0 570px;
 }

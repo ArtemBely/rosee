@@ -1,5 +1,6 @@
 import React from 'react';
 import { Route, NavLink } from 'react-router-dom';
+import rosee from '../../public/images/rosée.png';
 
 class Order extends React.Component{
 
@@ -66,6 +67,17 @@ render() {
     <Route path={['/order/everyMonth', '/order/everyMonthCombi', '/order/everyMonthFat', '/order/everyMonthDry']}>
      <form action='/order/everyMonth' method='POST'>
          <div className='wrap_Order'>
+                
+                  <div className='wrap_header'>
+                    <p className='wrap_rosee'><img src={rosee} className='header_logo'/></p>
+                    <p></p>
+                    <NavLink to='#' className='nav_header' id='advantages' activeClassName='active_header'>Преимущества</NavLink>
+                    <NavLink to='#' className='nav_header' id='inside' activeClassName='active_header'>Что внутри</NavLink>
+                    <NavLink to='#' className='nav_header' id='delivery' activeClassName='active_header'>Доставка</NavLink>
+                    <NavLink to='#' className='nav_header' id='header_buy' activeClassName='active_header'>Заказать</NavLink>
+                    <p><a href='/profile/logout' className='nav_header' id='header_login'>Выйти</a></p>
+                  </div>
+              
            <div className='order'>
              <h2 className='order_title'>Заказ</h2>
              <h4 className='order_name order_text'>Имя и фамилия</h4>
@@ -73,6 +85,17 @@ render() {
              <h4 className='order_mail order_text'>Почта</h4>
              <h4 className='order_address order_text'>Адрес получателя</h4>
              <h4 className='order_comments order_text'>Комментарии</h4>
+             <p className='order_title2'>Маски для ухода за кожей лица по подписке</p>
+             <p className='order_addition' id='addition1'>Если посылка потеряется, мы всегда <br/> сможем её найти по вашим данным</p>
+             <p className='order_addition' id='addition2'>Нужен для входа <br/> в аккаунт</p>
+             <p className='order_addition' id='addition3'>Придумайте пароль <br/> для входа в аккаунт</p>
+             <p className='order_addition' id='addition4'>Будем присылать <br/> уведомления об оплате</p>
+             <p className='order_addition' id='addition5'>Введите адрес полностью,<br/> он нужен для отправки посылки</p>
+             <p className='order_addition' id='addition6'>Если у вы хотите нам <br/> что-то сообщить</p>
+             <p className='order_text2'>Заполните все поля,<br/>чтобы продолжить</p>
+             <p className='order_text3'>Нажимая кнопку «Оформить», вы соглашаетесь с Политикой <br/> конфиденциальности и даёте согласие на обработку данных</p>
+           
+            
 
              <input type='text' name='username' className='name_input' required/>
              <input type='tel' name='userphone' className='telephone_input' required/>
@@ -89,7 +112,7 @@ render() {
              <textarea name='comments' className='comments'></textarea>
 
              <div className='wrap_password_field'>
-               <p className='passwordname'>Пароль</p>
+               <p className='passwordname order_text'>Пароль</p>
                <input type='text' name='password' className='password_field' required/>
              </div>
                <Route path={['/order/everyMonth', '/order/everyMonthCombi',
@@ -130,12 +153,25 @@ render() {
                </Route>
            </div>
          </div>
+         
      </form>
      </Route>
 
      <Route path={['/order/halfYear', '/order/halfYearCombi', '/order/halfYearFat', '/order/halfYearDry']}>
       <form action='/order/halfYear' method='POST'>
           <div className='wrap_Order'>
+                
+              <div className='wrap_header'>
+                    <p className='wrap_rosee'><img src={rosee} className='header_logo'/></p>
+                    <p></p>
+                    <NavLink to='#' className='nav_header' id='advantages' activeClassName='active_header'>Преимущества</NavLink>
+                    <NavLink to='#' className='nav_header' id='inside' activeClassName='active_header'>Что внутри</NavLink>
+                    <NavLink to='#' className='nav_header' id='delivery' activeClassName='active_header'>Доставка</NavLink>
+                    <NavLink to='#' className='nav_header' id='header_buy' activeClassName='active_header'>Заказать</NavLink>
+                    <p><a href='/profile/logout' className='nav_header' id='header_login'>Выйти</a></p>
+                  </div>
+                  
+              
             <div className='order'>
               <h2 className='order_title'>Заказ</h2>
               <h4 className='order_name order_text'>Имя и фамилия</h4>
@@ -143,6 +179,16 @@ render() {
               <h4 className='order_mail order_text'>Почта</h4>
               <h4 className='order_address order_text'>Адрес получателя</h4>
               <h4 className='order_comments order_text'>Комментарии</h4>
+              <p className='order_title2'>Маски для ухода за кожей лица по подписке</p>
+              <p className='order_addition' id='addition1'>Если посылка потеряется, мы всегда <br/> сможем её найти по вашим данным</p>
+              <p className='order_addition' id='addition2'>Нужен для входа <br/> в аккаунт</p>
+             <p className='order_addition' id='addition3'>Придумайте пароль <br/> для входа в аккаунт</p>
+             <p className='order_addition' id='addition4'>Будем присылать <br/> уведомления об оплате</p>
+             <p className='order_addition' id='addition5'>Введите адрес полностью,<br/> он нужен для отправки посылки</p>
+             <p className='order_addition' id='addition6'>Если у вы хотите нам <br/> что-то сообщить</p>
+             <p className='order_text2'>Заполните все поля,<br/>чтобы продолжить</p>
+             <p className='order_text3'>Нажимая кнопку «Оформить», вы соглашаетесь с Политикой <br/> конфиденциальности и даёте согласие на обработку данных</p>
+             
 
               <input type='text' name='username' className='name_input' required/>
               <input type='tel' name='userphone' className='telephone_input' required/>
@@ -157,7 +203,7 @@ render() {
               <textarea name='comments' className='comments'></textarea>
 
               <div className='wrap_password_field'>
-                <p className='passwordname'>Пароль</p>
+                <p className='passwordname order_text'>Пароль</p>
                 <input type='text' name='password' className='password_field' required/>
               </div>
                 <Route path={['/order/halfYear', '/order/everyMonthCombi',
@@ -197,13 +243,27 @@ render() {
                     <input type='hidden' name='typeOfPayment' value='Годовая подписка' />
                 </Route>
             </div>
+          
           </div>
+          
       </form>
       </Route>
 
       <Route path={['/order/everyYear', '/order/everyYearCombi', '/order/everyYearFat', '/order/everyYearDry']}>
        <form action='/order/everyYear' method='POST'>
            <div className='wrap_Order'>
+              
+                  <div className='wrap_header'>
+                    <p className='wrap_rosee'><img src={rosee} className='header_logo'/></p>
+                    <p></p>
+                    <NavLink to='#' className='nav_header' id='advantages' activeClassName='active_header'>Преимущества</NavLink>
+                    <NavLink to='#' className='nav_header' id='inside' activeClassName='active_header'>Что внутри</NavLink>
+                    <NavLink to='#' className='nav_header' id='delivery' activeClassName='active_header'>Доставка</NavLink>
+                    <NavLink to='#' className='nav_header' id='header_buy' activeClassName='active_header'>Заказать</NavLink>
+                    <p><a href='/profile/logout' className='nav_header' id='header_login'>Выйти</a></p>
+                  </div>
+                  
+              
              <div className='order'>
                <h2 className='order_title'>Заказ</h2>
                <h4 className='order_name order_text'>Имя и фамилия</h4>
@@ -211,6 +271,15 @@ render() {
                <h4 className='order_mail order_text'>Почта</h4>
                <h4 className='order_address order_text'>Адрес получателя</h4>
                <h4 className='order_comments order_text'>Комментарии</h4>
+               <p className='order_title2'>Маски для ухода за кожей лица по подписке</p>
+               <p className='order_addition' id='addition1'>Если посылка потеряется, мы всегда <br/> сможем её найти по вашим данным</p>
+               <p className='order_addition' id='addition2'>Нужен для входа <br/> в аккаунт</p>
+             <p className='order_addition' id='addition3'>Придумайте пароль <br/> для входа в аккаунт</p>
+             <p className='order_addition' id='addition4'>Будем присылать <br/> уведомления об оплате</p>
+             <p className='order_addition' id='addition5'>Введите адрес полностью,<br/> он нужен для отправки посылки</p>
+             <p className='order_addition' id='addition6'>Если у вы хотите нам <br/> что-то сообщить</p>
+             <p className='order_text2'>Заполните все поля,<br/>чтобы продолжить</p>
+             <p className='order_text3'>Нажимая кнопку «Оформить», вы соглашаетесь с Политикой <br/> конфиденциальности и даёте согласие на обработку данных</p>
 
                <input type='text' name='username' className='name_input' required/>
                <input type='tel' name='userphone' className='telephone_input' required/>
@@ -225,7 +294,7 @@ render() {
                <textarea name='comments' className='comments'></textarea>
 
                <div className='wrap_password_field'>
-                 <p className='passwordname'>Пароль</p>
+                 <p className='passwordname order_text'>Пароль</p>
                  <input type='text' name='password' className='password_field' required/>
                </div>
                  <Route path={['/order/everyYear', '/order/everyMonthCombi',
@@ -266,6 +335,7 @@ render() {
                  </Route>
              </div>
            </div>
+           
        </form>
        </Route>
     </div>
