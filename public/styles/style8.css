@@ -1,5 +1,4 @@
 #order_arrange{
-	margin-top: 640px;
 	background: #808080;
 	font-weight: 700;
 	font-size: 31px;
@@ -13,6 +12,11 @@
 	text-align:center;
 	border: none;
 	cursor: pointer;
+	z-index: 1000;
+}
+.wrap_or {
+	position: relative;
+  margin-top: 640px;
 }
 .arrange_text{
 	grid-column:2/3;

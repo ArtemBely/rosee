@@ -1,7 +1,8 @@
 import React from 'react';
-import {NavLink} from 'react-router-dom';
+import { NavLink, Route } from 'react-router-dom';
 import rosee from '../../public/images/rosée.png';
 import rosee2 from '../../public/images/rosée2.png';
+import Footer from './Footer';
 
 class Profile extends React.Component{
 
@@ -23,22 +24,76 @@ class Profile extends React.Component{
       return (
         <div className='wrap_userData'>
           <div className='userData'>
-            <p className='user_name'>{this.state.user.username}</p>
-            <p className='user_email' id='user'>{this.state.user.email}</p>
+
+            <Route exact path={['/profile', '/profile/changeMail', '/profile/changePhone', '/profile/changeAddress']}>
+              <p className='user_name'>{this.state.user.username}</p>
+            </Route>
+            <Route exact path='/profile/changeName'>
+              <textarea className='user_name add1'>{this.state.user.username}</textarea>
+            </Route>
+
+            <Route exact path={['/profile', '/profile/changeName', '/profile/changePhone', '/profile/changeAddress']}>
+              <p className='user_email' id='user'>{this.state.user.email}</p>
+            </Route>
+            <Route exact path='/profile/changeMail'>
+              <textarea className='user_email add2'>{this.state.user.email}</textarea>
+            </Route>
+
             <p className='user_password' id='user'>Пароль: **************</p>
-            <p className='user_phone' id='user'>{this.state.user.userphone}</p>
+
+            <Route exact path={['/profile', '/profile/changeMail', '/profile/changeName', '/profile/changeAddress']}>
+              <p className='user_phone' id='user'>{this.state.user.userphone}</p>
+            </Route>
+
+            <Route exact path='/profile/changePhone'>
+              <textarea className='user_phone add3' id='user'>{this.state.user.userphone}</textarea>
+            </Route>
+
             <p className='user_payment' id='user'>{this.state.user.typeOfPayment}</p>
             <p className='user_card' id='user'>**** **** **** 5017</p>
             <p className='user_timestamp'>Следующая оплата: {this.state.user.timestamp}</p>
-            <p className='user_address' id='user'>{this.state.user.useraddress}</p>
 
-            <p className='change_name' id='change'>Изменить имя</p>
-            <p className='change_email' id='change'>Изменить почту</p>
+            <Route exact path={['/profile', '/profile/changeMail', '/profile/changeName', '/profile/changePhone']}>
+              <p className='user_address' id='user'>{this.state.user.useraddress}</p>
+            </Route>
+
+            <Route exact path='/profile/changeAddress'>
+              <textarea className='user_address add4' id='user'>{this.state.user.useraddress}</textarea>
+            </Route>
+
+            <Route exact path={['/profile', '/profile/changeMail', '/profile/changePhone', '/profile/changeAddress']}>
+                <NavLink to='/profile/changeName' className='change_name' id='change'>Изменить имя</NavLink>
+            </Route>
+            <Route exact path='/profile/changeName'>
+                <NavLink to='/profile' className='change_name' id='change'>Назад</NavLink>
+            </Route>
+
+            <Route exact path={['/profile', '/profile/changeName', '/profile/changePhone', '/profile/changeAddress']}>
+                <NavLink to='/profile/changeMail' className='change_email' id='change'>Изменить почту</NavLink>
+            </Route>
+            <Route exact path='/profile/changeMail'>
+                <NavLink to='/profile' className='change_email' id='change'>Назад</NavLink>
+            </Route>
+
             <p className='change_password' id='change'>Изменить пароль</p>
-            <p className='change_phone' id='change'>Изменить телефон</p>
+
+            <Route exact path={['/profile', '/profile/changeName', '/profile/changeMail', '/profile/changeAddress']}>
+                <NavLink to='/profile/changePhone' className='change_phone' id='change'>Изменить телефон</NavLink>
+            </Route>
+            <Route exact path='/profile/changePhone'>
+                <NavLink to='/profile' className='change_phone' id='change'>Назад</NavLink>
+            </Route>
+
             <p className='change_period' id='change'>Изменить период</p>
             <p className='change_card' id='change'>Изменить карту оплаты</p>
-            <p className='change_address' id='change'>Изменить адрес</p>
+
+            <Route exact path={['/profile', '/profile/changeName', '/profile/changeMail', '/profile/changePhone']}>
+                <NavLink to='/profile/changeAddress' className='change_address' id='change'>Изменить адрес</NavLink>
+            </Route>
+            <Route exact path='/profile/changeAddress'>
+                <NavLink to='/profile' className='change_address' id='change'>Назад</NavLink>
+            </Route>
+
             <p className='cancel_sub'>Отменить подписку</p>
           </div>
           <div className='rating'>
@@ -102,18 +157,7 @@ class Profile extends React.Component{
               </form>
             </div>
           </div>
-          <footer className='wrap_Footer'>
-            <div className='footer'>
-  			    <div className='wrap_footer_rosee'><img src={rosee2} className='footer_logo'/></div>
-  				  <NavLink to='#' className='nav_footer' id='footer_offer' activeClassName='active_footer'>Оферта</NavLink>
-  				  <NavLink to='#' className='nav_footer' id='footer_confidentiality' activeClassName='active_footer'>Политика конфиденциальности</NavLink>
-  				  <NavLink to='#' className='nav_footer' id='footer_sentence' activeClassName='active_footer'>Пользовательское предложение</NavLink>
-				    <p className='nav_footer' id='footer_phone'>8 902 247 13 61</p>
-				    <p className='nav_footer' id='footer_email'>hi@rosee.ws</p>
-				    <p className='nav_footer' id='footer_information'>ИП Поветьев Кирилл Владимирович <br/>ИНН 562903440350 <br/>ОГРН 320565800048044</p>
-          </div>
-          </footer>
-          </div>
+        </div>
       )
     }
   }
@@ -131,10 +175,10 @@ class Profile extends React.Component{
             <NavLink to='#' className='nav_header' id='header_buy' activeClassName='active_header'>Заказать</NavLink>
             <p><a href='/profile/logout' className='nav_header' id='header_login'>Выйти</a></p>
             {this.userData()}
-          </div>
-        </div>
+           </div>
+         </div>
+        <p className='wrap_prof_footer'><Footer /></p>
       </div>
-      
     )
   }
 }

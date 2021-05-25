@@ -135,10 +135,12 @@
 }
 .first_section {
 	grid-column: 1 / 2;
+	z-index: 1;
 }
 .second_section{
 	grid-column: 2 / 3;
 	margin-top: 15px;
+	z-index: 1;
 }
 .questions_name{
 	width: 630px;
@@ -152,6 +154,7 @@
 	font-family: 'Manrope-Light';
 	color: #808080;
 	padding-left: 28px;
+	background: transparent;
 }
 .questions_mail{
 	grid-row:2/3;
@@ -167,6 +170,7 @@
 	color: #808080;
 	padding-left: 28px;
 	margin-top: 16px;
+	background: transparent;
 }
 .questions_input{
 	grid-row: 3/4;
@@ -184,6 +188,7 @@
 	padding-top: 14px;
 	margin-top: 16px;
 	resize: none;
+	background: transparent;
 }
 .questions_button{
 	grid-row: 4/5;
@@ -284,4 +289,3 @@ textarea{
 	grid-row:7/8;
 	margin-top: 15px;
 }
-

@@ -20,7 +20,8 @@ const routes = [
     component: Order
   },
   {
-    path: '/profile',
+    path: ['/profile', '/profile/changeName', '/profile/changeMail',
+     '/profile/changePhone', '/profile/changeAddress'],
     exact: true,
     component: Profile
   }

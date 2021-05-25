@@ -54,7 +54,7 @@
 	font-size: 18px;
 	line-height: 29px;
 	color: #414141;
-	margin-top: 0;
+	margin-top: -22px;
 }
 .user_address{
 	grid-column:3/4;
@@ -98,6 +98,8 @@
 	margin-top: 4px;
 }
 .change_address{
+  position: relative;
+  top: 100px;
 	grid-column:3/4;
 	grid-row:2/6;
 	margin-top: 40px;
@@ -110,7 +112,7 @@
 	line-height: 29px;
 	color: #000000;
 	text-decoration-line: underline;
-	margin-top: 0;
+	margin-top: -22px;
 }
 .rating_title{
 	text-align: center;
@@ -119,13 +121,15 @@
 	font-size: 25px;
 	line-height: 35px;
 	margin-bottom: 0;
+  position: relative;
+  top: 17px;
 }
 .rating{
 	width: 1320px;
 	position: relative;
 	display: flex;
 	justify-content: center;
-	margin-top: 150px;
+	margin-top: 82px;
 }
 .rating2{
 	width: 1320px;
@@ -168,4 +172,15 @@
 .call_us{
 	border-bottom: 0.5px solid #000000;
 }
-
+.wrap_prof_footer {
+  margin-top: 1367px;
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+.wrap_order_foot {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}

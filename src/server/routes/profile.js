@@ -8,7 +8,7 @@ import passport from 'passport';
 
 const router = express.Router();
 
-router.get('/', isLoggedIn, (req, res) => {
+router.get(['/', '/changeName', '/changeMail', '/changePhone', '/changeAddress'], isLoggedIn, (req, res) => {
   let cond = req.isAuthenticated();
   let user = req.user;
   const congrats = renderToString(
