@@ -97,6 +97,15 @@
 	color:#000000;
 	margin:0;
 }
+.br_1{
+	display: inline-block;
+}
+.br_2{
+	display: none;
+}
+.br_3{
+	display: inline-block;
+}
 .inside_mask3{
 	width: 310px;
 	height: 445px;

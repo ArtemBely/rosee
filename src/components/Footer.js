@@ -12,7 +12,7 @@ function Footer() {
   				<NavLink to='#' className='nav_footer' id='footer_sentence' activeClassName='active_footer'>Пользовательское предложение</NavLink>
 				<p className='nav_footer' id='footer_phone'>8 902 247 13 61</p>
 				<p className='nav_footer' id='footer_email'>hi@rosee.ws</p>
-				<p className='nav_footer' id='footer_information'>ИП Поветьев Кирилл Владимирович <br/>ИНН 562903440350 <br/>ОГРН 320565800048044</p>
+				<p className='nav_footer' id='footer_information'><p className="information_1">ИП Поветьев Кирилл Владимирович</p> <p className="information_2">ИНН 562903440350</p> <p className="information_3">ОГРН 320565800048044</p></p>
       </div>
     </footer>
   )

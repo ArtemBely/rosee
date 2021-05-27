@@ -15,7 +15,7 @@ function MasksInside() {
     	<p></p>
   		<h3 className='inside_title'>Что внутри</h3>
   		<h4 className='inside_subtitle'>Такой конверт мы отправляем каждую <br/> неделю. Заказ приходит в почтовый ящик.</h4>
-  		<p className='inside_text1'>Внутри конверта четыре случайных маски <br/> для ухода за кожей лица. Перед отправкой маски <br/> проверяются на соответствие вашему типу кожи.</p>
+  		<p className='inside_text1'>Внутри конверта четыре случайных <br className="br_2"/> маски <br className="br_3"/> для ухода за кожей лица.<br className="br_2"/> Перед отправкой маски <br className="br_1"/> проверяются <br className="br_2"/> на соответствие вашему типу кожи.</p>
 
   		<p className='wrap_mask1'><img src={mask1} className='inside_mask1'/></p>
   		<p className='wrap_mask2'><img src={mask2} className='inside_mask2'/></p>
@@ -30,7 +30,7 @@ function MasksInside() {
   		<p className='wrap_mask5'><img src={mask5} className='inside_mask5 com_ins'/></p>
   		<p className='wrap_mask6'><img src={mask6} className='inside_mask6 com_ins'/></p>
 
-  		<p className='inside_text3'>Маски в конверте случайные</p>
+  		<p className='inside_text3'>Маски в конверте<br className="br_2"/> случайные</p>
       </div>
     </div>
   )
