@@ -2,3 +2,57 @@
   position: relative;
   background: transparent;
 }
+#add1f {
+  grid-column: 1/2;
+  grid-row: 1/2;
+}
+#add2f {
+  grid-column: 1/2;
+  grid-row: 2/3;
+}
+#add3f {
+  grid-column: 1/2;
+  grid-row: 3/4;
+}
+#add4f {
+  grid-column: 3/4;
+  grid-row: 2/6;
+}
+#bt1 {
+  position: absolute;
+  top: 71px;
+}
+#btn2 {
+  position: absolute;
+  top: 116px;
+}
+#btn3 {
+  position: relative;
+  top: 58px;
+}
+#btn4 {
+  position: relative;
+  top: 14px;
+  left: -76px;
+  float: right;
+}
+.user_name {
+  width: 235px;
+}
+.user_email {
+  width: 257px;
+}
+.user_phone {
+  width: 217px;
+  top: 64px;
+  height: 47px;
+}
+.user_address {
+  width: 600px;
+  height: 125px;
+}
+.change_address {
+  top: 103px;
+  width: 150px;
+  height: 30px;
+}

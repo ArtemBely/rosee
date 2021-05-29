@@ -41,7 +41,8 @@
 	border: 2px solid #54854A;
 }
 .enterForm {
-	position: absolute;
+	position: relative;
+	top: 60px;
 }
 .wrap_enter {
 	height: 599px;
@@ -122,5 +123,7 @@
 	height: 20px;
 }
 .wrap_cross{
+	position: relative;
+  top: 34px;
 	margin: 40px 40px 0 570px;
 }

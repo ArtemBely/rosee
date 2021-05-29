@@ -36,6 +36,29 @@ router.get(['/', '/changeName', '/changeMail', '/changePhone', '/changeAddress']
     );
 });
 
+router.post('/nameChange', (req, res, next) => {
+  let user = req.user;
+  user.username = req.body.userName;
+  user.save();
+  console.log(user);
+  res.redirect('/profile');
+});
+router.post('/phoneChange', (req, res, next) => {
+  let user = req.user;
+  user.userphone = req.body.userPhone;
+  user.save();
+  console.log(user);
+  res.redirect('/profile');
+});
+router.post('/addressChange', (req, res, next) => {
+  let user = req.user;
+  user.useraddress = req.body.userAddress;
+  user.save();
+  console.log(user);
+  res.redirect('/profile');
+});
+
+
 router.get('/logout', isLoggedIn, (req, res, next) => {
   req.logout();
   res.redirect('/');

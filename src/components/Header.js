@@ -41,13 +41,13 @@ class Header extends React.Component{
 
            <Route exact path='/enter'>
                <div className='wrap_enter'>
-                 <p className="wrap_cross"><img src={cross} className="cross"/></p>
+                 <NavLink to='/' className="wrap_cross"><img src={cross} className="cross"/></NavLink>
                  <form action='/enter' className='enterForm' method='POST'>
                     <p className="enter_text">Вход</p>
                     <input type='text' name='email' placeholder='Введите email' className="input_mail" required/>
                     <input type='text' name='password' placeholder='Пароль' className="input_password" required/>
                     <button type='submit' className="enter_button">Войти</button>
-                    <p className="enter_text2">Чтобы продолжить, введите <br/> номер телефона и пароль</p>
+                    <p className="enter_text2">Чтобы продолжить, введите <br/> email и пароль</p>
                     {this.errReg()}
                  </form>
                </div>

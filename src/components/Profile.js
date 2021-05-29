@@ -29,14 +29,20 @@ class Profile extends React.Component{
               <p className='user_name'>{this.state.user.username}</p>
             </Route>
             <Route exact path='/profile/changeName'>
-              <textarea className='user_name add1'>{this.state.user.username}</textarea>
+               <form action='/profile/nameChange' method='POST' id='add1f'>
+                  <textarea className='user_name add1' name='userName'>{this.state.user.username}</textarea>
+                  <button type='submit' id='bt1'>Изменить</button>
+               </form>
             </Route>
 
             <Route exact path={['/profile', '/profile/changeName', '/profile/changePhone', '/profile/changeAddress']}>
               <p className='user_email' id='user'>{this.state.user.email}</p>
             </Route>
             <Route exact path='/profile/changeMail'>
-              <textarea className='user_email add2'>{this.state.user.email}</textarea>
+                <form action='/profile/mailChange' method='POST' id='add2f'>
+                    <textarea className='user_email add2'>{this.state.user.email}</textarea>
+                    <button type='submit' id='btn2'>Изменить</button>
+                </form>
             </Route>
 
             <p className='user_password' id='user'>Пароль: **************</p>
@@ -46,7 +52,10 @@ class Profile extends React.Component{
             </Route>
 
             <Route exact path='/profile/changePhone'>
-              <textarea className='user_phone add3' id='user'>{this.state.user.userphone}</textarea>
+                <form action='/profile/phoneChange' method='POST' id='add3f'>
+                    <textarea className='user_phone add3' id='user' name='userPhone'>{this.state.user.userphone}</textarea>
+                    <button type='submit' id='btn3'>Изменить</button>
+                </form>
             </Route>
 
             <p className='user_payment' id='user'>{this.state.user.typeOfPayment}</p>
@@ -58,7 +67,10 @@ class Profile extends React.Component{
             </Route>
 
             <Route exact path='/profile/changeAddress'>
-              <textarea className='user_address add4' id='user'>{this.state.user.useraddress}</textarea>
+                <form action='/profile/addressChange' method='POST' id='add4f'>
+                    <textarea className='user_address add4' id='user' name='userAddress'>{this.state.user.useraddress}</textarea>
+                    <button type='submit' id='btn4'>Изменить</button>
+                </form>
             </Route>
 
             <Route exact path={['/profile', '/profile/changeMail', '/profile/changePhone', '/profile/changeAddress']}>
