@@ -76,7 +76,7 @@ render() {
                     <NavLink to='#' className='nav_header' id='inside' activeClassName='active_header'>Что внутри</NavLink>
                     <NavLink to='#' className='nav_header' id='delivery' activeClassName='active_header'>Доставка</NavLink>
                     <NavLink to='#' className='nav_header' id='header_buy' activeClassName='active_header'>Заказать</NavLink>
-                    <p><a href='/profile/logout' className='nav_header' id='header_login'>Выйти</a></p>
+                    <NavLink to='/enter' className='nav_header' id='header_login'>Войти</NavLink>
                   </div>
 
            <div className='order'>
@@ -169,7 +169,7 @@ render() {
                     <NavLink to='#' className='nav_header' id='inside' activeClassName='active_header'>Что внутри</NavLink>
                     <NavLink to='#' className='nav_header' id='delivery' activeClassName='active_header'>Доставка</NavLink>
                     <NavLink to='#' className='nav_header' id='header_buy' activeClassName='active_header'>Заказать</NavLink>
-                    <p><a href='/profile/logout' className='nav_header' id='header_login'>Выйти</a></p>
+                    <NavLink to='/enter' className='nav_header' id='header_login'>Войти</NavLink>
                   </div>
 
 
@@ -261,7 +261,7 @@ render() {
                     <NavLink to='#' className='nav_header' id='inside' activeClassName='active_header'>Что внутри</NavLink>
                     <NavLink to='#' className='nav_header' id='delivery' activeClassName='active_header'>Доставка</NavLink>
                     <NavLink to='#' className='nav_header' id='header_buy' activeClassName='active_header'>Заказать</NavLink>
-                    <p><a href='/profile/logout' className='nav_header' id='header_login'>Выйти</a></p>
+                    <NavLink to='/enter' className='nav_header' id='header_login'>Войти</NavLink>
                   </div>
 
 

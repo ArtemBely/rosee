@@ -3,7 +3,7 @@ import React from 'react';
 function DeliveryIsFree() {
     return(
     <div className="DeliverySection">
-        <div className="DeliveryGrid">
+        <div className="DeliveryGrid" id="delId">
             <h2 className="DeliveryFree">Доставка</h2>
             <h3 className="DeliveryInMailBox">Доставляем в почтовый ящик</h3>
             <p className="DeliveryText1">Amet minim mollit non deserunt ullamco est

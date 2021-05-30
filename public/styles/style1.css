@@ -96,7 +96,9 @@ body {
 	color: #525252;
 	font-family: 'Roboto-Regular';
 	text-decoration:none;
+  cursor: pointer;
 }
+
 .wrap_cosmeticMasks {
   display: flex;
   justify-content: center;
@@ -152,6 +154,7 @@ body {
 	vertical-align: middle;
 	margin-top:-21px;
   transition: 0.5s;
+  cursor: pointer;
 }
 #masks_buy{
 	font-weight: 400;
@@ -198,6 +201,7 @@ body {
 }
 #inside {
   left: 17px;
+  cursor: pointer;
 }
 .every_p {
   font-size: 50px;

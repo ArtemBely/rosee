@@ -1,5 +1,6 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
+import { Link } from 'react-scroll';
 import rosee from '../../public/images/rosée.png';
 import $ from 'jquery';
 
@@ -96,8 +97,20 @@ componentDidMount() {
         <p className='wrap_allEvery'>
         <p className='masks_title' ref={this.every}>Еженедельная доставка <br/> косметических масок,<br/> отобранных вручную</p>
         <p className='masks_subtitle' ref={this.everyWeek}>Каждую неделю отправляем маски <br/> для ухода за кожей лица. Маски подбираем <br/> вручную, упаковываем в плотную бумагу. <br/>Отправка по всей России.</p>
-        <NavLink to='#' id='masks_order' ref={this.order}>Заказать</NavLink>
-            <NavLink to='#' id='masks_buy' ref={this.buy}>Купить в подарок</NavLink>
+        <Link activeClass="active"
+           id='masks_order'
+           to="buyImg"
+           spy={true}
+           smooth={true}
+           hashSpy={true}
+           duration={700}
+           isDynamic={true}
+           onSetActive={this.handleSetActive}
+           onSetInactive={this.handleSetInactive}
+           ignoreCancelEvents={false}
+           ref={this.order}>
+           Заказать</Link>
+        <NavLink to='#' id='masks_buy' ref={this.buy}>Купить в подарок</NavLink>
         </p>
             <div className='wrap_lottie'><div id='lottie-1' ref={this.animation}></div>
             </div>

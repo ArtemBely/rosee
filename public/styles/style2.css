@@ -5,6 +5,7 @@
 	grid-template-columns:10% 1fr 1fr 7%;
 	grid-column-gap:35px;
 	width: 1320px;
+	cursor: pointer;
 }
 .advantages_shop{
 	grid-column: 1 / 3;

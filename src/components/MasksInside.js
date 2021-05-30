@@ -11,7 +11,7 @@ import arrow2 from '../../public/images/Arrow 3.svg';
 function MasksInside() {
   return(
     <div className='wrap_inside'>
-      <div className='MasksInside'>
+      <div className='MasksInside' id='maskIn'>
     	<p></p>
   		<h3 className='inside_title'>Что внутри</h3>
   		<h4 className='inside_subtitle'>Такой конверт мы отправляем каждую <br/> неделю. Заказ приходит в почтовый ящик.</h4>

@@ -25,7 +25,7 @@ import mask18 from '../../public/images/Rectangle 254.svg';
 function Advantages() {
   return(
     <div className='wrap_advantages'>
-      <div className='advantages'>
+      <div className='advantages' id='advant'>
   		<div className='advantages_shop'>
   			<img src={shop} className='shop'/>
   			<h4 className='shop_title'>Покупать в магазинах косметики</h4>

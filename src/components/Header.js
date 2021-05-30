@@ -1,5 +1,6 @@
 import React from 'react';
 import { Route, NavLink } from 'react-router-dom';
+import { Link } from 'react-scroll';
 import rosee from '../../public/images/rosée.png';
 import cross from '../../public/images/Union.svg';
 
@@ -32,10 +33,58 @@ class Header extends React.Component{
         <div className='wrap_header'>
         <p className='wrap_rosee'><img src={rosee} className='header_logo'/></p>
         <p></p>
-        <NavLink to='#' className='nav_header' id='advantages' activeClassName='active_header'>Преимущества</NavLink>
-        <NavLink to='#' className='nav_header' id='inside' activeClassName='active_header'>Что внутри</NavLink>
-        <NavLink to='#' className='nav_header' id='delivery' activeClassName='active_header'>Доставка</NavLink>
-        <NavLink to='#' className='nav_header' id='header_buy' activeClassName='active_header'>Купить</NavLink>
+        <Link activeClass="active"
+            className='nav_header'
+            id='advantages'
+            to="advant"
+            spy={true}
+            smooth={true}
+            hashSpy={true}
+            duration={700}
+            isDynamic={true}
+            onSetActive={this.handleSetActive}
+            onSetInactive={this.handleSetInactive}
+            ignoreCancelEvents={false}>
+            Преимущества</Link>
+        <Link activeClass="active"
+            className='nav_header'
+            id='inside'
+            to="maskIn"
+            spy={true}
+            smooth={true}
+            hashSpy={true}
+            duration={700}
+            isDynamic={true}
+            onSetActive={this.handleSetActive}
+            onSetInactive={this.handleSetInactive}
+            ignoreCancelEvents={false}>
+            Что внутри</Link>
+         <Link activeClass="active"
+            className='nav_header'
+            id='delivery'
+            to="delId"
+            spy={true}
+            smooth={true}
+            hashSpy={true}
+            duration={700}
+            isDynamic={true}
+            onSetActive={this.handleSetActive}
+            onSetInactive={this.handleSetInactive}
+            ignoreCancelEvents={false}>
+            Доставка</Link>
+         <Link activeClass="active"
+            className='nav_header'
+            id='header_buy'
+            to="buyImg"
+            spy={true}
+            smooth={true}
+            hashSpy={true}
+            duration={700}
+            isDynamic={true}
+            onSetActive={this.handleSetActive}
+            onSetInactive={this.handleSetInactive}
+            ignoreCancelEvents={false}>
+            Купить</Link>
         <NavLink to='/enter' className='nav_header' id='header_login' activeClassName='active_header'>Войти</NavLink>
         </div>
 
