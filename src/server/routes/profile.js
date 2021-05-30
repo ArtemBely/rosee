@@ -4,6 +4,7 @@ import serialize from 'serialize-javascript';
 import { StaticRouter } from 'react-router-dom';
 import { renderToString } from 'react-dom/server';
 import Profile from '../../components/Profile';
+import User from '../models/User.js';
 import passport from 'passport';
 
 const router = express.Router();
@@ -58,6 +59,19 @@ router.post('/addressChange', (req, res, next) => {
   res.redirect('/profile');
 });
 
+router.post('/passChange', (req, res, next) => {
+    var user = req.user;
+    var newpass = req.body.password;
+    user.password = newpass;
+
+    user.save(function(err){
+        if (err) { next(err) }
+        else {
+          console.log(user);
+          res.redirect('/profile');
+        }
+    });
+});
 
 router.get('/logout', isLoggedIn, (req, res, next) => {
   req.logout();

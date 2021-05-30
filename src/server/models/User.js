@@ -15,11 +15,27 @@ const userSchema = new Schema({
    comments: {type: String},
    letter: {type: String}
 });
+userSchema.pre('save', function(next){
+    if (!this.isModified('password')) return next();
 
+    const user = this;
+    console.log(user);
+    bcrypt.genSalt(10, function(err, salt){
+        if (err){ return next(err) }
+
+        bcrypt.hash(user.password, salt, function(err, hash){
+            if(err){return next(err)}
+
+            user.password = hash;
+            next();
+        })
+   })
+});
 module.exports = mongoose.model('User', userSchema);
 module.exports.createUser = function(newUser, callback) {
 var bcrypt = require('bcryptjs');
 bcrypt.genSalt(10, function(err, salt) {
+
     bcrypt.hash(newUser.password, salt, function(err, hash) {
         newUser.password = hash;
         newUser.save(callback);

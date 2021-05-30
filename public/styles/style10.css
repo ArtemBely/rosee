@@ -1,4 +1,4 @@
-.add1, .add2, .add3, .add4 {
+.add1, .add2, .add3, .add4, .add5 {
   position: relative;
   background: transparent;
 }
@@ -17,6 +17,10 @@
 #add4f {
   grid-column: 3/4;
   grid-row: 2/6;
+}
+#add5f {
+  grid-column: 1 / 2;
+  grid-row: 3 / 4;
 }
 #bt1 {
   position: absolute;

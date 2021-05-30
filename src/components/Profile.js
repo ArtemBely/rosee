@@ -25,7 +25,7 @@ class Profile extends React.Component{
         <div className='wrap_userData'>
           <div className='userData'>
 
-            <Route exact path={['/profile', '/profile/changeMail', '/profile/changePhone', '/profile/changeAddress']}>
+            <Route exact path={['/profile', '/profile/changeMail', '/profile/changePhone', '/profile/changeAddress', '/profile/changePass']}>
               <p className='user_name'>{this.state.user.username}</p>
             </Route>
             <Route exact path='/profile/changeName'>
@@ -35,7 +35,7 @@ class Profile extends React.Component{
                </form>
             </Route>
 
-            <Route exact path={['/profile', '/profile/changeName', '/profile/changePhone', '/profile/changeAddress']}>
+            <Route exact path={['/profile', '/profile/changeName', '/profile/changePhone', '/profile/changeAddress', '/profile/changePass']}>
               <p className='user_email' id='user'>{this.state.user.email}</p>
             </Route>
             <Route exact path='/profile/changeMail'>
@@ -45,9 +45,17 @@ class Profile extends React.Component{
                 </form>
             </Route>
 
-            <p className='user_password' id='user'>Пароль: **************</p>
+            <Route exact path={['/profile', '/profile/changeName', '/profile/changePhone', '/profile/changeAddress', '/profile/changeMail']}>
+              <p className='user_password' id='user'>Пароль: **************</p>
+            </Route>
+            <Route exact path='/profile/changePass'>
+                <form action='/profile/passChange' method='POST' id='add5f'>
+                    <textarea className='user_password add5' name='password'></textarea>
+                    <button type='submit' id='btn5'>Изменить</button>
+                </form>
+            </Route>
 
-            <Route exact path={['/profile', '/profile/changeMail', '/profile/changeName', '/profile/changeAddress']}>
+            <Route exact path={['/profile', '/profile/changeMail', '/profile/changeName', '/profile/changeAddress', '/profile/changePass']}>
               <p className='user_phone' id='user'>{this.state.user.userphone}</p>
             </Route>
 
@@ -62,7 +70,7 @@ class Profile extends React.Component{
             <p className='user_card' id='user'>**** **** **** 5017</p>
             <p className='user_timestamp'>Следующая оплата: {this.state.user.timestamp}</p>
 
-            <Route exact path={['/profile', '/profile/changeMail', '/profile/changeName', '/profile/changePhone']}>
+            <Route exact path={['/profile', '/profile/changeMail', '/profile/changeName', '/profile/changePhone', '/profile/changePass']}>
               <p className='user_address' id='user'>{this.state.user.useraddress}</p>
             </Route>
 
@@ -73,23 +81,28 @@ class Profile extends React.Component{
                 </form>
             </Route>
 
-            <Route exact path={['/profile', '/profile/changeMail', '/profile/changePhone', '/profile/changeAddress']}>
+            <Route exact path={['/profile', '/profile/changeMail', '/profile/changePhone', '/profile/changeAddress', '/profile/changePass']}>
                 <NavLink to='/profile/changeName' className='change_name' id='change'>Изменить имя</NavLink>
             </Route>
             <Route exact path='/profile/changeName'>
                 <NavLink to='/profile' className='change_name' id='change'>Назад</NavLink>
             </Route>
 
-            <Route exact path={['/profile', '/profile/changeName', '/profile/changePhone', '/profile/changeAddress']}>
+            <Route exact path={['/profile', '/profile/changeName', '/profile/changePhone', '/profile/changeAddress', '/profile/changePass']}>
                 <NavLink to='/profile/changeMail' className='change_email' id='change'>Изменить почту</NavLink>
             </Route>
             <Route exact path='/profile/changeMail'>
                 <NavLink to='/profile' className='change_email' id='change'>Назад</NavLink>
             </Route>
 
-            <p className='change_password' id='change'>Изменить пароль</p>
+            <Route exact path={['/profile', '/profile/changeName', '/profile/changeMail', '/profile/changePhone', '/profile/changeAddress']}>
+                <NavLink to='/profile/changePass' className='change_password' id='change'>Изменить пароль</NavLink>
+            </Route>
+            <Route exact path='/profile/changePass'>
+                <NavLink to='/profile' className='change_password' id='change'>Назад</NavLink>
+            </Route>
 
-            <Route exact path={['/profile', '/profile/changeName', '/profile/changeMail', '/profile/changeAddress']}>
+            <Route exact path={['/profile', '/profile/changeName', '/profile/changeMail', '/profile/changeAddress', '/profile/changePass']}>
                 <NavLink to='/profile/changePhone' className='change_phone' id='change'>Изменить телефон</NavLink>
             </Route>
             <Route exact path='/profile/changePhone'>
@@ -99,7 +112,7 @@ class Profile extends React.Component{
             <p className='change_period' id='change'>Изменить период</p>
             <p className='change_card' id='change'>Изменить карту оплаты</p>
 
-            <Route exact path={['/profile', '/profile/changeName', '/profile/changeMail', '/profile/changePhone']}>
+            <Route exact path={['/profile', '/profile/changeName', '/profile/changeMail', '/profile/changePhone', '/profile/changePass']}>
                 <NavLink to='/profile/changeAddress' className='change_address' id='change'>Изменить адрес</NavLink>
             </Route>
             <Route exact path='/profile/changeAddress'>

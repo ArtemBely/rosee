@@ -21,7 +21,7 @@ const routes = [
   },
   {
     path: ['/profile', '/profile/changeName', '/profile/changeMail',
-     '/profile/changePhone', '/profile/changeAddress'],
+     '/profile/changePhone', '/profile/changeAddress', '/profile/changePass'],
     exact: true,
     component: Profile
   }

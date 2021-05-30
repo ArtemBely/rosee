@@ -116,6 +116,7 @@ function notLoggedIn(req, res, next) {
   res.redirect('/profile');
 }
 
+/*
 app.use((error, req, res, next) => {
   res.status(error.status);
 
@@ -125,12 +126,12 @@ app.use((error, req, res, next) => {
     stack: error.stack
   });
 });
+*/
 
-/*
 app.use((req, res, next) => {  //<-- заменить если появится непредвиденная ошибка
    const err = new Error ('Noooo');
      err.status = 404;
      next (err);
 });
-*/
-app.listen(port, () => {console.log('connected!')});
+
+app.listen(8888, () => {console.log('connected!')});
