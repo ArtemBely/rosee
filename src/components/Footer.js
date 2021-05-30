@@ -7,7 +7,7 @@ function Footer() {
     <footer className='wrap_Footer'>
       <div className='footer'>
   			<div className='wrap_footer_rosee'><img src={rosee} className='footer_logo'/></div>
-  				<a href='/https://docs.google.com/document/d/1d4pEXBZh_aXOMoJkhbtwu4klflWcsoBYGcFbIQUPdFg/edit' className='nav_footer' id='footer_offer'>Оферта</a>
+  				<a href='https://docs.google.com/document/d/1d4pEXBZh_aXOMoJkhbtwu4klflWcsoBYGcFbIQUPdFg/edit' className='nav_footer' id='footer_offer'>Оферта</a>
   				<NavLink to='#' className='nav_footer' id='footer_confidentiality' activeClassName='active_footer'>Политика конфиденциальности</NavLink>
   				<NavLink to='#' className='nav_footer' id='footer_sentence' activeClassName='active_footer'>Пользовательское предложение</NavLink>
 				<p className='nav_footer' id='footer_phone'>8 902 247 13 61</p>
