@@ -870,7 +870,7 @@ body {
 }
 
 .DeliverySection {
-    display: grid;
+    display: none;
     width: 100%;
     justify-content: center;
     position: absolute;
