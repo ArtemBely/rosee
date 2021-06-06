@@ -70,6 +70,7 @@
 	font-weight: 400;
 	margin-left: 286px;
 	margin-top: -60px;
+	font-family: 'Manrope-Regular';
 }
 .input_mail{
 	width: 460px;
@@ -81,7 +82,7 @@
 	font-size: 25px;
 	line-height: 41px;
 	color: #808080;
-	font-family: 'Manrope-Medium';
+	font-family: 'Manrope-Regular';
 	margin-left: 85px;
 	padding-left: 28px;
 	margin-bottom: 16px;
@@ -96,7 +97,7 @@
 	font-size: 25px;
 	line-height: 41px;
 	color: #808080;
-	font-family: 'Manrope-Medium';
+	font-family: 'Manrope-Regular';
 	margin-left: 85px;
 	margin-bottom: 22px;
 	padding-left: 28px;
@@ -113,7 +114,20 @@
 	border: none;
 	cursor: pointer;
 }
-
+.enter_text3{
+	font-family: 'Manrope-Regular';
+	font-size: 18px;
+	line-height: 25px;
+	margin-left: 85px;
+	margin-top: 77px;
+}
+.enter_text4{
+	font-family: 'Manrope-Regular';
+	font-size: 18px;
+	line-height: 25px;
+	cursor: pointer;
+	color: #000000;
+}
 .enter_button:focus{
 	background: #54854A;
 }

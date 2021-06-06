@@ -35,7 +35,7 @@ class Header extends React.Component{
         <NavLink to='#' className='nav_header' id='advantages' activeClassName='active_header'>Преимущества</NavLink>
         <NavLink to='#' className='nav_header' id='inside' activeClassName='active_header'>Что внутри</NavLink>
         <NavLink to='#' className='nav_header' id='delivery' activeClassName='active_header'>Доставка</NavLink>
-        <NavLink to='#' className='nav_header' id='header_buy' activeClassName='active_header'>Купить</NavLink>
+        <NavLink to='#' className='nav_header' id='header_buy' activeClassName='active_header'>Заказать</NavLink>
         <NavLink to='/enter' className='nav_header' id='header_login' activeClassName='active_header'>Войти</NavLink>
         </div>
 
@@ -48,6 +48,7 @@ class Header extends React.Component{
                     <input type='text' name='password' placeholder='Пароль' className="input_password" required/>
                     <button type='submit' className="enter_button">Войти</button>
                     <p className="enter_text2">Чтобы продолжить, введите <br/> номер телефона и пароль</p>
+                    <p className="enter_text3">Нет аккаунта? <br/> <NavLink to="#" className="enter_text4">Зарегистрироваться →</NavLink></p>
                     {this.errReg()}
                  </form>
                </div>

@@ -6,19 +6,10 @@ function DeliveryIsFree() {
         <div className="DeliveryGrid">
             <h2 className="DeliveryFree">Доставка</h2>
             <h3 className="DeliveryInMailBox">Доставляем в почтовый ящик</h3>
-            <p className="DeliveryText1">Amet minim mollit non deserunt ullamco est
-                sit aliqua dolor do amet sint. Velit officia
-                consequat duis enim velit mollit.
+            <p className="DeliveryText1">Мы отправляем посылки с помощью Почты России. Благодаря компактному размеру упаковки, срок доставки — от двух до семи дней.
             </p>
-            <h3 className="forRF">По всей РФ</h3>
-            <p className="DeliveryText2">Amet minim mollit non deserunt ullamco est
-                sit aliqua dolor do amet sint. Velit officia
-                consequat duis enim velit mollit.
-            </p>
-            <h3 className="Free">Бесплатно</h3>
-            <p className="DeliveryText3">Amet minim mollit non deserunt ullamco est
-                sit aliqua dolor do amet sint. Velit officia
-                consequat duis enim velit mollit.
+            <h3 className="forRF">Бесплатно по всей РФ</h3>
+            <p className="DeliveryText2">Бесплатная доставка масок каждую неделю для регулярного ухода за кожей лица, даже если живёте в удалённой части России.
             </p>
         </div>
     </div>
