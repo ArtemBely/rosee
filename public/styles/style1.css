@@ -32,7 +32,7 @@
     url('../../fonts/Manrope-Medium.woff') format('woff'),
     url('../../fonts/Manrope-Medium.ttf') format('truetype');
     font-weight: normal;
-    font-style: normal;
+    font-style: normal; 
 }
 @font-face {
   font-family: 'Manrope-Regular';
@@ -41,7 +41,7 @@
   url('../../fonts/Manrope-Regular.woff') format('woff'),
   url('../../fonts/Manrope-Regular.ttf') format('truetype');
   font-weight: normal;
-  font-style: normal;
+  font-style: normal; 
 }
 @font-face {
     font-family: 'Manrope-Bold';
@@ -104,9 +104,12 @@ body {
 	line-height: 34px;
 	color: #525252;
 	font-family: 'Roboto-Regular';
+<<<<<<< HEAD
 	text-decoration:none;
   cursor: pointer;
+=======
 	text-decoration-line: underline;
+>>>>>>> e0ae96235107b4524da82e43e331769bd17fb627
 }
 
 .wrap_cosmeticMasks {
@@ -164,8 +167,11 @@ body {
 	vertical-align: middle;
 	margin-top:-21px;
   transition: 0.5s;
+<<<<<<< HEAD
   cursor: pointer;
+=======
   font-family: 'Manrope-Regular';
+>>>>>>> e0ae96235107b4524da82e43e331769bd17fb627
 }
 #masks_buy{
 	font-weight: 400;

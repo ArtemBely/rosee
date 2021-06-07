@@ -32,7 +32,7 @@
     url(/fonts/Manrope-Medium.woff) format('woff'),
     url(/fonts/Manrope-Medium.ttf) format('truetype');
     font-weight: normal;
-    font-style: normal; 
+    font-style: normal;
 }
 @font-face {
   font-family: 'Manrope-Regular';
@@ -41,7 +41,7 @@
   url(/fonts/Manrope-Regular.woff) format('woff'),
   url(/fonts/Manrope-Regular.ttf) format('truetype');
   font-weight: normal;
-  font-style: normal; 
+  font-style: normal;
 }
 @font-face {
     font-family: 'Manrope-Bold';
@@ -104,12 +104,9 @@ body {
 	line-height: 34px;
 	color: #525252;
 	font-family: 'Roboto-Regular';
-<<<<<<< HEAD
 	text-decoration:none;
   cursor: pointer;
-=======
 	text-decoration-line: underline;
->>>>>>> e0ae96235107b4524da82e43e331769bd17fb627
 }
 
 .wrap_cosmeticMasks {
@@ -167,11 +164,8 @@ body {
 	vertical-align: middle;
 	margin-top:-21px;
   transition: 0.5s;
-<<<<<<< HEAD
   cursor: pointer;
-=======
   font-family: 'Manrope-Regular';
->>>>>>> e0ae96235107b4524da82e43e331769bd17fb627
 }
 #masks_buy{
 	font-weight: 400;
@@ -2554,55 +2548,6 @@ textarea{
 		grid-template-rows:50px 60px 120px 700px;
 		grid-row-gap:10px;
 	  	width: 992px;
-	}	
-	.MasksInside > *:nth-child(1){
-		-ms-grid-row:1;
-		-ms-grid-column:1;
-	}	.MasksInside > *:nth-child(2){
-		-ms-grid-row:1;
-		-ms-grid-column:2;
-	}  .MasksInside > *:nth-child(3){
-		-ms-grid-row:1;
-		-ms-grid-column:3;
-	} .MasksInside > *:nth-child(4){
-		-ms-grid-row:1;
-		-ms-grid-column:4;
-	}	.MasksInside > *:nth-child(5){
-		-ms-grid-row:3;
-		-ms-grid-column:1;
-	} .MasksInside > *:nth-child(6){
-		-ms-grid-row:3;
-		-ms-grid-column:2;
-	} .MasksInside > *:nth-child(7){
-		-ms-grid-row:3;
-		-ms-grid-column:3;
-	} .MasksInside > *:nth-child(8){
-		-ms-grid-row:3;
-		-ms-grid-column:4;
-	} .MasksInside > *:nth-child(9){
-		-ms-grid-row:5;
-		-ms-grid-column:1;
-	} .MasksInside > *:nth-child(10){
-		-ms-grid-row:5;
-		-ms-grid-column:2;
-	} .MasksInside > *:nth-child(11){
-		-ms-grid-row:5;
-		-ms-grid-column:3;
-	} .MasksInside > *:nth-child(12){
-		-ms-grid-row:5;
-		-ms-grid-column:4;
-	} .MasksInside > *:nth-child(13){
-		-ms-grid-row:7;
-		-ms-grid-column:1;
-	} .MasksInside > *:nth-child(14){
-		-ms-grid-row:7;
-		-ms-grid-column:2;
-	} .MasksInside > *:nth-child(15){
-		-ms-grid-row:7;
-		-ms-grid-column:3;
-	} .MasksInside > *:nth-child(16){
-		-ms-grid-row:7;
-		-ms-grid-column:4;
 	}
 	.MasksInside > *:nth-child(1){
 		-ms-grid-row:1;
@@ -2759,82 +2704,6 @@ textarea{
 		-ms-grid-rows:40px 15px 130px 15px 180px 15px 180px 15px 180px;
 		grid-template-rows:40px 130px repeat(3, 180px);
 		width: 992px;
-	}		
-	 .envelope > *:nth-child(1){
-		-ms-grid-row:1;
-		-ms-grid-column:1;
-	} .envelope > *:nth-child(2){
-		-ms-grid-row:1;
-		-ms-grid-column:3;
-	} .envelope > *:nth-child(3){
-		-ms-grid-row:1;
-		-ms-grid-column:5;
-	} .envelope > *:nth-child(4){
-		-ms-grid-row:1;
-		-ms-grid-column:7;
-	}	.envelope > *:nth-child(5){
-		-ms-grid-row:1;
-		-ms-grid-column:9;
-	}	.envelope > *:nth-child(6){
-		-ms-grid-row:3;
-		-ms-grid-column:1;
-	}	.envelope > *:nth-child(7){
-		-ms-grid-row:3;
-		-ms-grid-column:3;
-	} .envelope > *:nth-child(8){
-		-ms-grid-row:3;
-		-ms-grid-column:5;
-	}	.envelope > *:nth-child(9){
-		-ms-grid-row:3;
-		-ms-grid-column:7;
-	}	.envelope > *:nth-child(10){
-		-ms-grid-row:3;
-		-ms-grid-column:9;
-	}	.envelope > *:nth-child(11){
-		-ms-grid-row:5;
-		-ms-grid-column:1;
-	}	.envelope > *:nth-child(12){
-		-ms-grid-row:5;
-		-ms-grid-column:3;
-	}	.envelope > *:nth-child(13){
-		-ms-grid-row:5;
-		-ms-grid-column:5;
-	}	.envelope > *:nth-child(14){
-		-ms-grid-row:5;
-		-ms-grid-column:7;
-	}	.envelope > *:nth-child(15){
-		-ms-grid-row:5;
-		-ms-grid-column:9;
-	}	.envelope > *:nth-child(16){
-		-ms-grid-row:7;
-		-ms-grid-column:1;
-	}	.envelope > *:nth-child(17){
-		-ms-grid-row:7;
-		-ms-grid-column:3;
-	}	.envelope > *:nth-child(18){
-		-ms-grid-row:7;
-		-ms-grid-column:5;
-	}	.envelope > *:nth-child(19){
-		-ms-grid-row:7;
-		-ms-grid-column:7;
-	}	.envelope > *:nth-child(20){
-		-ms-grid-row:7;
-		-ms-grid-column:9;
-	}	.envelope > *:nth-child(21){
-		-ms-grid-row:9;
-		-ms-grid-column:1;
-	}	.envelope > *:nth-child(22){
-		-ms-grid-row:9;
-		-ms-grid-column:3;
-	} .envelope > *:nth-child(23){
-		-ms-grid-row:9;
-		-ms-grid-column:5;
-	} .envelope > *:nth-child(24){
-		-ms-grid-row:9;
-		-ms-grid-column:7;
-	} .envelope > *:nth-child(25){
-		-ms-grid-row:9;
-		-ms-grid-column:9;
 	}
 	 .envelope > *:nth-child(1){
 		-ms-grid-row:1;
@@ -3016,11 +2885,7 @@ textarea{
 		-webkit-box-pack: stretch;
 			 -ms-flex-pack: stretch;
 				  justify-content: stretch;
-<<<<<<< HEAD
 	 }
-=======
-	 } 
->>>>>>> e0ae96235107b4524da82e43e331769bd17fb627
 	   .DeliveryGrid > *:nth-child(1) {
 		-ms-grid-row: 1;
 		-ms-grid-column: 1;
@@ -3091,11 +2956,7 @@ textarea{
 		-ms-grid-rows: (1fr);
 		grid-template-rows: repeat(4, 1fr);
 		left: 0px;
-<<<<<<< HEAD
 	 }
-=======
-	 }   
->>>>>>> e0ae96235107b4524da82e43e331769bd17fb627
 	 .buyBlock > *:nth-child(1) {
 		-ms-grid-row: 1;
 		-ms-grid-column: 1;
@@ -3238,34 +3099,6 @@ textarea{
 		-ms-grid-rows:40px 19px 138px 19px 138px;
 		grid-template-rows:40px repeat(2, 138px);
 		width: 992px;
-	}	 
-	.promotions > *:nth-child(1){
-		-ms-grid-row:1;
-		-ms-grid-column:1;
-	}	 .promotions > *:nth-child(2){
-		-ms-grid-row:1;
-		-ms-grid-column:3;
-	}	 .promotions > *:nth-child(3){
-		-ms-grid-row:1;
-		-ms-grid-column:5;
-	}	 .promotions > *:nth-child(4){
-		-ms-grid-row:3;
-		-ms-grid-column:1;
-	}	 .promotions > *:nth-child(5){
-		-ms-grid-row:3;
-		-ms-grid-column:3;
-	}	 .promotions > *:nth-child(6){
-		-ms-grid-row:3;
-		-ms-grid-column:5;
-	}	 .promotions > *:nth-child(7){
-		-ms-grid-row:5;
-		-ms-grid-column:1;
-	}	 .promotions > *:nth-child(8){
-		-ms-grid-row:5;
-		-ms-grid-column:3;
-	}	 .promotions > *:nth-child(9){
-		-ms-grid-row:5;
-		-ms-grid-column:5;
 	}
 	.promotions > *:nth-child(1){
 		-ms-grid-row:1;
@@ -3365,16 +3198,6 @@ textarea{
 		margin-bottom:30px;
 		padding-top:400px;
 		width: 992px;
-	}	
-	.footer > *:nth-child(1){
-		-ms-grid-row:1;
-		-ms-grid-column:1;
-	}	.footer > *:nth-child(2){
-		-ms-grid-row:3;
-		-ms-grid-column:1;
-	}	.footer > *:nth-child(3){
-		-ms-grid-row:5;
-		-ms-grid-column:1;
 	}
 	.footer > *:nth-child(1){
 		-ms-grid-row:1;

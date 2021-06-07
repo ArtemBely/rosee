@@ -33,7 +33,6 @@ class Header extends React.Component{
         <div className='wrap_header'>
         <p className='wrap_rosee'><img src={rosee} className='header_logo'/></p>
         <p></p>
-<<<<<<< HEAD
         <Link activeClass="active"
             className='nav_header'
             id='advantages'
@@ -86,12 +85,12 @@ class Header extends React.Component{
             onSetInactive={this.handleSetInactive}
             ignoreCancelEvents={false}>
             Купить</Link>
-=======
+
         <NavLink to='#' className='nav_header' id='advantages' activeClassName='active_header'>Преимущества</NavLink>
         <NavLink to='#' className='nav_header' id='inside' activeClassName='active_header'>Что внутри</NavLink>
         <NavLink to='#' className='nav_header' id='delivery' activeClassName='active_header'>Доставка</NavLink>
         <NavLink to='#' className='nav_header' id='header_buy' activeClassName='active_header'>Заказать</NavLink>
->>>>>>> e0ae96235107b4524da82e43e331769bd17fb627
+
         <NavLink to='/enter' className='nav_header' id='header_login' activeClassName='active_header'>Войти</NavLink>
         </div>
 
@@ -103,12 +102,12 @@ class Header extends React.Component{
                     <input type='text' name='email' placeholder='Введите email' className="input_mail" required/>
                     <input type='text' name='password' placeholder='Пароль' className="input_password" required/>
                     <button type='submit' className="enter_button">Войти</button>
-<<<<<<< HEAD
+
                     <p className="enter_text2">Чтобы продолжить, введите <br/> email и пароль</p>
-=======
+
                     <p className="enter_text2">Чтобы продолжить, введите <br/> номер телефона и пароль</p>
                     <p className="enter_text3">Нет аккаунта? <br/> <NavLink to="#" className="enter_text4">Зарегистрироваться →</NavLink></p>
->>>>>>> e0ae96235107b4524da82e43e331769bd17fb627
+
                     {this.errReg()}
                  </form>
                </div>
