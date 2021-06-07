@@ -99,10 +99,20 @@ class Header extends React.Component{
                     <button type='submit' className="enter_button">Войти</button>
 
                     <p className="enter_text2">Чтобы продолжить, введите <br/> email и пароль</p>
-
-                    <p className="enter_text2">Чтобы продолжить, введите <br/> номер телефона и пароль</p>
-                    <p className="enter_text3">Нет аккаунта? <br/> <NavLink to="#" className="enter_text4">Зарегистрироваться →</NavLink></p>
-
+                    <p className="enter_text3">Нет аккаунта? <br/>
+                    <Link activeClass="active"
+                        className='enter_text4'
+                        to="blockBuy"
+                        spy={true}
+                        smooth={true}
+                        hashSpy={true}
+                        duration={700}
+                        isDynamic={true}
+                        onSetActive={this.handleSetActive}
+                        onSetInactive={this.handleSetInactive}
+                        ignoreCancelEvents={false}>
+                        Зарегистрироваться</Link>
+                     </p>
                     {this.errReg()}
                  </form>
                </div>

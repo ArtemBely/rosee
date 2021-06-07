@@ -54,7 +54,7 @@ dryChange = () => {
 render() {
   return(
     <div className='wrap_Buy'>
-      <div className='buyBlock'>
+      <div className='buyBlock' id='blockBuy'>
        <div className='wrap_skinImages' id='buyImg'>
         <img src={tree} id='tree' />
         <img src={face} id='face' />
