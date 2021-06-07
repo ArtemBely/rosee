@@ -684,6 +684,8 @@
 		top: 4250px;
    }
    .DeliveryGrid {
+		position: relative;
+		top: -25px;
 		width: 992px;
 		-ms-grid-rows: 50px 10px 50px 10px 150px;
 		grid-template-rows: 50px 50px 150px;
@@ -735,7 +737,7 @@
    .forRF {
 	  font-size: 18px;
 	  line-height: 25px;
-	  width: 110px;
+	  width: 210px;
    }
    .Free {
 	  font-size: 18px;
@@ -751,7 +753,7 @@
 		-ms-grid-row: 2;
 		-ms-grid-row-span: 1;
 		grid-row: 2/3;
-		margin-top: 30px;
+		margin-top: 58px;
 	}
 	.wrap_Buy {
 		top: -80px;

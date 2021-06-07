@@ -152,10 +152,19 @@
   top: -53px;
 }
 .forMyself {
-  color: #54854A !important;
-  border-bottom: 2px dashed;
   cursor: pointer;
   text-decoration: none;
+  background-image: linear-gradient(to right, #54854A 48%, rgba(255,255,255,0) 0%) !important;
+  background-position: bottom !important;
+  background-size: 36px 2px !important;
+  background-repeat: repeat-x !important;
+  color: #54854A !important;
+}
+.specDashed {
+  background-image: linear-gradient(to right, #5B5464 48%, rgba(255,255,255,0) 0%);
+  background-position: bottom;
+  background-size: 36px 2px;
+  background-repeat: repeat-x;
 }
 .typeOfSkin {
   font-weight: 700;
@@ -416,8 +425,11 @@
   top: 54px;
 }
 .presents {
-  border-bottom: 2px dashed;
   cursor: pointer;
   text-decoration: none;
   color: #5B5464;
+  background-image: linear-gradient(to right, #5B5464 48%, rgba(255,255,255,0) 0%);
+  background-position: bottom;
+  background-size: 36px 2px;
+  background-repeat: repeat-x;
 }

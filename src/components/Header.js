@@ -84,7 +84,7 @@ class Header extends React.Component{
             onSetActive={this.handleSetActive}
             onSetInactive={this.handleSetInactive}
             ignoreCancelEvents={false}>
-            Купить</Link>
+            Заказать</Link>
 
         <NavLink to='/enter' className='nav_header' id='header_login' activeClassName='active_header'>Войти</NavLink>
         </div>

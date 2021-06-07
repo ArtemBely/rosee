@@ -63,7 +63,7 @@ render() {
        <NavLink to='/' className='presents' activeClassName='forMyself' ref={this.forme} onClick={() => {
          this.forme.current.classList.contains('forMyself') ? null : this.forme.current.classList.add('forMyself')
        }}>для себя </NavLink>
-        или <NavLink exact to='/present' className='presents' activeClassName='forMyself' onClick={() => {
+        или <NavLink exact to='/present' className='presents specDashed' activeClassName='forMyself' onClick={() => {
           this.forme.current.classList.contains('forMyself') ? this.forme.current.classList.remove('forMyself') : null
         }}> в подарок </NavLink></p>
        <div className='chooseSecond'>
