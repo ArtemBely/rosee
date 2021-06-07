@@ -95,8 +95,9 @@ componentDidMount() {
       <div className='wrap_cosmeticMasks'>
         <div className='cosmeticMasks'>
         <p className='wrap_allEvery'>
-        <p className='masks_title' ref={this.every}>Еженедельная доставка <br/> косметических масок,<br/> отобранных вручную</p>
+        <p className='masks_title' ref={this.every}>Еженедельная доставка <br/> косметических масок,<br/> отобранных вручную.</p>
         <p className='masks_subtitle' ref={this.everyWeek}>Каждую неделю отправляем маски <br/> для ухода за кожей лица. Маски подбираем <br/> вручную, упаковываем в плотную бумагу. <br/>Отправка по всей России.</p>
+
         <Link activeClass="active"
            id='masks_order'
            to="buyImg"
@@ -111,6 +112,10 @@ componentDidMount() {
            ref={this.order}>
            Заказать</Link>
         <NavLink to='#' id='masks_buy' ref={this.buy}>Купить в подарок</NavLink>
+
+        <NavLink to='#' id='masks_order' ref={this.order}>Заказать</NavLink>
+            <NavLink to='#' id='masks_buy' ref={this.buy}>Купить в подарок.</NavLink>
+
         </p>
             <div className='wrap_lottie'><div id='lottie-1' ref={this.animation}></div>
             </div>
