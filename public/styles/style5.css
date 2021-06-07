@@ -1,5 +1,5 @@
 .DeliverySection {
-    display: none;
+    display: flex;
     width: 100%;
     justify-content: center;
     position: absolute;
@@ -35,6 +35,7 @@
     grid-column-gap: 160px;
     grid-row-gap: 13px;
     grid-template-rows: 86px 38px 160px;
+    grid-template-columns: 500px 500px;
 }
 .DeliveryFree {
   grid-column: 1/4;
