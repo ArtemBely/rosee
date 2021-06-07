@@ -1,5 +1,5 @@
 .wrap_Promotions{
-	display: flex;
+	display: none;
 	justify-content: center;
 	width: 100%;
 }
@@ -57,7 +57,7 @@
 	background: url('../images/Group 34.png') no-repeat center;
 	background-size: cover;
 	position: absolute;
-	margin-top: -200px;
+	margin-top: -100px;
 	justify-content: center;
 }
 .footer{
@@ -67,7 +67,7 @@
 	grid-template-rows: 43px 35px;
 	grid-column-gap:44px;
 	grid-row-gap: 30px;
-	margin-top:150px;
+	margin-top:270px;
 	margin-bottom:44px;
 	justify-items:center;
 	align-items:center;
@@ -131,9 +131,9 @@
 }
 .wrap_questions2 {
 	position: relative;
-  display: flex;
-  justify-content: center;
-  top: 150px;
+  	display: flex;
+  	justify-content: center;
+  	top: 450px;
 	z-index: 1;
 }
 .questions2 {
