@@ -86,11 +86,6 @@ class Header extends React.Component{
             ignoreCancelEvents={false}>
             Купить</Link>
 
-        <NavLink to='#' className='nav_header' id='advantages' activeClassName='active_header'>Преимущества</NavLink>
-        <NavLink to='#' className='nav_header' id='inside' activeClassName='active_header'>Что внутри</NavLink>
-        <NavLink to='#' className='nav_header' id='delivery' activeClassName='active_header'>Доставка</NavLink>
-        <NavLink to='#' className='nav_header' id='header_buy' activeClassName='active_header'>Заказать</NavLink>
-
         <NavLink to='/enter' className='nav_header' id='header_login' activeClassName='active_header'>Войти</NavLink>
         </div>
 

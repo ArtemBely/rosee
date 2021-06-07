@@ -112,10 +112,6 @@ componentDidMount() {
            ref={this.order}>
            Заказать</Link>
         <NavLink to='#' id='masks_buy' ref={this.buy}>Купить в подарок</NavLink>
-
-        <NavLink to='#' id='masks_order' ref={this.order}>Заказать</NavLink>
-            <NavLink to='#' id='masks_buy' ref={this.buy}>Купить в подарок.</NavLink>
-
         </p>
             <div className='wrap_lottie'><div id='lottie-1' ref={this.animation}></div>
             </div>
