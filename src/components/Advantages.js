@@ -21,10 +21,42 @@ import mask15 from '../../public/images/Rectangle 242.svg';
 import mask16 from '../../public/images/Rectangle 246.svg';
 import mask17 from '../../public/images/Rectangle 250.svg';
 import mask18 from '../../public/images/Rectangle 254.svg';
+import advantages from '../../public/images/Group 97 (1).svg';
 
 function Advantages() {
   return(
-    <div className='wrap_advantages'>
+   <div className='wrap_advantages'>
+		 <div className="advantages_phone">
+			 <div className="shop_advantages_phone">
+			 	<img src={advantages} className='advantages_phone_img'/> 
+			 </div>
+			 <NavLink to='#' className='advantages_phone_btn'>Оформить подписку</NavLink>
+		 </div>
+		 <div className="our_advantages_phone">
+			 <div className="advantages_phone_mask">
+			 	 <img src={mask1} className='advantages_phone_mask1'/> 
+				 <img src={mask5} className='advantages_phone_mask2'/> 
+				 <img src={mask9} className='advantages_phone_mask3'/> 
+				 <img src={mask6} className='advantages_phone_mask4'/> 
+				 <img src={mask8} className='advantages_phone_mask5'/> 
+			 </div>
+			 <p className="OA_phone_title">Получать маски по подписке проще и выгоднее</p>
+			 <p className="OA_phone_subtitle1">Доставка в почтовый ящик</p>
+			 <p className="OA_phone_text1">За новыми масками не нужно никуда ехать — отправляем комплекты масок по почте, заберёте их в почтовом ящике.</p>
+			 <p className="OA_phone_subtitle2">Регулярный уход за кожей лица</p>
+			 <p className="OA_phone_text2">Мы отправляем комплект масок один раз в неделю. Это позволит вам сделать уход за кожей лица доступным в любое время.</p>
+			 <p className="OA_phone_subtitle3">Доступнее, чем в магазине</p>
+			 <p className="OA_phone_text3">В месяц за 2490 рублей вы получите 16 масок. Это дешевле, чем покупать маски в магазине поштучно.</p>
+			 <p className="OA_phone_subtitle4">Маски разных брендов</p>
+			 <p className="OA_phone_text4">Маски в комплекте случайные. Вы познакомитесь с новыми производителями и вкусами.</p>
+			 <p className="OA_phone_subtitle5">Большое разнообразие масок</p>
+			 <p className="OA_phone_text5">Расширяем ассортимент, чтобы вы получали непохожие маски.</p>
+			 <img src={mask15} className='advantages_phone_mask6'/> 
+			 <img src={mask10} className='advantages_phone_mask7'/> 
+			 <img src={mask16} className='advantages_phone_mask8'/> 
+			 <img src={mask13} className='advantages_phone_mask9'/>
+			 <img src={mask17} className='advantages_phone_mask10'/>
+		 </div>
       <div className='advantages' id='advant'>
   		<div className='advantages_shop'>
   			<img src={shop} className='shop'/>
@@ -77,7 +109,7 @@ function Advantages() {
   			<NavLink to='#' className='advantages_btn' activeClassName='active_header'>Заказать с промокодом</NavLink>
   		</div>
       </div>
-    </div>
+   </div>
   )
 }
 
