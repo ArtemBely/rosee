@@ -95,7 +95,6 @@ app.get('*', notLoggedIn, (req, res, next) => {
                     <meta name="viewport" content="width=device-width, initial-scale=1">
                       <script src='/bundle.js' defer></script>
                         <script>window.__INITIAL_DATA__= ${serialize(data)}</script>
-
                                     <script>
                                     !function(f,b,e,v,n,t,s)
                                     {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
@@ -174,4 +173,4 @@ app.use((req, res, next) => {  //<-- заменить если появится 
      next (err);
 });
 
-app.listen(port, () => {console.log('connected!')});
+app.listen(8888, () => {console.log('connected!')});
