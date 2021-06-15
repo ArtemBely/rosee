@@ -4432,12 +4432,23 @@ textarea{
 }
 
 @media (min-width: 320px) and (max-width: 375px) {
+  body {
+      -moz-transform: scale(0.9, 0.9); /* Moz-browsers */
+      zoom: 0.9; /* Other non-webkit browsers */
+      zoom: 90%; /* Webkit browsers */
+  }
+}
+
+@media (min-width: 320px) and (max-width: 576px) {
   .wrap_header{
     grid-template-columns:55px 80px;
     grid-column-gap:200px;
     margin-top:50px;
     width: 375px;
     height: 50px;
+  }
+  .wrap_rosee {
+    grid-column: 1 / 2;
   }
   .nav_header{
    display: none;
@@ -4462,13 +4473,14 @@ textarea{
     position: relative;
     grid-column: 1/2;
     grid-row:1/2;
-    margin-top: -625px;
+    margin-top: -774px;
     margin-left: 20px;
   }
   .wrap_allEvery {
     grid-column: 1/2;
     grid-row: 2/3;
     width: 325px;
+    position: relative;
   }
   .masks_title{
     grid-column:1/2;
@@ -4478,9 +4490,11 @@ textarea{
     width: 325px;
     margin: 0;
     margin-left: 20px;
+    position: relative;
+    top: -148px;
   }
   .masks_subtitle{
-    top: 0;
+    top: -144px;
     grid-column:1/2;
     grid-row:3/4;
     width: 283px;
@@ -4508,7 +4522,7 @@ textarea{
     box-sizing: border-box;
     cursor: pointer;
     color: #ffffff;
-    margin-top: 257px;
+    margin-top: 274px;
     margin-left: 20px;
   }
   #masks_buy{
@@ -4531,7 +4545,7 @@ textarea{
     margin-left:20px;
   }
   .advantages_phone{
-    margin-top: -900px;
+    margin-top: -749px;
     display: grid;
     grid-template-columns: 335px;
     grid-template-rows: 900px;
@@ -4542,6 +4556,7 @@ textarea{
   .shop_advantages_phone{
     grid-row: 1/2;
     grid-column: 1/2;
+    top: 166px;
   }
   .advantages_phone_btn{
     grid-row: 1/2;
@@ -4564,13 +4579,14 @@ textarea{
     margin-top: 839px;
   }
   .our_advantages_phone{
-    margin-top: 100px;
+    margin-top: 256px;
     display: grid;
     grid-template-columns: 350px;
     grid-template-rows: 216px 62px 130px 130px 104px 104px 78px;
     grid-row-gap:35px ;
     width: 375px;
     position: absolute;
+    left: -2px;
   }
   .advantages_phone_mask{
     grid-row: 1/2;
@@ -4753,6 +4769,9 @@ textarea{
     height: 99px;
     overflow: hidden;
   }
+  #app {
+    overflow-x: hidden;
+  }
   .MasksInside{
     margin-top:1220px;
     margin-left: 20px;
@@ -4766,6 +4785,13 @@ textarea{
     height: 1020px;
     background: #D9EED4;
     border-radius: 20px;
+  }
+  .wrap_inside {
+    overflow: hidden;
+    top: -220px;
+  }
+  .wrapMain_Envelope {
+    top: -220px;
   }
   .inside_title{
     grid-column:1/2;
@@ -5025,9 +5051,12 @@ textarea{
     grid-row:5/6;
     margin-left: -584px;
     margin-top: -184px;
+    width: 47px;
+    height: 62px;
   }
   .DeliverySection {
-    top: 4710px;
+    top: -120px;
+    position: relative;
   }
   .DeliveryGrid {
     width: 335px;
@@ -5083,7 +5112,7 @@ textarea{
     width: 295px;
   }
   .wrap_Buy {
-    top: 430px;
+    top: -17px;
   }
   .buyBlock {
     width: 375px;
@@ -5276,7 +5305,7 @@ textarea{
     width: 50px;
   }
   .wrap_questions2 {
-    top: 550px;
+    top: 104px;
     margin-left: 20px;
   }
   .questions2 {
@@ -5352,7 +5381,7 @@ textarea{
     background: url(/1cdf580ddbd2ba8f10221a72f33bc073.svg) no-repeat center;
     background-size: cover;
     position: absolute;
-    margin-top: 130px;
+    margin-top: -450px;
     justify-content: center;
   }
   .footer{
