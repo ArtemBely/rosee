@@ -1,6 +1,7 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
 import { Link } from 'react-scroll';
+import mask from '../../public/images/Mask Group 1.svg';
 import rosee from '../../public/images/rosée.png';
 import $ from 'jquery';
 
@@ -95,8 +96,12 @@ componentDidMount() {
       <div className='wrap_cosmeticMasks'>
         <div className='cosmeticMasks'>
         <p className='wrap_allEvery'>
-        <p className='masks_title' ref={this.every}>Еженедельная доставка <br/> косметических масок,<br/> отобранных вручную.</p>
+        <p className='masks_title' ref={this.every}>Еженедельная доставка <br/> косметических масок,<br/> отобранных вручную</p>
         <p className='masks_subtitle' ref={this.everyWeek}>Каждую неделю отправляем маски <br/> для ухода за кожей лица. Маски подбираем <br/> вручную, упаковываем в плотную бумагу. <br/>Отправка по всей России.</p>
+        <div className='mask_phone'>
+			    <img src={mask} className='phone_mask'/>
+		    </div>
+        <NavLink to='#' id='masks_sub_phone'>Оформить подписку</NavLink>
 
         <Link activeClass="active"
            id='masks_order'

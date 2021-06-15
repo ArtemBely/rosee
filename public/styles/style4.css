@@ -50,6 +50,9 @@
 	line-height: 38px;
 	color: #000000;
 }
+.envelope_subtitle_phone{
+	display: none;
+}
 .wrapEN_mask1{
 	grid-column:1/2;
 	grid-row:3/4;

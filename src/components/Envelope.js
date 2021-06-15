@@ -22,7 +22,8 @@ function Envelope() {
       <div className='envelope'>
 		<h3 className='envelope_title'>Какие маски в конверте</h3>
 		<p className='envelope_subtitle'>В одном конверте — четыре случайные маски.<br/> Мы подбираем их так, чтобы они подходили <br/> под ваш тип кожи лица. Не работаем с контрабандой,<br/> привозим маски только через поставщиков-партнёров.</p>
-		
+		<p className='envelope_subtitle_phone'>В одном конверте — четыре случайные маски. Мы подбираем их под ваш тип кожи лица.</p>
+	
 		<div className='wrapEN_mask1'>
 			<img src={mask1} className='envelope_mask1'/>
 		</div>
