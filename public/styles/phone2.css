@@ -1,0 +1,20 @@
+@media (min-width: 576px) and (max-width: 767px) {
+  body {
+      -moz-transform: scale(1.6, 1.6); /* Moz-browsers */
+      zoom: 1.6; /* Other non-webkit browsers */
+      zoom: 160%; /* Webkit browsers */
+  }
+  .footer {
+      margin-top: 191px !important;
+  }
+}
+@media (min-width: 768px) and (max-width: 769px) {
+  .inside_text2 {
+     margin-top: 75px !important;
+     width: 329px !important;
+  }
+  .inside_mask3 {
+    top: 93px !important;
+    left: 428px !important;
+  }
+}

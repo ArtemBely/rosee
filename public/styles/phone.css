@@ -6,7 +6,7 @@
   }
 }
 
-@media (min-width: 320px) and (max-width: 576px) {
+@media (min-width: 320px) and (max-width: 769px) {
   .wrap_header{
     grid-template-columns:55px 80px;
     grid-column-gap:200px;
@@ -147,13 +147,15 @@
   }
   .our_advantages_phone{
     margin-top: 256px;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
     display: grid;
     grid-template-columns: 350px;
     grid-template-rows: 216px 62px 130px 130px 104px 104px 78px;
     grid-row-gap:35px ;
     width: 375px;
     position: absolute;
-    left: -2px;
   }
   .advantages_phone_mask{
     grid-row: 1/2;
@@ -338,6 +340,8 @@
   }
   #app {
     overflow-x: hidden;
+    overflow-y: clip;
+    height: 6700px;
   }
   .MasksInside{
     margin-top:1220px;
@@ -502,7 +506,7 @@
     margin-top:100px;
     grid-template-columns:335px;
     grid-template-rows:30px 98px 157px 107px 65px;
-    width: 375px;
+    width: 335px;
     margin-left: 14px;
     grid-gap: 10px;
     overflow: hidden;
@@ -876,7 +880,7 @@
     margin-left: 20px;
   }
   .questions2 {
-    width: 375px;
+    width: 351px;
     grid-template-columns: 335px;
     grid-template-rows: 145px 355px;
     grid-row-gap: 16px;
@@ -945,10 +949,10 @@
   .wrap_Footer{
     display: flex;
     width: 100%;
-    background: url('../images/Без имени-2 2.svg') no-repeat center;
+    background: url('../images/Без имени-2 2.svg') no-repeat -52px 211px;
     background-size: cover;
     position: absolute;
-    margin-top: -450px;
+    margin-top: -402px;
     justify-content: center;
   }
   .footer{
@@ -956,13 +960,13 @@
     grid-template-rows: 36px 60px repeat(2, 26px) 64px 200px;
     grid-column-gap:0px;
     grid-row-gap: 10px;
-    margin-top:160px;
+    margin-top:248px;
     margin-bottom:47px;
     justify-items:center;
     align-items:center;
     padding-top:400px;
-    width: 375px;
-    height: 590px;
+    width: 351px;
+    height: 347px;
   }
   .wrap_footer_rosee{
     grid-column:1/2;
