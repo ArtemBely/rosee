@@ -6,7 +6,7 @@
   }
 }
 
-@media (min-width: 320px) and (max-width: 769px) {
+@media (min-width: 320px) and (max-width: 576px) {
   .wrap_header{
     grid-template-columns:55px 80px;
     grid-column-gap:200px;
@@ -124,6 +124,9 @@
     grid-row: 1/2;
     grid-column: 1/2;
     top: 166px;
+  }
+  .shop_advantages_phone2{
+    display: none;
   }
   .advantages_phone_btn{
     grid-row: 1/2;

@@ -15,8 +15,8 @@
 		float: none;
 	}
 	 .nav_header{
-		 font-size: 16px;
-		 line-height: 26px;
+		 font-size: 18px;
+		 line-height: 29px;
 		 color: #525252;
 		 cursor: pointer;
 	 }
@@ -955,7 +955,7 @@
 		width: 992px;
 		-ms-grid-columns: 350px 70px 413px;
 		grid-template-columns: 350px 413px;
-		grid-column-gap: 70px;
+		grid-column-gap: 100px;
 	}
 	.questions_name{
 		width: 413px;
@@ -998,6 +998,7 @@
 		font-size: 18px;
 		line-height: 29px;
 		top: -15px;
+		width: 326px;
 	}
 	.footer{
 		-ms-grid-columns:900px;

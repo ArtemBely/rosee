@@ -22,6 +22,7 @@ import mask16 from '../../public/images/Rectangle 246.svg';
 import mask17 from '../../public/images/Rectangle 250.svg';
 import mask18 from '../../public/images/Rectangle 254.svg';
 import advantages from '../../public/images/Group 97 (1).svg';
+import advantages2 from '../../public/images/Group 126.svg';
 
 function Advantages() {
   return(
@@ -29,6 +30,9 @@ function Advantages() {
 		 <div className="advantages_phone">
 			 <div className="shop_advantages_phone">
 			 	<img src={advantages} className='advantages_phone_img'/> 
+			 </div>
+			 <div className="shop_advantages_phone2">
+			 	<img src={advantages2} className='advantages_phone_img2'/> 
 			 </div>
 			 <NavLink to='#' className='advantages_phone_btn'>Оформить подписку</NavLink>
 		 </div>
