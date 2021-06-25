@@ -17,14 +17,31 @@ class Profile extends React.Component{
     this.state = {
       user
     }
+    this.cancel = React.createRef();
+  }
+
+  closeCancel = () => {
+    if(this.cancel.current.classList.contains('openSubs')) {
+        this.cancel.current.classList.remove('openSubs')
+        this.cancel.current.classList.add('closeSubs');
+    }
+  }
+  openCancel = () => {
+      this.cancel.current.classList.add('openSubs');
   }
 
   userData = () => {
     if(this.state && this.state.user) {
       return (
         <div className='wrap_userData'>
+         <div className='wrap_cancel'>
+              <div className='cancel2' ref={this.cancel}>
+                 <p className='sure_cancel'>Уверенны, что хотите отписаться?</p>
+                 <a href='/profile/cancel' id='cancel_yes'><p>Да</p></a>
+                 <p id='cancel_no' onClick={this.closeCancel}>Нет</p>
+               </div>
+           </div>
           <div className='userData'>
-
             <Route exact path={['/profile', '/profile/changeMail', '/profile/changePhone', '/profile/changeAddress', '/profile/changePass']}>
               <p className='user_name'>{this.state.user.username}</p>
             </Route>
@@ -119,7 +136,7 @@ class Profile extends React.Component{
                 <NavLink to='/profile' className='change_address' id='change'>Назад</NavLink>
             </Route>
 
-            <p className='cancel_sub'>Отменить подписку</p>
+            <p className='cancel_sub' onClick={this.openCancel}>Отменить подписку</p>
           </div>
           <div className='rating'>
             <h3 className='rating_title'>Оцените вероятность того, что <br/> порекомендуете нас друзьям:</h3>

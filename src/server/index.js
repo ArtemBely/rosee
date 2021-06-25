@@ -141,6 +141,7 @@ app.get('*', notLoggedIn, (req, res, next) => {
                      ${markup}
                    </div>
                   <script src='https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.5.0/lottie.js'></script>
+                  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
                 </body>
             </html>`;
 
@@ -155,7 +156,7 @@ function notLoggedIn(req, res, next) {
   res.redirect('/profile');
 }
 
-/*
+
 app.use((error, req, res, next) => {
   res.status(error.status);
 
@@ -165,12 +166,12 @@ app.use((error, req, res, next) => {
     stack: error.stack
   });
 });
-*/
 
+/*
 app.use((req, res, next) => {  //<-- заменить если появится непредвиденная ошибка
    const err = new Error ('Noooo');
      err.status = 404;
      next (err);
-});
+});*/
 
 app.listen(8888, () => {console.log('connected!')});

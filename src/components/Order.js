@@ -2,6 +2,8 @@ import React from 'react';
 import { Route, NavLink } from 'react-router-dom';
 import rosee from '../../public/images/rosée.png';
 import Footer from './Footer';
+import { findIp } from './fetchData';
+import axios from 'axios';
 
 class Order extends React.Component{
 
@@ -23,8 +25,24 @@ class Order extends React.Component{
       error,
       typeOfSkin,
       success,
-      repeat
+      repeat,
+      ipAddress: 'example'
     }
+  }
+
+  async componentDidMount() {
+       await axios.get('https://api.ipify.org/?format=json')
+      .then(res => {
+        let data = res.data;
+        let currentIp = data.ip;
+        this.setState({ ipAddress: currentIp });
+        setTimeout(() => {
+          console.log(this.state.ipAddress);
+        }, 300)
+        //console.log(currentIp);
+        return currentIp;
+      })
+      .catch(err => console.log(err))
   }
 
 errF = () => {
@@ -104,6 +122,8 @@ render() {
              <input type='hidden' name='timestamp' />
              <input type='hidden' name='adminComment' />
 
+             <input type='hidden' name='ipAddress' value={this.state.ipAddress} />
+
              <div className='radio'>
                <input type='radio' name='letter' className='radio_input' id='radio1'/>
                <label htmlFor='radio1' className='radio_label'>Получать письма с акциями</label>
@@ -128,7 +148,7 @@ render() {
                </Route>
 
                <Route path={['/order/everyMonth', '/order/everyMonthCombi', '/order/everyMonthFat', '/order/everyMonthDry']}>
-                 <p className='wrap_or'><a href='https://pay.fondy.eu/s/A5qqFUTrtDV0J'>
+                 <p className='wrap_or'><a href='https://pay.fondy.eu/s/PI3dMfrP'>
                    <button type='submit' id='order_arrange'>Оформить</button>
                  </a></p>
                </Route>

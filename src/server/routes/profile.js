@@ -1,5 +1,6 @@
 import React from 'react';
 import express from 'express';
+import mongoose from 'mongoose';
 import serialize from 'serialize-javascript';
 import { StaticRouter } from 'react-router-dom';
 import { renderToString } from 'react-dom/server';
@@ -103,7 +104,6 @@ router.post('/passChange', (req, res, next) => {
     var user = req.user;
     var newpass = req.body.password;
     user.password = newpass;
-
     user.save(function(err){
         if (err) { next(err) }
         else {
@@ -112,7 +112,15 @@ router.post('/passChange', (req, res, next) => {
         }
     });
 });
-
+router.get('/cancel', (req, res, next) => {
+  var user = req.user;
+  user.cancel = 'yes';
+  user.save(function(err) {
+    if (err) throw err;
+    console.log(user);
+    res.redirect('/profile');
+  });
+});
 router.get('/logout', isLoggedIn, (req, res, next) => {
   req.logout();
   res.redirect('/');
