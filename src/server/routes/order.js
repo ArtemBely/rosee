@@ -2,6 +2,7 @@ import React from 'react';
 import serialize from 'serialize-javascript';
 import passport from 'passport';
 import mongoose from 'mongoose';
+import axios from 'axios';
 import { StaticRouter } from 'react-router-dom';
 import { renderToString } from 'react-dom/server';
 import Order from '../../components/Order';
@@ -20,7 +21,9 @@ passport.deserializeUser(function(id, done) {
   });
 });
 
-router.get(['/everyMonth', '/halfYear', 'everyYear', '/'], notLoggedIn, (req, res) => {
+router.get(['/everyMonth', '/everyMonthCombi', '/everyMonthFat', '/everyMonthDry',
+'/halfYear', '/halfYearCombi', '/halfYearFat', '/halfYearDry',
+'/everyYear', '/everyYearCombi', '/everyYearFat', '/everyYearDry', '/'], notLoggedIn, async (req, res) => {
   const buy = renderToString(
     <StaticRouter>
        <Order />
@@ -84,9 +87,10 @@ router.get(['/everyMonth', '/halfYear', 'everyYear', '/'], notLoggedIn, (req, re
     );
 });
 
-router.post(['/', '/everyMonth', '/everyYear', '/halfYear'], (req, res, done) => {
+router.post(['/', '/everyMonth', '/everyYear', '/halfYear'], async (req, res, done) => {
+
   var {
-         username, userphone, email, timestamp, adminComment, letter, useraddress,
+         username, userphone, email, ipAddress, timestamp, adminComment, letter, useraddress,
          comments, password, typeOfSkin, typeOfPayment
       } = req.body;
 
@@ -254,7 +258,9 @@ var newUser = new User({
   typeOfPayment: typeOfPayment,
   typeOfSkin: typeOfSkin,
   comments: comments,
-  letter: letter
+  letter: letter,
+  ipAddress: ipAddress,
+  cancel: 'no'
 });
 
 User.createUser(newUser, function(err, user) {
@@ -263,13 +269,23 @@ User.createUser(newUser, function(err, user) {
 });
 
 const cond = req.isAuthenticated();
-const indicate = 'Вы успешно зарегестрировались и теперь можете войти в личный кабинет!';
+/*const indicate = 'Вы успешно зарегестрировались и теперь можете войти в личный кабинет!';
 const they = renderToString(
       <StaticRouter>
          <Order />
       </StaticRouter>
-    )
-    res.send(
+    )*/
+      console.log(req.originalUrl);
+      if(req.originalUrl == '/order/halfYear') {
+        res.redirect('https://pay.fondy.eu/s/OnCUN8IoAFd');
+      }
+      if(req.originalUrl == '/order/everyMonth') {
+        res.redirect('https://pay.fondy.eu/s/PI3dMfrP');
+      }
+      if(req.originalUrl == '/order/everyYear') {
+        res.redirect('https://pay.fondy.eu/s/BQo3bkVg');
+      }
+    /*res.send(
       `<!DOCTYPE html>
             <html>
                 <head>
@@ -327,7 +343,7 @@ const they = renderToString(
               </body>
         </html>
       `
-    )
+    );*/
   });
 });
 

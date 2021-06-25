@@ -13,13 +13,14 @@ const userSchema = new Schema({
    typeOfPayment: {type: String, required: true},
    typeOfSkin: {type: String},
    comments: {type: String},
-   letter: {type: String}
+   letter: {type: String},
+   ipAddress: {type: String},
+   cancel: {type: String}
 });
 userSchema.pre('save', function(next){
-    if (!this.isModified('password')) return next();
+    var user = this;
+    if (!this.isModified('password') || this.isNew) return next();
 
-    const user = this;
-    console.log(user);
     bcrypt.genSalt(10, function(err, salt){
         if (err){ return next(err) }
 
@@ -27,6 +28,7 @@ userSchema.pre('save', function(next){
             if(err){return next(err)}
 
             user.password = hash;
+            console.log(user);
             next();
         })
    })
@@ -42,7 +44,6 @@ bcrypt.genSalt(10, function(err, salt) {
     });
   });
 }
-
 module.exports.comparePassword = function(candidatePassword, hash, callback) {
   bcrypt.compare(candidatePassword, hash, function(err, isMatch) {
     if (err) throw err;
