@@ -96,7 +96,7 @@ render() {
               </NavLink>
             </p>
             <p className='newPrice'><b className='priceNew'>2490.-</b><p className='month1'>в месяц</p></p>
-            <div className='oldPrice' style={{opacity: 0}}>3990</div>
+            <div className='oldPrice'>3990</div>
           </Route>
           <Route exact path='/half'>
             <p className='makePayment'>

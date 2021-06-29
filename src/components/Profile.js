@@ -2,7 +2,6 @@ import React from 'react';
 import { NavLink, Route } from 'react-router-dom';
 import rosee from '../../public/images/rosée.png';
 import rosee2 from '../../public/images/rosée2.png';
-import Footer from './Footer';
 
 class Profile extends React.Component{
 
@@ -18,6 +17,9 @@ class Profile extends React.Component{
       user
     }
     this.cancel = React.createRef();
+    this.cls1 = React.createRef();
+    this.cls2 = React.createRef();
+    this.cls3 = React.createRef();
   }
 
   closeCancel = () => {
@@ -28,6 +30,18 @@ class Profile extends React.Component{
   }
   openCancel = () => {
       this.cancel.current.classList.add('openSubs');
+  }
+  rot = () => {
+    if(!this.cls1.current.classList.contains('trans1')) {
+      this.cls1.current.classList.add('trans1');
+      this.cls3.current.classList.add('trans2');
+      this.cls2.current.classList.add('disappear');
+    }
+    else {
+      this.cls1.current.classList.remove('trans1');
+      this.cls3.current.classList.remove('trans2');
+      this.cls2.current.classList.remove('disappear');
+    }
   }
 
   userData = () => {
@@ -208,18 +222,35 @@ class Profile extends React.Component{
     return (
       <div>
         <div className='wrapMain_header'>
-          <div className='wrap_header'>
-            <p className='wrap_rosee'><img src={rosee} className='header_logo'/></p>
+          <div className='wrap_header specialHead'>
+            <p className='wrap_rosee wrap_roseeProf'><img src={rosee} className='header_logo header_logoProf'/></p>
+            <div className='cls clsProf' onClick={this.rot}>
+                <span className='partOfCls' id='cls1' ref={this.cls1}></span>
+                <span className='partOfCls' id='cls2' ref={this.cls2}></span>
+                <span className='partOfCls' id='cls3' ref={this.cls3}></span>
+            </div>
             <p></p>
-            <NavLink to='#' className='nav_header' id='advantages' activeClassName='active_header'>Преимущества</NavLink>
-            <NavLink to='#' className='nav_header' id='inside' activeClassName='active_header'>Что внутри</NavLink>
-            <NavLink to='#' className='nav_header' id='delivery' activeClassName='active_header'>Доставка</NavLink>
-            <NavLink to='#' className='nav_header' id='header_buy' activeClassName='active_header'>Заказать</NavLink>
-            <p><a href='/profile/logout' className='nav_header' id='header_login'>Выйти</a></p>
+            <NavLink to='#' className='nav_header adv' id='advantages' activeClassName='active_header'>Преимущества</NavLink>
+            <NavLink to='#' className='nav_header whatIns' id='inside' activeClassName='active_header'>Что внутри</NavLink>
+            <NavLink to='#' className='nav_header del' id='delivery' activeClassName='active_header'>Доставка</NavLink>
+            <NavLink to='#' className='nav_header ord' id='header_buy' activeClassName='active_header'>Заказать</NavLink>
+            <p><a href='/profile/logout' className='nav_header ex' id='header_login'>Выйти</a></p>
             {this.userData()}
            </div>
          </div>
-        <p className='wrap_prof_footer'><Footer /></p>
+        <p className='wrap_prof_footer'>
+            <footer className='wrap_Footer'>
+              <div className='footer specProfFoot'>
+                <div className='wrap_footer_rosee'><img src={rosee2} className='footer_logo'/></div>
+                  <a href='https://docs.google.com/document/d/1d4pEXBZh_aXOMoJkhbtwu4klflWcsoBYGcFbIQUPdFg/edit' className='nav_footer' id='footer_offer'>Оферта</a>
+                  <a href='https://docs.google.com/document/d/1IcFeUEIdDZ6cU6kjTjYtYONfeamZvNOqsNXBeH7hl2k/edit' className='nav_footer' id='footer_confidentiality'>Политика конфиденциальности</a>
+                  <a href='https://docs.google.com/document/d/1EiJUgz1JSZKRvfzWYJpWcdhlXHZHRAF6xbwm0qXSqLs/edit' className='nav_footer' id='footer_sentence'>Пользовательское предложение</a>
+                <p className='nav_footer' id='footer_phone'>8 902 247 13 61</p>
+                <p className='nav_footer' id='footer_email'>hi@rosee.ws</p>
+                <p className='nav_footer' id='footer_information'><p className="information_1">ИП Поветьев Кирилл Владимирович</p> <p className="information_2">ИНН 562903440350</p> <p className="information_3">ОГРН 320565800048044</p></p>
+              </div>
+            </footer>
+        </p>
       </div>
     )
   }

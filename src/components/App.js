@@ -13,9 +13,11 @@ import '../../public/styles/style9.css';
 import '../../public/styles/style10.css';
 import '../../public/styles/tablet.css';
 import '../../public/styles/tablet2.css';
+import '../../public/styles/tablet3.css';
 import '../../public/styles/phone.css';
 import '../../public/styles/phone2.css';
 import '../../public/styles/phone3.css';
+import '../../public/styles/phone4.css';
 
 class App extends React.Component {
   render() {

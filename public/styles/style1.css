@@ -88,6 +88,66 @@ body {
   width: 1320px;
   height: 50px;
 }
+.cls {
+  display: none;
+}
+.specialHead {
+  margin-left: 648px !important;
+  margin-top: -25px !important;
+}
+.clsProf {
+  display: grid !important;
+}
+.wrap_roseeProf {
+  position: relative;
+  left: 107px;
+  top: 63px;
+}
+.adv {
+  position: relative;
+  left: -788px !important;
+  top: 20px;
+}
+.whatIns {
+  position: relative;
+  left: 868px !important;
+  top: -14px;
+}
+.del {
+  width: 73px;
+  position: relative;
+  left: 941px !important;
+  top: -14px;
+}
+.ord {
+  top: -14px;
+  position: relative;
+  left: -215px !important;
+  width: 69px;
+}
+.ex {
+  position: relative;
+  left: 1363px !important;
+  top: -64px;
+}
+.nav_header_order {
+  font-size: 21px;
+  line-height: 29px;
+  color: #525252;
+  cursor: pointer;
+  position: relative;
+  left: -108px;
+  font-family: 'Roboto-Regular';
+}
+.order_spec {
+  left: -386px !important;
+}
+.inside_spec {
+  left: 15px !important;
+}
+.delivery_spec {
+  left: 18px !important;
+}
 .wrapMain_header {
   display: flex;
   justify-content: center;
@@ -106,7 +166,7 @@ body {
 	font-family: 'Roboto-Regular';
 	text-decoration:none;
   cursor: pointer;
-	text-decoration-line: underline;
+	text-decoration: none;
 }
 
 .wrap_cosmeticMasks {

@@ -1,3 +1,255 @@
+@media (min-width: 576px) and (max-width: 768px) {
+  .header_logo, .wrap_rosee {
+    position: relative;
+    width: 110px;
+    left: 206px;
+    top: -6px;
+  }
+  .cls {
+    display: grid;
+    width: 31px;
+    height: 31px;
+    cursor: pointer;
+    position: relative;
+    grid-column: 3 / 4;
+    left: 132px;
+    top: -5px;
+  }
+  #cls1, #cls2, #cls3 {
+    position: relative;
+    width: 100%;
+    height: 3px;
+    background: black;
+  }
+  #cls1, #cls3 {
+    transition: 0.2s;
+  }
+  #inside, #delivery {
+    display: none;
+  }
+  .trans1 {
+    transform: rotate(45deg);
+    top: 12px !important;
+  }
+  .trans2 {
+    transform: rotate(-45deg);
+    top: -9px !important;
+  }
+  .disappear {
+    opacity: 0;
+  }
+  .order_title2 {
+    grid-column: 2/3;
+    grid-row: 1/2;
+    font-weight: 700;
+    font-size: 35px;
+    line-height: 43px;
+    color: #54854A;
+    width: 337px;
+    font-size: 22px;
+    line-height: 30px;
+    position: relative;
+    left: 245px;
+    font-family: 'Manrope-Bold';
+    top: -41px;
+  }
+  .order_title {
+    display: none;
+  }
+  .name_input {
+    grid-column: 2/3;
+    grid-row: 2/3;
+    font-size: 16px;
+    font-family: 'Manrope-Medium';
+    width: 336px;
+    height: 40px;
+    position: relative;
+    left: 147px;
+    margin-left: 100px;
+    background: #dddddd;
+    border-radius: 10px;
+    border: none;
+    font-size: 16px;
+    padding-left: 10px;
+    box-sizing: border-box;
+    position: relative;
+  }
+  .password_field {
+    grid-column: 2/3;
+    grid-row: 4/5;
+    width: 336px;
+    left: 247px;
+    position: relative;
+    height: 40px;
+    border-radius: 10px;
+    background: #DDDDDD;
+    font-size: 16px;
+    border: none;
+    margin-left: 245px;
+    margin-top: -60px;
+    padding-left: 28px;
+    box-sizing: border-box;
+  }
+  .telephone_input {
+    grid-column: 2/3;
+    grid-row: 3/4;
+    width: 165px;
+    height: 40px;
+    border-radius: 10px;
+    background: #DDDDDD;
+    font-size: 16px;
+    border: none;
+    padding-left: 10px;
+    box-sizing: border-box;
+    left: 247px;
+    position: relative;
+  }
+  .order_telephone {
+    top: -33px !important;
+  }
+  .order_text {
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 32px;
+    color: #000000;
+    margin: 0;
+    font-family: 'Inter-Bold';
+    position: relative;
+    left: 491px;
+    top: -39px;
+    height: 10px;
+  }
+  .mail_input {
+    grid-column: 2/3;
+    grid-row: 5/6;
+    position: relative;
+    left: 247px;
+    top: -6px;
+    width: 336px;
+    height: 40px;
+    border-radius: 10px;
+    background: #DDDDDD;
+    font-size: 16px;
+    border: none;
+    padding-left: 10px;
+    box-sizing: border-box;
+  }
+  .order {
+    grid-template-rows: 110px 70px 70px 75px 98px 90px 210px 160px;
+  }
+  .passwordname, .order_name, .order_address {
+    top: -33px !important;
+  }
+  .radio_label:before {
+    width: 21px;
+    height: 21px;
+    top: 2px;
+  }
+  .radio {
+    margin-top: 43px;
+    height: 60px;
+    left: 247px;
+  }
+  .radio_label {
+    font-size: 11px;
+    line-height: 29px;
+    font-weight: 400;
+    color: #000000;
+    padding-left: 31px;
+    font-family: 'Manrope-Light';
+  }
+  .address_input {
+    grid-column: 2/3;
+    grid-row: 6/7;
+    width: 330px;
+    height: 40px;
+    border-radius: 10px;
+    background: #DDDDDD;
+    font-size: 16px;
+    border: none;
+    resize: none;
+    padding-left: 10px;
+    box-sizing: border-box;
+    padding-top: 10px;
+    position: relative;
+    left: 246px;
+    overflow: overlay;
+  }
+  .comments {
+    grid-column: 2/3;
+    grid-row: 7/8;
+    width: 330px;
+    height: 118px;
+    position: relative;
+    border-radius: 10px;
+    background: #DDDDDD;
+    font-size: 25px;
+    resize: none;
+    border: none;
+    padding-left: 10px;
+    box-sizing: border-box;
+    padding-top: 10px;
+    top: -17px;
+    position: relative;
+    left: 246px;
+  }
+  .order_comments {
+    top: -52px;
+  }
+  #order_arrange {
+    background: #808080;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 68px;
+    color: #fff;
+    font-family: 'Manrope-Bold';
+    width: 147px;
+    height: 53px;
+    grid-column: 3/4;
+    grid-row: 10/11;
+    text-align: center;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    z-index: 1000;
+    left: 491px;
+    position: relative;
+    align-items: center;
+    text-decoration: none;
+    top: 123px;
+  }
+  .navLinks {
+    text-decoration: none;
+  }
+  .order_text2 {
+    grid-column: 3/4;
+    grid-row: 8/9;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 22px;
+    color: #000000;
+    font-family: 'Manrope-Regular';
+    position: relative;
+    left: -537px;
+    top: -133px;
+    width: 159px;
+    height: 50px;
+  }
+  .order_text3 {
+    grid-column: 2/3;
+    grid-row: 8/9;
+    font-weight: 400;
+    font-size: 11px;
+    line-height: 22px;
+    color: #808080;
+    font-family: 'Manrope-Light';
+    margin-top: -36px;
+    width: 275px;
+    left: 244px;
+    position: relative;
+  }
+}
 @media (min-width: 1100px) and (max-width: 1390px) {
   .userData{
     grid-template-columns:260px 216px;
@@ -6,6 +258,45 @@
     grid-row-gap: 30px;
     margin-top:100px;
     width: 992px;
+  }
+  .specialHead {
+    margin-left: 513px !important;
+    margin-top: -25px !important;
+  }
+  .wrap_roseeProf {
+    position: relative;
+    left: 91px;
+    top: 71px;
+  }
+  .adv {
+    position: relative;
+    left: -782px !important;
+    top: 29px;
+  }
+  .whatIns {
+    position: relative;
+    left: 500px !important;
+    top: -2px;
+  }
+  .del {
+    width: 73px;
+    position: relative;
+    left: 567px !important;
+    top: -2px;
+  }
+  .ord {
+    top: -2px;
+    position: relative;
+    left: -284px !important;
+    width: 69px;
+  }
+  .ex {
+    position: relative;
+    left: 929px !important;
+    top: -47px;
+  }
+  .clsProf {
+    display: grid !important;
   }
   #user{
     font-size: 18px;
@@ -75,7 +366,7 @@
     display: none;
   }
 }
-@media (min-width: 770px) and (max-width: 1100px) {
+@media (min-width: 768px) and (max-width: 1100px) {
   .wrap_header{
 		grid-template-columns:1% 0.1fr 0.1fr repeat(5, 1fr) 1%;
 		grid-column-gap:40px;
@@ -83,6 +374,45 @@
  	 	width: 768px;
  	 	height: 50px;
 	}
+  .specialHead {
+    margin-left: 408px !important;
+    margin-top: -25px !important;
+  }
+  .clsProf {
+    display: grid !important;
+  }
+  .wrap_roseeProf {
+    position: relative;
+    left: 83px;
+    top: 63px;
+  }
+  .adv {
+    position: relative;
+    left: -583px !important;
+    top: 25px;
+  }
+  .whatIns {
+    position: relative;
+    left: 441px !important;
+    top: -7px;
+  }
+  .del {
+    width: 73px;
+    position: relative;
+    left: 496px !important;
+    top: -6px;
+  }
+  .ord {
+    top: -6px;
+    position: relative;
+    left: -145px !important;
+    width: 69px;
+  }
+  .ex {
+    position: relative;
+    left: 821px !important;
+    top: -47px;
+  }
   .userData{
     grid-template-columns:260px 216px;
     grid-template-rows:150px repeat(4, 29px) 82px 55px 49px 29px;

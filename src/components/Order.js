@@ -1,7 +1,7 @@
 import React from 'react';
 import { Route, NavLink } from 'react-router-dom';
 import rosee from '../../public/images/rosée.png';
-import Footer from './Footer';
+import rosee2 from '../../public/images/rosée2.png';
 import { findIp } from './fetchData';
 import axios from 'axios';
 
@@ -28,6 +28,9 @@ class Order extends React.Component{
       repeat,
       ipAddress: 'example'
     }
+    this.cls1 = React.createRef();
+    this.cls2 = React.createRef();
+    this.cls3 = React.createRef();
   }
 
   async componentDidMount() {
@@ -77,25 +80,46 @@ rep = () => {
   }
 }
 
+rot = () => {
+  if(!this.cls1.current.classList.contains('trans1')) {
+    this.cls1.current.classList.add('trans1');
+    this.cls3.current.classList.add('trans2');
+    this.cls2.current.classList.add('disappear');
+  }
+  else {
+    this.cls1.current.classList.remove('trans1');
+    this.cls3.current.classList.remove('trans2');
+    this.cls2.current.classList.remove('disappear');
+  }
+}
+
 render() {
   return(
-    <div>
+    <div className='wrap_order22'>
     {this.errF()}
     {this.succ()}
     {this.rep()}
     <Route path={['/order/everyMonth', '/order/everyMonthCombi', '/order/everyMonthFat', '/order/everyMonthDry']}>
      <form action='/order/everyMonth' method='POST'>
          <div className='wrap_Order'>
-
-                  <div className='wrap_header'>
+              <div className='wrap2_header'>
+                  <div className='wrap_header headForOrder'>
                     <NavLink to ='/' className='wrap_rosee'><img src={rosee} className='header_logo'/></NavLink>
+                    <div className='cls clsOrder' onClick={this.rot}>
+                        <span className='partOfCls' id='cls1' ref={this.cls1}></span>
+                        <span className='partOfCls' id='cls2' ref={this.cls2}></span>
+                        <span className='partOfCls' id='cls3' ref={this.cls3}></span>
+                    </div>
                     <p></p>
-                    <NavLink to='#' className='nav_header' id='advantages' activeClassName='active_header'>Преимущества</NavLink>
-                    <NavLink to='#' className='nav_header' id='inside' activeClassName='active_header'>Что внутри</NavLink>
-                    <NavLink to='#' className='nav_header' id='delivery' activeClassName='active_header'>Доставка</NavLink>
-                    <NavLink to='#' className='nav_header' id='header_buy' activeClassName='active_header'>Заказать</NavLink>
-                    <NavLink to='/enter' className='nav_header' id='header_login'>Войти</NavLink>
+                    <NavLink to='#' className='nav_header_order' id='advantages' activeClassName='active_header'>Преимущества</NavLink>
+                    <NavLink to='#' className='nav_header_order inside_spec' id='inside' activeClassName='active_header'>Что внутри</NavLink>
+                    <NavLink to='#' className='nav_header_order delivery_spec' id='delivery' activeClassName='active_header'>Доставка</NavLink>
+                    <NavLink to='#' className='nav_header_order order_spec' id='header_buy' activeClassName='active_header'>Заказать</NavLink>
+                    <NavLink to='/enter' className='nav_header_order enter_spec' id='header_login'>Войти</NavLink>
+                    <div className='mobile_menu' style={{display: 'none'}}>
+                    </div>
                   </div>
+              </div>
 
            <div className='order'>
              <h2 className='order_title'>Заказ</h2>
@@ -111,7 +135,7 @@ render() {
              <p className='order_addition' id='addition4'>Будем присылать <br/> уведомления об оплате</p>
              <p className='order_addition' id='addition5'>Введите адрес полностью,<br/> он нужен для отправки посылки</p>
              <p className='order_addition' id='addition6'>Если у вы хотите нам <br/> что-то сообщить</p>
-             <p className='order_text2'>Заполните все поля,<br/>чтобы продолжить</p>
+             <p className='order_text2'>Заполните все поля, <br/>чтобы продолжить</p>
              <p className='order_text3'>Нажимая кнопку «Оформить», вы соглашаетесь с Политикой <br/> конфиденциальности и даёте согласие на обработку данных</p>
 
 
@@ -148,17 +172,17 @@ render() {
                </Route>
 
                <Route path={['/order/everyMonth', '/order/everyMonthCombi', '/order/everyMonthFat', '/order/everyMonthDry']}>
-                 <p className='wrap_or'><a href='https://pay.fondy.eu/s/PI3dMfrP'>
+                 <p className='wrap_or'><a href='https://pay.fondy.eu/s/PI3dMfrP' className='navLinks'>
                    <button type='submit' id='order_arrange'>Оформить</button>
                  </a></p>
                </Route>
                <Route path={['/order/halfYear', '/order/halfYearCombi', '/order/halfYearFat', '/order/halfYearDry']}>
-                 <p className='wrap_or'><a href='https://pay.fondy.eu/s/OnCUN8IoAFd'>
+                 <p className='wrap_or'><a href='https://pay.fondy.eu/s/OnCUN8IoAFd' className='navLinks'>
                    <button type='submit' id='order_arrange'>Оформить</button>
                  </a></p>
                </Route>
                <Route path={['/order/everyYear', '/order/everyYearCombi', '/order/everyYearFat', '/order/everyYearDry']}>
-                 <p className='wrap_or'><a href='https://pay.fondy.eu/s/BQo3bkVg'>
+                 <p className='wrap_or'><a href='https://pay.fondy.eu/s/BQo3bkVg' className='navLinks'>
                    <button type='submit' id='order_arrange'>Оформить</button>
                  </a></p>
                </Route>
@@ -184,6 +208,11 @@ render() {
 
               <div className='wrap_header'>
                     <NavLink to='/' className='wrap_rosee'><img src={rosee} className='header_logo'/></NavLink>
+                    <div className='cls' onClick={this.rot}>
+                       <span className='partOfCls' id='cls1' ref={this.cls1}></span>
+                       <span className='partOfCls' id='cls2' ref={this.cls2}></span>
+                       <span className='partOfCls' id='cls3' ref={this.cls3}></span>
+                    </div>
                     <p></p>
                     <NavLink to='#' className='nav_header' id='advantages' activeClassName='active_header'>Преимущества</NavLink>
                     <NavLink to='#' className='nav_header' id='inside' activeClassName='active_header'>Что внутри</NavLink>
@@ -207,7 +236,7 @@ render() {
              <p className='order_addition' id='addition4'>Будем присылать <br/> уведомления об оплате</p>
              <p className='order_addition' id='addition5'>Введите адрес полностью,<br/> он нужен для отправки посылки</p>
              <p className='order_addition' id='addition6'>Если у вы хотите нам <br/> что-то сообщить</p>
-             <p className='order_text2'>Заполните все поля,<br/>чтобы продолжить</p>
+             <p className='order_text2'>Заполните все поля, <br/>чтобы продолжить</p>
              <p className='order_text3'>Нажимая кнопку «Оформить», вы соглашаетесь с Политикой <br/> конфиденциальности и даёте согласие на обработку данных</p>
 
 
@@ -239,17 +268,17 @@ render() {
                 </Route>
 
                 <Route path={['/order/everyMonth', '/order/everyMonthCombi', '/order/everyMonthFat', '/order/everyMonthDry']}>
-                  <p className='wrap_or'><a href='https://pay.fondy.eu/s/A5qqFUTrtDV0J'>
+                  <p className='wrap_or'><a href='https://pay.fondy.eu/s/A5qqFUTrtDV0J' className='navLinks'>
                     <button type='submit' id='order_arrange'>Оформить</button>
                   </a></p>
                 </Route>
                 <Route path={['/order/halfYear', '/order/halfYearCombi', '/order/halfYearFat', '/order/halfYearDry']}>
-                  <p className='wrap_or'><a href='https://pay.fondy.eu/s/OnCUN8IoAFd'>
+                  <p className='wrap_or'><a href='https://pay.fondy.eu/s/OnCUN8IoAFd' className='navLinks'>
                     <button type='submit' id='order_arrange'>Оформить</button>
                   </a></p>
                 </Route>
                 <Route path={['/order/everyYear', '/order/everyYearCombi', '/order/everyYearFat', '/order/everyYearDry']}>
-                  <p className='wrap_or'><a href='https://pay.fondy.eu/s/BQo3bkVg'>
+                  <p className='wrap_or'><a href='https://pay.fondy.eu/s/BQo3bkVg' className='navLinks'>
                     <button type='submit' id='order_arrange'>Оформить</button>
                   </a></p>
                 </Route>
@@ -276,6 +305,11 @@ render() {
 
                   <div className='wrap_header'>
                     <NavLink to='/' className='wrap_rosee'><img src={rosee} className='header_logo'/></NavLink>
+                    <div className='cls' onClick={this.rot}>
+                    <span className='partOfCls' id='cls1' ref={this.cls1}></span>
+                    <span className='partOfCls' id='cls2' ref={this.cls2}></span>
+                    <span className='partOfCls' id='cls3' ref={this.cls3}></span>
+                    </div>
                     <p></p>
                     <NavLink to='#' className='nav_header' id='advantages' activeClassName='active_header'>Преимущества</NavLink>
                     <NavLink to='#' className='nav_header' id='inside' activeClassName='active_header'>Что внутри</NavLink>
@@ -299,7 +333,7 @@ render() {
              <p className='order_addition' id='addition4'>Будем присылать <br/> уведомления об оплате</p>
              <p className='order_addition' id='addition5'>Введите адрес полностью,<br/> он нужен для отправки посылки</p>
              <p className='order_addition' id='addition6'>Если у вы хотите нам <br/> что-то сообщить</p>
-             <p className='order_text2'>Заполните все поля,<br/>чтобы продолжить</p>
+             <p className='order_text2'>Заполните все поля, <br/>чтобы продолжить</p>
              <p className='order_text3'>Нажимая кнопку «Оформить», вы соглашаетесь с Политикой <br/> конфиденциальности и даёте согласие на обработку данных</p>
 
                <input type='text' name='username' className='name_input' required/>
@@ -330,17 +364,17 @@ render() {
                  </Route>
 
                  <Route path={['/order/everyMonth', '/order/everyMonthCombi', '/order/everyMonthFat', '/order/everyMonthDry']}>
-                   <p className='wrap_or'><a href='https://pay.fondy.eu/s/A5qqFUTrtDV0J'>
+                   <p className='wrap_or'><a href='https://pay.fondy.eu/s/A5qqFUTrtDV0J' className='navLinks'>
                      <button type='submit' id='order_arrange'>Оформить</button>
                    </a></p>
                  </Route>
                  <Route path={['/order/halfYear', '/order/halfYearCombi', '/order/halfYearFat', '/order/halfYearDry']}>
-                   <p className='wrap_or'><a href='https://pay.fondy.eu/s/OnCUN8IoAFd'>
+                   <p className='wrap_or'><a href='https://pay.fondy.eu/s/OnCUN8IoAFd' className='navLinks'>
                      <button type='submit' id='order_arrange'>Оформить</button>
                    </a></p>
                  </Route>
                  <Route path={['/order/everyYear', '/order/everyYearCombi', '/order/everyYearFat', '/order/everyYearDry']}>
-                   <p className='wrap_or'><a href='https://pay.fondy.eu/s/BQo3bkVg'>
+                   <p className='wrap_or'><a href='https://pay.fondy.eu/s/BQo3bkVg' className='navLinks'>
                      <button type='submit' id='order_arrange'>Оформить</button>
                    </a></p>
                  </Route>
@@ -359,7 +393,19 @@ render() {
 
        </form>
        </Route>
-       <p className='wrap_order_foot'><Footer /></p>
+       <p className='wrap_order_foot'>
+           <footer className='wrap_Footer'>
+             <div className='footer orderFoot'>
+               <div className='wrap_footer_rosee'><img src={rosee2} className='footer_logo'/></div>
+                 <a href='https://docs.google.com/document/d/1d4pEXBZh_aXOMoJkhbtwu4klflWcsoBYGcFbIQUPdFg/edit' className='nav_footer' id='footer_offer'>Оферта</a>
+                 <a href='https://docs.google.com/document/d/1IcFeUEIdDZ6cU6kjTjYtYONfeamZvNOqsNXBeH7hl2k/edit' className='nav_footer' id='footer_confidentiality'>Политика конфиденциальности</a>
+                 <a href='https://docs.google.com/document/d/1EiJUgz1JSZKRvfzWYJpWcdhlXHZHRAF6xbwm0qXSqLs/edit' className='nav_footer' id='footer_sentence'>Пользовательское предложение</a>
+               <p className='nav_footer' id='footer_phone'>8 902 247 13 61</p>
+               <p className='nav_footer' id='footer_email'>hi@rosee.ws</p>
+               <p className='nav_footer' id='footer_information'><p className="information_1">ИП Поветьев Кирилл Владимирович</p> <p className="information_2">ИНН 562903440350</p> <p className="information_3">ОГРН 320565800048044</p></p>
+             </div>
+           </footer>
+       </p>
     </div>
   )
  }

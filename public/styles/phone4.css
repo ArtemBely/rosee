@@ -1,0 +1,864 @@
+@media (min-width: 320px) and (max-width: 576px) {
+  .header_logo, .wrap_rosee {
+    position: relative;
+    width: 54px;
+    left: 236px;
+    top: -6px;
+    height: auto;
+  }
+  .order_addition {
+    opacity: 0;
+  }
+  .wrpa_order22 {
+    position: relative;
+    height: 1721px;
+    overflow-y: hidden;
+  }
+  .cls {
+    display: grid;
+    width: 21px;
+    height: 21px;
+    cursor: pointer;
+    position: relative;
+    grid-column: 3 / 4;
+    left: 263px;
+    top: -8px;
+  }
+  .clsOrder {
+    left: 236px !important;
+  }
+  #cls1, #cls2, #cls3 {
+    position: relative;
+    width: 100%;
+    height: 3px;
+    background: black;
+  }
+  #cls1, #cls3 {
+    transition: 0.2s;
+  }
+  #inside, #delivery {
+    display: none;
+  }
+  .trans1 {
+    transform: rotate(45deg);
+    top: 5px !important;
+  }
+  .trans2 {
+    transform: rotate(-45deg);
+    top: -9px !important;
+  }
+  .disappear {
+    opacity: 0;
+  }
+  .order_title2 {
+    grid-column: 2/3;
+    grid-row: 1/2;
+    font-weight: 700;
+    font-size: 35px;
+    line-height: 43px;
+    color: #54854A;
+    width: 337px;
+    font-size: 25px;
+    line-height: 38px;
+    position: relative;
+    left: 245px;
+    font-family: 'Manrope-Bold';
+    top: -41px;
+  }
+  .order_title {
+    display: none;
+  }
+  .name_input {
+    grid-column: 2/3;
+    grid-row: 2/3;
+    font-size: 16px;
+    font-family: 'Manrope-Medium';
+    width: 336px;
+    height: 40px;
+    position: relative;
+    left: 147px;
+    margin-left: 100px;
+    background: #dddddd;
+    border-radius: 10px;
+    border: none;
+    font-size: 16px;
+    padding-left: 10px;
+    box-sizing: border-box;
+    position: relative;
+  }
+  .password_field {
+    grid-column: 2/3;
+    grid-row: 4/5;
+    width: 336px;
+    left: 247px;
+    position: relative;
+    height: 40px;
+    border-radius: 10px;
+    background: #DDDDDD;
+    font-size: 16px;
+    border: none;
+    margin-left: 245px;
+    margin-top: -60px;
+    padding-left: 28px;
+    box-sizing: border-box;
+  }
+  .telephone_input {
+    grid-column: 2/3;
+    grid-row: 3/4;
+    width: 165px;
+    height: 40px;
+    border-radius: 10px;
+    background: #DDDDDD;
+    font-size: 16px;
+    border: none;
+    padding-left: 10px;
+    box-sizing: border-box;
+    left: 247px;
+    position: relative;
+  }
+  .order_telephone {
+    top: -33px !important;
+  }
+  .order_text {
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 32px;
+    color: #000000;
+    margin: 0;
+    font-family: 'Inter-Bold';
+    position: relative;
+    left: 491px;
+    top: -39px;
+    height: 10px;
+  }
+  .mail_input {
+    grid-column: 2/3;
+    grid-row: 5/6;
+    position: relative;
+    left: 247px;
+    top: -6px;
+    width: 336px;
+    height: 40px;
+    border-radius: 10px;
+    background: #DDDDDD;
+    font-size: 16px;
+    border: none;
+    padding-left: 10px;
+    box-sizing: border-box;
+  }
+  .order {
+    grid-template-rows: 110px 70px 70px 75px 98px 90px 210px 160px;
+  }
+  .passwordname, .order_name, .order_address {
+    top: -33px !important;
+  }
+  .radio_label:before {
+    width: 21px;
+    height: 21px;
+    top: 2px;
+  }
+  .radio {
+    margin-top: 43px;
+    height: 60px;
+    left: 247px;
+  }
+  .radio_label {
+    font-size: 16px;
+    line-height: 29px;
+    font-weight: 400;
+    color: #000000;
+    padding-left: 31px;
+    font-family: 'Manrope-Light';
+  }
+  .address_input {
+    grid-column: 2/3;
+    grid-row: 6/7;
+    width: 330px;
+    height: 40px;
+    border-radius: 10px;
+    background: #DDDDDD;
+    font-size: 16px;
+    border: none;
+    resize: none;
+    padding-left: 10px;
+    box-sizing: border-box;
+    padding-top: 10px;
+    position: relative;
+    left: 246px;
+    overflow: overlay;
+  }
+  .comments {
+    grid-column: 2/3;
+    grid-row: 7/8;
+    width: 330px;
+    height: 118px;
+    position: relative;
+    border-radius: 10px;
+    background: #DDDDDD;
+    font-size: 25px;
+    resize: none;
+    border: none;
+    padding-left: 10px;
+    box-sizing: border-box;
+    padding-top: 10px;
+    top: -17px;
+    position: relative;
+    left: 246px;
+  }
+  .order_comments {
+    top: -52px;
+  }
+  #order_arrange {
+    background: #808080;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 68px;
+    color: #fff;
+    font-family: 'Manrope-Bold';
+    width: 147px;
+    height: 53px;
+    grid-column: 3/4;
+    grid-row: 10/11;
+    text-align: center;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    z-index: 1000;
+    left: 491px;
+    position: relative;
+    align-items: center;
+    text-decoration: none;
+    top: 123px;
+  }
+  .navLinks {
+    text-decoration: none;
+  }
+  .order_text2 {
+    grid-column: 3/4;
+    grid-row: 8/9;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 22px;
+    color: #000000;
+    font-family: 'Manrope-Regular';
+    position: relative;
+    left: -537px;
+    top: -133px;
+    width: 166px;
+    height: 50px;
+  }
+  .order_text3 {
+    grid-column: 2/3;
+    grid-row: 8/9;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 22px;
+    color: #808080;
+    font-family: 'Manrope-Light';
+    margin-top: -36px;
+    width: 299px;
+    left: 244px;
+    position: relative;
+    height: 50px;
+  }
+  .wrap_Footer {
+    background: url('../images/Без имени-2 2.svg');
+    background-size: cover;
+    position: relative;
+    height: 886x;
+  }
+  .wrap_order_foot {
+    top: 130px !important;
+  }
+  .orderFoot {
+    margin-top: 245px !important;
+    margin-bottom: 20px !important;
+    padding-top: 225px !important;
+  }
+  .specialHead {
+    margin-left: -1805px !important;
+  }
+  .clsProf {
+    left: 327px !important;
+  }
+  .wrap_roseeProf, .header_logoProf {
+    left: 18px !important;
+    top: -13px !important;
+  }
+  .wrap_footer_rosee {
+    top: -79px;
+    grid-column: 1 / 5;
+    grid-row: 1/2;
+    justify-content: start;
+    width: 100%;
+    position: relative;
+    left: -168px;
+    width: 100px;
+  }
+  .footer_logo {
+    width: 75px;
+    height: auto;
+  }
+  #footer_phone {
+    grid-column: 1/2;
+    grid-row: 1/2;
+    position: relative;
+    left: -16px;
+    top: -175px;
+    color: white;
+  }
+  #footer_email {
+    grid-column: 1/2;
+    grid-row: 1/2;
+    top: -175px;
+    position: relative;
+    color: white;
+  }
+  #footer_offer {
+    grid-column: 1/2;
+    grid-row: 1/2;
+    text-decoration-line: underline;
+    margin-left: -236px;
+    top: -117px;
+    position: relative;
+  }
+  #footer_confidentiality {
+    grid-column: 1/2;
+    grid-row: 2/3;
+    text-decoration-line: underline;
+    left: -8px;
+    position: relative;
+    width: 255px;
+    top: -143px;
+  }
+  #footer_sentence {
+    grid-column: 1/2;
+    grid-row: 2/3;
+    text-decoration-line: underline;
+    position: relative;
+    top: -93px;
+    left: -15px;
+    width: 250px;
+  }
+  #footer_information {
+    grid-column: 1/2;
+    grid-row: 1/3;
+    margin-left: 30px;
+    position: relative;
+    width: 319px;
+    top: 75px;
+  }
+  .nav_footer {
+    font-family: 'Roboto-Light';
+    color: white;
+    font-size: 16px;
+  }
+
+
+  .wrap_header {
+    margin-left: -242px;
+    margin-top: -10px;
+  }
+  #user {
+    position: relative;
+    top: 64px;
+    font-size: 17px;
+  }
+  .wrap_Footer {
+    background: url('../images/Без имени-2 2.svg');
+    background-size: cover;
+  }
+  .wrap_order_foot {
+    top: -215px;
+  }
+  .change_email {
+    grid-column: 1/2;
+    grid-row: 2/3;
+    margin-top: 98px;
+  }
+  .change_password {
+    grid-column: 1/2;
+    grid-row: 4/5;
+    margin-top: 47px;
+  }
+  .change_phone {
+    grid-column: 1/2;
+    position: relative;
+    top: 134px;
+  }
+  .change_period {
+    grid-column: 1/2;
+    grid-row: 5/6;
+    margin-top: 4px;
+    position: relative;
+    top: 144px;
+  }
+  .change_card {
+    grid-column: 1/2;
+    grid-row: 6/7;
+    margin-top: 190px;
+  }
+  .user_card {
+    top: 132px !important;
+  }
+  .user_address {
+    grid-column: 1/2;
+    grid-row: 8/9;
+    top: 124px !important;
+  }
+  .cancel_sub {
+    grid-column: 1/2;
+    grid-row: 7/8;
+    margin-top: 270px;
+    color: #808080;
+  }
+  .rating {
+    width: 366px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    margin-top: 123px;
+    left: -15px;
+  }
+  .rating2 {
+    display: grid;
+    width: 300px;
+    top: 21px;
+  }
+  .label_rating {
+    width: 56px;
+    height: 56px;
+  }
+  .numbers {
+    font-size: 17px;
+  }
+  .have_a_quest {
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 70px;
+    color: black;
+    margin-top: 0;
+  }
+  .questions2 {
+    position: relative;
+    width: 300px;
+    top: -53px;
+  }
+  .second_section {
+    grid-column: 1 / 2;
+    margin-top: -33px;
+    width: 347px;
+  }
+  .second_section > form {
+    width: 100%
+  }
+  .questions_name, .questions_mail, .questions_input {
+    width: 100%;
+    font-size: 12px;
+    background: white;
+  }
+  .questions_name, .questions_mail {
+    height: 51px;
+  }
+  .wrap_prof_footer {
+    margin-top: 1862px;
+  }
+  .specProfFoot {
+    margin-top: 195px !important;
+    margin-bottom: 60px !important;
+    height: 202px !important;
+  }
+  .headForOrder {
+    margin-left: 0px !important;
+  }
+  .questions_button {
+    width: 156px;
+    height: 51px;
+    font-size: 19px;
+  }
+  .have_a_quest2 {
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 20px;
+    position: relative;
+    top: -34px;
+    font-family: 'Manrope-Light';
+    width: 300;
+    width: 213px;
+  }
+  #rating_form {
+    display: grid;
+    margin-top: 50px;
+    grid-template-columns: repeat(10, 1fr);
+    width: 100%;
+    grid-template-rows: repeat(2, 1fr);
+    height: 116px;
+    grid-gap: 26px 2px;
+    position: relative;
+    left: 21px;
+  }
+  .rating_title {
+    text-align: center;
+    font-family: 'Roboto-Regular';
+    font-weight: 400;
+    font-size: 17px;
+    line-height: 27px;
+    margin-bottom: 0;
+    position: relative;
+    top: 51px;
+  }
+  .raiting {
+    width: 345px;
+  }
+  .change_address {
+    grid-column: 1/2;
+    grid-row: 8/9;
+    margin-top: 53px;
+  }
+  .user_timestamp {
+    margin-top: 92px;
+  }
+  .user_phone {
+    top: 104px !important;
+  }
+  .user_payment {
+    top: 115px !important;
+  }
+  .user_password {
+    top: 84px !important;
+  }
+  #change {
+    font-size: 17px;
+  }
+  .change_name {
+    grid-column: 1/2;
+    grid-row: 1/2;
+    margin-top: 5px;
+    position: relative;
+    top: 36px;
+  }
+  .user_name {
+    font-size: 28px;
+  }
+  .footer_logo {
+    width: 67px;
+    height: auto;
+  }
+  #footer_phone {
+    grid-column: 1/2;
+    grid-row: 3/4;
+    position: relative;
+    left: -33px;
+    top: -140px;
+    color: white;
+  }
+  #footer_email {
+    grid-column: 1/2;
+    grid-row: 1/2;
+    top: -30px;
+    left: -42px;
+    position: relative;
+    color: white;
+  }
+  #footer_offer {
+    grid-column: 1/2;
+    grid-row: 3/4;
+    text-decoration-line: underline;
+    margin-left: -257px;
+    top: -103px;
+    position: relative;
+  }
+  #footer_confidentiality {
+    grid-column: 1/2;
+    grid-row: 2/3;
+    text-decoration-line: underline;
+    left: -44px;
+    position: relative;
+    width: 195px;
+    top: -23px;
+  }
+  #footer_sentence {
+    grid-column: 1/5;
+    grid-row: 2/3;
+    text-decoration-line: underline;
+    position: relative;
+    top: 22px;
+    left: -70px;
+  }
+  #footer_information {
+    grid-column: 1/5;
+    grid-row: 4/5;
+    margin-left: -2px;
+    position: relative;
+    width: 400px;
+    top: 61px;
+  }
+  .nav_footer {
+    font-family: 'Roboto-Light';
+    color: white;
+    font-size: 13px;
+  }
+}
+
+@media (min-width: 576px) and (max-width: 768px) {
+  .wrap_header {
+    margin-left: -94px;
+    margin-top: -10px;
+  }
+  .specialHead {
+    margin-left: -853px !important;
+    position: absolute;
+  }
+  .clsProf {
+    left: 318px !important;
+    top: 27px !important;
+  }
+  .wrap_roseeProf, .header_logoProf {
+    left: 45px !important;
+    top: 4px !important;
+  }
+  .headForOrder {
+    margin-left: 87px !important;
+    margin-top: 42px !important;
+  }
+  #user {
+    position: relative;
+    top: 64px;
+    font-size: 17px;
+  }
+  .wrap_Footer {
+    background: url('../images/Без имени-2 2.svg');
+    background-size: cover;
+  }
+  .wrap_order_foot {
+    top: -215px;
+  }
+  .change_email {
+    grid-column: 1/2;
+    grid-row: 2/3;
+    margin-top: 98px;
+  }
+  .change_password {
+    grid-column: 1/2;
+    grid-row: 4/5;
+    margin-top: 47px;
+  }
+  .change_phone {
+    grid-column: 1/2;
+    position: relative;
+    top: 134px;
+  }
+  .change_period {
+    grid-column: 1/2;
+    grid-row: 5/6;
+    margin-top: 4px;
+    position: relative;
+    top: 144px;
+  }
+  .change_card {
+    grid-column: 1/2;
+    grid-row: 6/7;
+    margin-top: 190px;
+  }
+  .user_card {
+    top: 132px !important;
+  }
+  .user_address {
+    grid-column: 1/2;
+    grid-row: 8/9;
+    top: 124px !important;
+  }
+  .cancel_sub {
+    grid-column: 1/2;
+    grid-row: 7/8;
+    margin-top: 270px;
+    color: #808080;
+  }
+  .rating {
+    width: 366px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    margin-top: 123px;
+    left: -15px;
+  }
+  .rating2 {
+    display: grid;
+    width: 300px;
+    top: 21px;
+  }
+  .label_rating {
+    width: 56px;
+    height: 56px;
+  }
+  .numbers {
+    font-size: 17px;
+  }
+  .have_a_quest {
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 70px;
+    color: black;
+    margin-top: 0;
+  }
+  .questions2 {
+    position: relative;
+    width: 300px;
+    top: -53px;
+  }
+  .second_section {
+    grid-column: 1 / 2;
+    margin-top: -33px;
+    width: 347px;
+  }
+  .second_section > form {
+    width: 100%
+  }
+  .questions_name, .questions_mail, .questions_input {
+    width: 100%;
+    font-size: 12px;
+    background: white;
+  }
+  .questions_name, .questions_mail {
+    height: 51px;
+  }
+  .wrap_prof_footer {
+    margin-top: 1660px;
+  }
+  .questions_button {
+    width: 156px;
+    height: 51px;
+    font-size: 19px;
+  }
+  .have_a_quest2 {
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 20px;
+    position: relative;
+    top: -34px;
+    font-family: 'Manrope-Light';
+    width: 300;
+    width: 213px;
+  }
+  #rating_form {
+    display: grid;
+    margin-top: 50px;
+    grid-template-columns: repeat(10, 1fr);
+    width: 100%;
+    grid-template-rows: repeat(2, 1fr);
+    height: 116px;
+    grid-gap: 26px 2px;
+    position: relative;
+    left: 21px;
+  }
+  .rating_title {
+    text-align: center;
+    font-family: 'Roboto-Regular';
+    font-weight: 400;
+    font-size: 17px;
+    line-height: 27px;
+    margin-bottom: 0;
+    position: relative;
+    top: 51px;
+  }
+  .raiting {
+    width: 345px;
+  }
+  .change_address {
+    grid-column: 1/2;
+    grid-row: 8/9;
+    margin-top: 53px;
+  }
+  .user_timestamp {
+    margin-top: 92px;
+  }
+  .user_phone {
+    top: 104px !important;
+  }
+  .user_payment {
+    top: 115px !important;
+  }
+  .user_password {
+    top: 84px !important;
+  }
+  #change {
+    font-size: 17px;
+  }
+  .change_name {
+    grid-column: 1/2;
+    grid-row: 1/2;
+    margin-top: 5px;
+    position: relative;
+    top: 36px;
+  }
+  .user_name {
+    font-size: 28px;
+  }
+  .wrap_footer_rosee {
+    top: -231px;
+    grid-column: 4/5;
+    grid-row: 1/2;
+    justify-content: start;
+    width: 100%;
+    position: relative;
+    left: -26px;
+  }
+  .footer_logo {
+    width: 67px;
+    height: auto;
+  }
+  #footer_phone {
+    grid-column: 3/5;
+    grid-row: 1/2;
+    position: relative;
+    left: -60px;
+    top: -165px;
+    color: white;
+  }
+  #footer_email {
+    grid-column: 4/5;
+    grid-row: 1/2;
+    top: -165px;
+    position: relative;
+    color: white;
+  }
+  #footer_offer {
+    grid-column: 3/4;
+    grid-row: 1/2;
+    text-decoration-line: underline;
+    margin-left: 201px;
+    top: -103px;
+    position: relative;
+  }
+  #footer_confidentiality {
+    grid-column: 3/4;
+    grid-row: 2/3;
+    text-decoration-line: underline;
+    left: 175px;
+    position: relative;
+    width: 195px;
+    top: -143px;
+  }
+  #footer_sentence {
+    grid-column: 4/5;
+    grid-row: 2/3;
+    text-decoration-line: underline;
+    position: relative;
+    top: -114px;
+    left: -90px;
+  }
+  #footer_information {
+    grid-column: 4/5;
+    grid-row: 1/3;
+    margin-left: 23px;
+    position: relative;
+    width: 400px;
+    top: 23px;
+  }
+  .nav_footer {
+    font-family: 'Roboto-Light';
+    color: white;
+    font-size: 13px;
+  }
+}

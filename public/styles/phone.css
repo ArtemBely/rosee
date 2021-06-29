@@ -13,6 +13,11 @@
     margin-top:50px;
     width: 375px;
     height: 50px;
+    margin-left: -942px !important;
+    margin-top: 28px !important;
+  }
+  .wrapMain_header {
+    position: relative;
   }
   .wrap_rosee {
     grid-column: 1 / 2;
@@ -119,6 +124,7 @@
     width: 375px;
     height: 900px;
     position: relative;
+    left: -3px;
   }
   .shop_advantages_phone{
     grid-row: 1/2;
@@ -344,7 +350,6 @@
   #app {
     overflow-x: hidden;
     overflow-y: clip;
-    height: 6700px;
   }
   .MasksInside{
     margin-top:1220px;
@@ -694,7 +699,7 @@
     grid-template-columns: 335px;
     grid-template-rows: 65px 234px 234px 70px;
     grid-row-gap: 10px;
-    left: 20px;
+    left: 10px;
   }
   .wrap_skinImages {
     display: none;
@@ -880,7 +885,7 @@
   }
   .wrap_questions2 {
     top: 104px;
-    margin-left: 20px;
+    margin-left: -48px;
   }
   .questions2 {
     width: 351px;
@@ -964,12 +969,13 @@
     grid-column-gap:0px;
     grid-row-gap: 10px;
     margin-top:248px;
-    margin-bottom:47px;
+    margin-bottom: -106px;
     justify-items:center;
     align-items:center;
     padding-top:400px;
     width: 351px;
     height: 347px;
+    left: 4px;
   }
   .wrap_footer_rosee{
     grid-column:1/2;

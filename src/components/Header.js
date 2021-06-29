@@ -17,6 +17,9 @@ class Header extends React.Component{
     this.state = {
       errors
     }
+    this.cls1 = React.createRef();
+    this.cls2 = React.createRef();
+    this.cls3 = React.createRef();
   }
 
   errReg = () => {
@@ -26,12 +29,29 @@ class Header extends React.Component{
       )
     }
   }
+  rot = () => {
+    if(!this.cls1.current.classList.contains('trans1')) {
+      this.cls1.current.classList.add('trans1');
+      this.cls3.current.classList.add('trans2');
+      this.cls2.current.classList.add('disappear');
+    }
+    else {
+      this.cls1.current.classList.remove('trans1');
+      this.cls3.current.classList.remove('trans2');
+      this.cls2.current.classList.remove('disappear');
+    }
+  }
 
   render() {
     return(
       <div className='wrapMain_header'>
         <div className='wrap_header'>
         <p className='wrap_rosee'><img src={rosee} className='header_logo'/></p>
+        <div className='cls' onClick={this.rot}>
+            <span className='partOfCls' id='cls1' ref={this.cls1}></span>
+            <span className='partOfCls' id='cls2' ref={this.cls2}></span>
+            <span className='partOfCls' id='cls3' ref={this.cls3}></span>
+        </div>
         <p></p>
         <Link activeClass="active"
             className='nav_header'
