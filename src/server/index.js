@@ -174,4 +174,4 @@ app.use((req, res, next) => {  //<-- заменить если появится 
      next (err);
 });*/
 
-app.listen(port, () => {console.log('connected!')});
+app.listen(8080, () => {console.log('connected!')});
