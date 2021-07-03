@@ -24,6 +24,11 @@ const app = express();
 const port = process.env.PORT || 5000;
 const CONNECTION_URI = process.env.MONGODB_URI;
 
+const options = {
+  key: fs.readFileSync('./ssl/rosee.ws.key'),
+  cert: fs.readFileSync('./ssl/rosee.ws.pem')
+}
+
 require('dotenv/config');
 
 mongoose.connect(
@@ -174,4 +179,4 @@ app.use((req, res, next) => {  //<-- заменить если появится 
      next (err);
 });*/
 
-app.listen(8080, () => {console.log('connected!')});
+app.listen(443, () => {console.log('connected!')});
