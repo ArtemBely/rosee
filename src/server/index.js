@@ -14,6 +14,8 @@ import validator from 'express-validator';
 import cors from 'cors';
 import passport from 'passport';
 import flash from 'connect-flash';
+import fs from 'fs';
+import path from 'path';
 
 import orderRouter from './routes/order';
 import enterRouter from './routes/enter';
@@ -25,8 +27,8 @@ const port = process.env.PORT || 5000;
 const CONNECTION_URI = process.env.MONGODB_URI;
 
 const options = {
-  key: fs.readFileSync('./ssl/rosee.ws.key'),
-  cert: fs.readFileSync('./ssl/rosee.ws.pem')
+  key: fs.readFileSync(path.resolve('src/server/ssl/rosee.ws.key')),
+  cert: fs.readFileSync(path.resolve('src/server/ssl/rosee.ws.pem')),
 }
 
 require('dotenv/config');
@@ -179,4 +181,4 @@ app.use((req, res, next) => {  //<-- заменить если появится 
      next (err);
 });*/
 
-app.listen(443, () => {console.log('connected!')});
+app.listen(8443, () => {console.log('connected!')});
