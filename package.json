@@ -59,6 +59,8 @@
     "express-validator": "^5.3.1",
     "file-loader": "^6.2.0",
     "flash": "^1.1.0",
+    "http": "0.0.1-security",
+    "https": "^1.0.0",
     "jquery": "^3.6.0",
     "mini-css-extract-plugin": "^1.4.0",
     "mongoose": "^5.12.3",

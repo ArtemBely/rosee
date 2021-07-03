@@ -1,7 +1,7 @@
 import axios from 'axios';
 
 async function getProfile() {
-  return await axios.get('http://localhost:8888/api/profileData')
+  return await axios.get('http://localhost:8080/api/profileData')
   .then(res => {
     let info = res.data;
     return info
