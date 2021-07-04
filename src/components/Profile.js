@@ -1,6 +1,6 @@
 import React from 'react';
 import { NavLink, Route } from 'react-router-dom';
-import rosee from '../../public/images/rosée.png';
+import rosee from '../../public/images/LogoRosee.svg';
 import rosee2 from '../../public/images/rosée2.png';
 
 class Profile extends React.Component{
@@ -20,6 +20,7 @@ class Profile extends React.Component{
     this.cls1 = React.createRef();
     this.cls2 = React.createRef();
     this.cls3 = React.createRef();
+    this.mobile = React.createRef();
   }
 
   closeCancel = () => {
@@ -42,6 +43,7 @@ class Profile extends React.Component{
       this.cls3.current.classList.remove('trans2');
       this.cls2.current.classList.remove('disappear');
     }
+    this.mobile.current.classList.toggle('mobileAppear');
   }
 
   userData = () => {
@@ -237,6 +239,13 @@ class Profile extends React.Component{
             <p><a href='/profile/logout' className='nav_header ex' id='header_login'>Выйти</a></p>
             {this.userData()}
            </div>
+         </div>
+         <div className='mobile_menu' ref={this.mobile}>
+             <p className='mobile_each'>Преимущества</p>
+               <p className='mobile_each'>Что внутри</p>
+                 <p className='mobile_each'>Доставка</p>
+               <p className='mobile_each' id='mob_order'>Заказать</p>
+             <a href='/profile/logout' className='mobile_each' id='mob_enter'>Выйти</a>
          </div>
         <p className='wrap_prof_footer'>
             <footer className='wrap_Footer'>

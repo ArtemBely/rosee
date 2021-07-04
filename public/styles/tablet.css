@@ -14,6 +14,13 @@
 	#btn4 {
 		float: none;
 	}
+	.animationMove2 {
+	    transform: translateY(686px) !important;
+	    left: -123px !important;
+	    transition: 1.5s;
+	    width: 424px !important;
+	    top: -80px !important;
+	}
 	 .nav_header{
 		 font-size: 18px;
 		 line-height: 29px;

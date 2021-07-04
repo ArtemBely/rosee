@@ -1,6 +1,6 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
-import rosee from '../../public/images/rosée2.png';
+import rosee from '../../public/images/LogoRosee.svg';
 
 function Footer() {
   return(

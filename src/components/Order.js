@@ -1,6 +1,7 @@
 import React from 'react';
 import { Route, NavLink } from 'react-router-dom';
-import rosee from '../../public/images/rosée.png';
+import { Link } from 'react-scroll';
+import rosee from '../../public/images/LogoRosee.svg';
 import rosee2 from '../../public/images/rosée2.png';
 import { findIp } from './fetchData';
 import axios from 'axios';
@@ -31,6 +32,7 @@ class Order extends React.Component{
     this.cls1 = React.createRef();
     this.cls2 = React.createRef();
     this.cls3 = React.createRef();
+    this.mobile = React.createRef();
   }
 
   async componentDidMount() {
@@ -91,6 +93,7 @@ rot = () => {
     this.cls3.current.classList.remove('trans2');
     this.cls2.current.classList.remove('disappear');
   }
+  this.mobile.current.classList.toggle('mobileAppear');
 }
 
 render() {
@@ -102,6 +105,36 @@ render() {
     <Route path={['/order/everyMonth', '/order/everyMonthCombi', '/order/everyMonthFat', '/order/everyMonthDry']}>
      <form action='/order/everyMonth' method='POST'>
          <div className='wrap_Order'>
+             <div className='mobile_menu' ref={this.mobile}>
+                 <NavLink
+                     className='mobile_each'
+                     id='advantages'
+                     to="/">
+                     Преимущества</NavLink>
+
+                 <NavLink
+                     className='mobile_each'
+                     to="/">
+                     Что внутри</NavLink>
+
+                 <NavLink
+                     className='mobile_each'
+                     to="/">
+                     Доставка</NavLink>
+
+                 <NavLink
+                     className='mobile_each'
+                     id='mob_order'
+                     to="/">
+                     Заказать</NavLink>
+
+                 <NavLink
+                     className='mobile_each'
+                     id='mob_enter'
+                     to="/#buyImg">
+                     Войти</NavLink>
+              </div>
+
               <div className='wrap2_header'>
                   <div className='wrap_header headForOrder'>
                     <NavLink to ='/' className='wrap_rosee'><img src={rosee} className='header_logo'/></NavLink>
@@ -111,10 +144,10 @@ render() {
                         <span className='partOfCls' id='cls3' ref={this.cls3}></span>
                     </div>
                     <p></p>
-                    <NavLink to='#' className='nav_header_order' id='advantages' activeClassName='active_header'>Преимущества</NavLink>
-                    <NavLink to='#' className='nav_header_order inside_spec' id='inside' activeClassName='active_header'>Что внутри</NavLink>
-                    <NavLink to='#' className='nav_header_order delivery_spec' id='delivery' activeClassName='active_header'>Доставка</NavLink>
-                    <NavLink to='#' className='nav_header_order order_spec' id='header_buy' activeClassName='active_header'>Заказать</NavLink>
+                    <NavLink to='/#advant' className='nav_header_order' id='advantages' activeClassName='active_header'>Преимущества</NavLink>
+                    <NavLink to='/#maskIn' className='nav_header_order inside_spec' id='inside' activeClassName='active_header'>Что внутри</NavLink>
+                    <NavLink to='/#buyImg' className='nav_header_order delivery_spec' id='delivery' activeClassName='active_header'>Доставка</NavLink>
+                    <NavLink to='/#buyImg' className='nav_header_order order_spec' id='header_buy' activeClassName='active_header'>Заказать</NavLink>
                     <NavLink to='/enter' className='nav_header_order enter_spec' id='header_login'>Войти</NavLink>
                     <div className='mobile_menu' style={{display: 'none'}}>
                     </div>
@@ -172,17 +205,17 @@ render() {
                </Route>
 
                <Route path={['/order/everyMonth', '/order/everyMonthCombi', '/order/everyMonthFat', '/order/everyMonthDry']}>
-                 <p className='wrap_or'><a href='https://pay.fondy.eu/s/PI3dMfrP' className='navLinks'>
+                 <p className='wrap_or'><a href='https://pay.fondy.eu/s/wxz7RJSJ1xX' className='navLinks'>
                    <button type='submit' id='order_arrange'>Оформить</button>
                  </a></p>
                </Route>
                <Route path={['/order/halfYear', '/order/halfYearCombi', '/order/halfYearFat', '/order/halfYearDry']}>
-                 <p className='wrap_or'><a href='https://pay.fondy.eu/s/OnCUN8IoAFd' className='navLinks'>
+                 <p className='wrap_or'><a href='https://pay.fondy.eu/s/spEFdAgLYkf' className='navLinks'>
                    <button type='submit' id='order_arrange'>Оформить</button>
                  </a></p>
                </Route>
                <Route path={['/order/everyYear', '/order/everyYearCombi', '/order/everyYearFat', '/order/everyYearDry']}>
-                 <p className='wrap_or'><a href='https://pay.fondy.eu/s/BQo3bkVg' className='navLinks'>
+                 <p className='wrap_or'><a href='https://pay.fondy.eu/s/1AU5ulqIzCO' className='navLinks'>
                    <button type='submit' id='order_arrange'>Оформить</button>
                  </a></p>
                </Route>
@@ -205,8 +238,38 @@ render() {
      <Route path={['/order/halfYear', '/order/halfYearCombi', '/order/halfYearFat', '/order/halfYearDry']}>
       <form action='/order/halfYear' method='POST'>
           <div className='wrap_Order'>
+                <div className='mobile_menu' ref={this.mobile}>
+                    <NavLink
+                        className='mobile_each'
+                        id='advantages'
+                        to="/">
+                        Преимущества</NavLink>
 
-              <div className='wrap_header'>
+                    <NavLink
+                        className='mobile_each'
+                        to="/">
+                        Что внутри</NavLink>
+
+                    <NavLink
+                        className='mobile_each'
+                        to="/">
+                        Доставка</NavLink>
+
+                    <NavLink
+                        className='mobile_each'
+                        id='mob_order'
+                        to="/">
+                        Заказать</NavLink>
+
+                    <NavLink
+                        className='mobile_each'
+                        id='mob_enter'
+                        to="/enter">
+                        Войти</NavLink>
+                 </div>
+
+            <div className='wrap2_header'>
+              <div className='wrap_header headForOrder'>
                     <NavLink to='/' className='wrap_rosee'><img src={rosee} className='header_logo'/></NavLink>
                     <div className='cls' onClick={this.rot}>
                        <span className='partOfCls' id='cls1' ref={this.cls1}></span>
@@ -214,13 +277,13 @@ render() {
                        <span className='partOfCls' id='cls3' ref={this.cls3}></span>
                     </div>
                     <p></p>
-                    <NavLink to='#' className='nav_header' id='advantages' activeClassName='active_header'>Преимущества</NavLink>
-                    <NavLink to='#' className='nav_header' id='inside' activeClassName='active_header'>Что внутри</NavLink>
-                    <NavLink to='#' className='nav_header' id='delivery' activeClassName='active_header'>Доставка</NavLink>
-                    <NavLink to='#' className='nav_header' id='header_buy' activeClassName='active_header'>Заказать</NavLink>
+                    <NavLink to='/' className='nav_header' id='advantages' activeClassName='active_header'>Преимущества</NavLink>
+                    <NavLink to='/' className='nav_header' id='inside' activeClassName='active_header'>Что внутри</NavLink>
+                    <NavLink to='/' className='nav_header' id='delivery' activeClassName='active_header'>Доставка</NavLink>
+                    <NavLink to='/' className='nav_header' id='header_buy' activeClassName='active_header'>Заказать</NavLink>
                     <NavLink to='/enter' className='nav_header' id='header_login'>Войти</NavLink>
-                  </div>
-
+              </div>
+            </div>
 
             <div className='order'>
               <h2 className='order_title'>Заказ</h2>
@@ -243,6 +306,8 @@ render() {
               <input type='text' name='username' className='name_input' required/>
               <input type='tel' name='userphone' className='telephone_input' required/>
               <input type='text' name='email' className='mail_input' required/>
+
+              <input type='hidden' name='ipAddress' value={this.state.ipAddress} />
 
               <div className='radio'>
                 <input type='radio' name='letter' className='radio_input' id='radio1'/>
@@ -302,22 +367,52 @@ render() {
       <Route path={['/order/everyYear', '/order/everyYearCombi', '/order/everyYearFat', '/order/everyYearDry']}>
        <form action='/order/everyYear' method='POST'>
            <div className='wrap_Order'>
+                     <div className='mobile_menu' ref={this.mobile}>
+                         <NavLink
+                             className='mobile_each'
+                             id='advantages'
+                             to="/">
+                             Преимущества</NavLink>
 
-                  <div className='wrap_header'>
-                    <NavLink to='/' className='wrap_rosee'><img src={rosee} className='header_logo'/></NavLink>
-                    <div className='cls' onClick={this.rot}>
-                    <span className='partOfCls' id='cls1' ref={this.cls1}></span>
-                    <span className='partOfCls' id='cls2' ref={this.cls2}></span>
-                    <span className='partOfCls' id='cls3' ref={this.cls3}></span>
+                         <NavLink
+                             className='mobile_each'
+                             to="/">
+                             Что внутри</NavLink>
+
+                         <NavLink
+                             className='mobile_each'
+                             to="/">
+                             Доставка</NavLink>
+
+                         <NavLink
+                             className='mobile_each'
+                             id='mob_order'
+                             to="/">
+                             Заказать</NavLink>
+
+                         <NavLink
+                             className='mobile_each'
+                             id='mob_enter'
+                             to="/#buyImg">
+                             Войти</NavLink>
+                      </div>
+
+            <div className='wrap2_header'>
+                <div className='wrap_header headForOrder'>
+                      <NavLink to='/' className='wrap_rosee'><img src={rosee} className='header_logo'/></NavLink>
+                      <div className='cls' onClick={this.rot}>
+                      <span className='partOfCls' id='cls1' ref={this.cls1}></span>
+                      <span className='partOfCls' id='cls2' ref={this.cls2}></span>
+                      <span className='partOfCls' id='cls3' ref={this.cls3}></span>
+                      </div>
+                      <p></p>
+                      <NavLink to='/' className='nav_header' id='advantages' activeClassName='active_header'>Преимущества</NavLink>
+                      <NavLink to='/' className='nav_header' id='inside' activeClassName='active_header'>Что внутри</NavLink>
+                      <NavLink to='/' className='nav_header' id='delivery' activeClassName='active_header'>Доставка</NavLink>
+                      <NavLink to='/' className='nav_header' id='header_buy' activeClassName='active_header'>Заказать</NavLink>
+                      <NavLink to='/enter' className='nav_header' id='header_login'>Войти</NavLink>
                     </div>
-                    <p></p>
-                    <NavLink to='#' className='nav_header' id='advantages' activeClassName='active_header'>Преимущества</NavLink>
-                    <NavLink to='#' className='nav_header' id='inside' activeClassName='active_header'>Что внутри</NavLink>
-                    <NavLink to='#' className='nav_header' id='delivery' activeClassName='active_header'>Доставка</NavLink>
-                    <NavLink to='#' className='nav_header' id='header_buy' activeClassName='active_header'>Заказать</NavLink>
-                    <NavLink to='/enter' className='nav_header' id='header_login'>Войти</NavLink>
-                  </div>
-
+              </div>
 
              <div className='order'>
                <h2 className='order_title'>Заказ</h2>
@@ -339,6 +434,8 @@ render() {
                <input type='text' name='username' className='name_input' required/>
                <input type='tel' name='userphone' className='telephone_input' required/>
                <input type='text' name='email' className='mail_input' required/>
+
+               <input type='hidden' name='ipAddress' value={this.state.ipAddress} />
 
                <div className='radio'>
                  <input type='radio' name='letter' className='radio_input' id='radio1'/>

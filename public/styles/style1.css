@@ -103,6 +103,9 @@ body {
   left: 107px;
   top: 63px;
 }
+.mobile_menu {
+  display: none;
+}
 .adv {
   position: relative;
   left: -788px !important;

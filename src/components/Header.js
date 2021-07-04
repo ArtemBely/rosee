@@ -1,7 +1,7 @@
 import React from 'react';
 import { Route, NavLink } from 'react-router-dom';
 import { Link } from 'react-scroll';
-import rosee from '../../public/images/rosée.png';
+import rosee from '../../public/images/LogoRosee.svg';
 import cross from '../../public/images/Union.svg';
 
 class Header extends React.Component{
@@ -20,6 +20,7 @@ class Header extends React.Component{
     this.cls1 = React.createRef();
     this.cls2 = React.createRef();
     this.cls3 = React.createRef();
+    this.mobile = React.createRef();
   }
 
   errReg = () => {
@@ -40,11 +41,82 @@ class Header extends React.Component{
       this.cls3.current.classList.remove('trans2');
       this.cls2.current.classList.remove('disappear');
     }
+    this.mobile.current.classList.toggle('mobileAppear');
   }
 
   render() {
     return(
       <div className='wrapMain_header'>
+
+        <div className='mobile_menu' ref={this.mobile}>
+        <Link activeClass="active"
+            className='mobile_each'
+            id='advantages'
+            to="mobile_Adv"
+            spy={true}
+            smooth={true}
+            hashSpy={true}
+            duration={700}
+            isDynamic={true}
+            onSetActive={this.handleSetActive}
+            onSetInactive={this.handleSetInactive}
+            ignoreCancelEvents={false}>
+            Преимущества</Link>
+
+            <Link activeClass="active"
+                className='mobile_each'
+                to="maskIn"
+                spy={true}
+                smooth={true}
+                hashSpy={true}
+                duration={700}
+                isDynamic={true}
+                onSetActive={this.handleSetActive}
+                onSetInactive={this.handleSetInactive}
+                ignoreCancelEvents={false}>
+                Что внутри</Link>
+
+                <Link activeClass="active"
+                   className='mobile_each'
+                   to="delId"
+                   spy={true}
+                   smooth={true}
+                   hashSpy={true}
+                   duration={700}
+                   isDynamic={true}
+                   onSetActive={this.handleSetActive}
+                   onSetInactive={this.handleSetInactive}
+                   ignoreCancelEvents={false}>
+                   Доставка</Link>
+                   <Link activeClass="active"
+                      className='mobile_each'
+                      id='mob_order'
+                      to="sixtheenId"
+                      spy={true}
+                      smooth={true}
+                      hashSpy={true}
+                      duration={700}
+                      isDynamic={true}
+                      onSetActive={this.handleSetActive}
+                      onSetInactive={this.handleSetInactive}
+                      ignoreCancelEvents={false}>
+                      Заказать</Link>
+                      <Link activeClass="active"
+                         className='mobile_each'
+                         id='mob_enter'
+                         to="buyImg"
+                         spy={true}
+                         smooth={true}
+                         hashSpy={true}
+                         duration={700}
+                         isDynamic={true}
+                         onSetActive={this.handleSetActive}
+                         onSetInactive={this.handleSetInactive}
+                         ignoreCancelEvents={false}>
+                         Войти</Link>
+
+           </div>
+
         <div className='wrap_header'>
         <p className='wrap_rosee'><img src={rosee} className='header_logo'/></p>
         <div className='cls' onClick={this.rot}>

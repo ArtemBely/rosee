@@ -20,6 +20,13 @@
  	 	width: 768px;
  	 	height: 50px;
 	}
+	.animationMove2 {
+	    transform: translateY(686px) !important;
+	    left: -162px !important;
+	    transition: 1.5s;
+	    width: 385px !important;
+	    top: -307px !important;
+	}
 	 .nav_header{
 		 font-size: 16px;
 		 line-height: 26px;

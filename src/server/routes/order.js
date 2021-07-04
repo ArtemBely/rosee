@@ -277,13 +277,13 @@ const they = renderToString(
     )*/
       console.log(req.originalUrl);
       if(req.originalUrl == '/order/halfYear') {
-        res.redirect('https://pay.fondy.eu/s/OnCUN8IoAFd');
+        res.redirect('https://pay.fondy.eu/s/spEFdAgLYkf');
       }
       if(req.originalUrl == '/order/everyMonth') {
-        res.redirect('https://pay.fondy.eu/s/PI3dMfrP');
+        res.redirect('https://pay.fondy.eu/s/wxz7RJSJ1xX');
       }
       if(req.originalUrl == '/order/everyYear') {
-        res.redirect('https://pay.fondy.eu/s/BQo3bkVg');
+        res.redirect('https://pay.fondy.eu/s/1AU5ulqIzCO');
       }
     /*res.send(
       `<!DOCTYPE html>

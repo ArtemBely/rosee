@@ -29,20 +29,20 @@ function Advantages() {
    <div className='wrap_advantages'>
 		 <div className="advantages_phone">
 			 <div className="shop_advantages_phone">
-			 	<img src={advantages} className='advantages_phone_img'/> 
+			 	<img src={advantages} className='advantages_phone_img' id='mobile_Adv'/> 
 			 </div>
 			 <div className="shop_advantages_phone2">
-			 	<img src={advantages2} className='advantages_phone_img2'/> 
+			 	<img src={advantages2} className='advantages_phone_img2'/>
 			 </div>
 			 <NavLink to='#' className='advantages_phone_btn'>Оформить подписку</NavLink>
 		 </div>
 		 <div className="our_advantages_phone">
 			 <div className="advantages_phone_mask">
-			 	 <img src={mask1} className='advantages_phone_mask1'/> 
-				 <img src={mask5} className='advantages_phone_mask2'/> 
-				 <img src={mask9} className='advantages_phone_mask3'/> 
-				 <img src={mask6} className='advantages_phone_mask4'/> 
-				 <img src={mask8} className='advantages_phone_mask5'/> 
+			 	 <img src={mask1} className='advantages_phone_mask1'/>
+				 <img src={mask5} className='advantages_phone_mask2'/>
+				 <img src={mask9} className='advantages_phone_mask3'/>
+				 <img src={mask6} className='advantages_phone_mask4'/>
+				 <img src={mask8} className='advantages_phone_mask5'/>
 			 </div>
 			 <p className="OA_phone_title">Получать маски по подписке проще и выгоднее</p>
 			 <p className="OA_phone_subtitle1">Доставка в почтовый ящик</p>
@@ -55,9 +55,9 @@ function Advantages() {
 			 <p className="OA_phone_text4">Маски в комплекте случайные. Вы познакомитесь с новыми производителями и вкусами.</p>
 			 <p className="OA_phone_subtitle5">Большое разнообразие масок</p>
 			 <p className="OA_phone_text5">Расширяем ассортимент, чтобы вы получали непохожие маски.</p>
-			 <img src={mask15} className='advantages_phone_mask6'/> 
-			 <img src={mask10} className='advantages_phone_mask7'/> 
-			 <img src={mask16} className='advantages_phone_mask8'/> 
+			 <img src={mask15} className='advantages_phone_mask6'/>
+			 <img src={mask10} className='advantages_phone_mask7'/>
+			 <img src={mask16} className='advantages_phone_mask8'/>
 			 <img src={mask13} className='advantages_phone_mask9'/>
 			 <img src={mask17} className='advantages_phone_mask10'/>
 		 </div>

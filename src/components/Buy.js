@@ -59,7 +59,7 @@ render() {
         <img src={tree} id='tree' />
         <img src={face} id='face' />
        </div>
-       <p className='qty'><p className='sixtheen'>16 масок в месяц</p>
+       <p className='qty'><p className='sixtheen' id='sixtheenId'>16 масок в месяц</p>
        <NavLink to='/' className='presents' activeClassName='forMyself' ref={this.forme} onClick={() => {
          this.forme.current.classList.contains('forMyself') ? null : this.forme.current.classList.add('forMyself')
        }}>для себя </NavLink>

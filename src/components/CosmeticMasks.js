@@ -2,7 +2,7 @@ import React from 'react';
 import { NavLink } from 'react-router-dom';
 import { Link } from 'react-scroll';
 import mask from '../../public/images/Mask Group 1.svg';
-import rosee from '../../public/images/rosée.png';
+import rosee from '../../public/images/LogoRosee.svg';
 import $ from 'jquery';
 
 class CosmeticMasks extends React.Component{
