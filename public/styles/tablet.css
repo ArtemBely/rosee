@@ -15,8 +15,12 @@
 		float: none;
 	}
 	.animationMove2 {
-	    transform: translateY(686px) !important;
+	    -webkit-transform: translateY(686px) !important;
+	        -ms-transform: translateY(686px) !important;
+	            transform: translateY(686px) !important;
 	    left: -123px !important;
+	    -webkit-transition: 1.5s;
+	    -o-transition: 1.5s;
 	    transition: 1.5s;
 	    width: 424px !important;
 	    top: -80px !important;
@@ -26,7 +30,8 @@
 		 line-height: 29px;
 		 color: #525252;
 		 cursor: pointer;
-		 text-decoration-line: none;
+		 -webkit-text-decoration-line: none;
+		         text-decoration-line: none;
 	 }
 	 .cosmeticMasks{
 		margin-top:100px;

@@ -103,7 +103,7 @@ app.get('*', notLoggedIn, (req, res, next) => {
         `<!DOCTYPE html>
             <html>
                 <head>
-                  <title>collab</title>
+                  <title>Маски по подписке</title>
                   <link rel="stylesheet" type="text/css" href="../main.css">
                     <meta name="viewport" content="width=device-width, initial-scale=1">
                       <script src='/bundle.js' defer></script>

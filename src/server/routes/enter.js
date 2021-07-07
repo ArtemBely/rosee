@@ -19,7 +19,7 @@ router.get('/', notLoggedIn, (req, res) => {
     `<!DOCTYPE html>
         <html>
             <head>
-              <title>Проверка кода</title>
+              <title>Маски по подписке</title>
                    <link rel="stylesheet" type="text/css" href="../main.css">
                      <meta name="viewport" content="width=device-width, initial-scale=1">
                        <script src='/bundle.js' defer></script>

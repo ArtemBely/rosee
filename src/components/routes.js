@@ -16,7 +16,6 @@ const routes = [
      '/order/halfYearDry', '/order/everyYearCombi',
      '/order/everyYearFat', '/order/everyYearDry'
    ],
-    exact: true,
     component: Order
   },
   {

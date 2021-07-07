@@ -211,7 +211,7 @@ class Profile extends React.Component{
                 <input type="text" name="name" className="questions_name" placeholder="Ваше имя"/>
                 <input type="email" name="email" className="questions_mail" placeholder="Телефон или электронная почта"/>
                 <textarea type="text" name="questions" className="questions_input" placeholder="Ваш вопрос"></textarea>
-                <button type='submit' className="questions_button">Оформить</button>
+                <button type='submit' className="questions_button">Отправить</button>
               </form>
             </div>
           </div>

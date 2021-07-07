@@ -36,6 +36,7 @@ class Order extends React.Component{
   }
 
   async componentDidMount() {
+       window.scrollTo(0, 0)
        await axios.get('https://api.ipify.org/?format=json')
       .then(res => {
         let data = res.data;
@@ -182,7 +183,7 @@ render() {
              <input type='hidden' name='ipAddress' value={this.state.ipAddress} />
 
              <div className='radio'>
-               <input type='radio' name='letter' className='radio_input' id='radio1'/>
+               <input type='checkbox' name='letter' className='radio_input' id='radio1'/>
                <label htmlFor='radio1' className='radio_label'>Получать письма с акциями</label>
              </div>
 
@@ -310,7 +311,7 @@ render() {
               <input type='hidden' name='ipAddress' value={this.state.ipAddress} />
 
               <div className='radio'>
-                <input type='radio' name='letter' className='radio_input' id='radio1'/>
+                <input type='checkbox' name='letter' className='radio_input' id='radio1'/>
                 <label htmlFor='radio1' className='radio_label'>Получать письма с акциями</label>
               </div>
 
@@ -438,7 +439,7 @@ render() {
                <input type='hidden' name='ipAddress' value={this.state.ipAddress} />
 
                <div className='radio'>
-                 <input type='radio' name='letter' className='radio_input' id='radio1'/>
+                 <input type='checkbox' name='letter' className='radio_input' id='radio1'/>
                  <label htmlFor='radio1' className='radio_label'>Получать письма с акциями</label>
                </div>
 

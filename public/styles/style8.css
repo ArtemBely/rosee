@@ -7,7 +7,11 @@
 	font-family: 'Manrope-Bold';
 	width: 240px;
 	height: 68px;
+	-ms-grid-column:2;
+	-ms-grid-column-span:1;
 	grid-column:2/3;
+	-ms-grid-row:8;
+	-ms-grid-row-span:1;
 	grid-row:8/9;
 	text-align:center;
 	border: none;
@@ -19,7 +23,11 @@
   margin-top: 640px;
 }
 .arrange_text{
+	-ms-grid-column:2;
+	-ms-grid-column-span:1;
 	grid-column:2/3;
+	-ms-grid-row:10;
+	-ms-grid-row-span:1;
 	grid-row:10/11;
 	margin-top: 280px;
 	font-weight: 400;
@@ -33,7 +41,11 @@
 	border-bottom: 1px dotted #242424;
 }
 .wrap_password_field {
+	-ms-grid-column: 1;
+	-ms-grid-column-span: 1;
 	grid-column: 1/2;
+	-ms-grid-row: 4;
+	-ms-grid-row-span: 1;
 	grid-row: 4/5;
 }
 .chooseType {
@@ -49,13 +61,18 @@
 	width: 630px;
 	position: absolute;
 	top: 125px;
-	box-shadow: 0px 20px 50px rgba(0, 0, 0, 0.1);
+	-webkit-box-shadow: 0px 20px 50px rgba(0, 0, 0, 0.1);
+	        box-shadow: 0px 20px 50px rgba(0, 0, 0, 0.1);
+	background: -o-linear-gradient(
+	222.09deg
+	, #FFFFFF 4.34%, #F0F0F0 104.3%);
 	background: linear-gradient(
 	227.91deg
 	, #FFFFFF 4.34%, #F0F0F0 104.3%);
 	z-index: 10;
 	border: 1px solid #808080;
-	box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	        box-sizing: border-box;
 	border-radius: 30px;
 }
 .enter_text{
@@ -78,7 +95,8 @@
 	height: 71px;
 	background: #FFFFFF;
 	border: 2px solid #54854A;
-	box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	        box-sizing: border-box;
 	border-radius: 10px;
 	font-size: 25px;
 	line-height: 41px;
@@ -93,7 +111,8 @@
 	height: 71px;
 	background: #FFFFFF;
 	border: 2px solid #54854A;
-	box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	        box-sizing: border-box;
 	border-radius: 10px;
 	font-size: 25px;
 	line-height: 41px;
