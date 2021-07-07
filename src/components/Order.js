@@ -138,7 +138,7 @@ render() {
 
               <div className='wrap2_header'>
                   <div className='wrap_header headForOrder'>
-                    <NavLink to ='/' className='wrap_rosee'><img src={rosee} className='header_logo'/></NavLink>
+                    <NavLink to ='/' className='wrap_rosee mobile_rosee_order'><img src={rosee} className='header_logo'/></NavLink>
                     <div className='cls clsOrder' onClick={this.rot}>
                         <span className='partOfCls' id='cls1' ref={this.cls1}></span>
                         <span className='partOfCls' id='cls2' ref={this.cls2}></span>

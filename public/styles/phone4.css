@@ -6,7 +6,10 @@
     top: 11px;
     height: auto;
   }
-  .main_wrap {
+  .mobile_rosee_order {
+    left: 235px !important;
+  }
+  .wrap_Order {
     overflow-x: hidden;
   }
   .mobile_menu {
