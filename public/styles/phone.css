@@ -17,6 +17,10 @@
       margin-left: -942px !important;
       margin-top: 28px !important;
     }
+    .wrap_everyWeek {
+      position: relative;
+      left: -100px;
+    }
     .wrapMain_header {
       position: relative;
     }
@@ -69,7 +73,7 @@
       -ms-grid-row:1;
       -ms-grid-row-span:1;
       grid-row:1/2;
-      margin-top: -774px;
+      margin-top: -813px;
       margin-left: 20px;
     }
     .wrap_allEvery {
@@ -137,7 +141,7 @@
                 box-sizing: border-box;
         cursor: pointer;
         color: #ffffff;
-        margin-top: 274px;
+        margin-top: 309px;
         margin-left: 20px;
       }
       #masks_buy{
@@ -1040,7 +1044,7 @@
             margin-left: 20px;
             font-size: 16px;
             line-height: 26px;
-            width: 252px;
+            width: 275px;
           }
           .DeliveryText1 {
             -ms-grid-column: 1;
@@ -1409,6 +1413,7 @@
             -webkit-box-pack: center;
                 -ms-flex-pack: center;
                     justify-content: center;
+                    overflow: hidden;
           }
           .footer{
             -ms-grid-columns:300px;
@@ -1484,6 +1489,9 @@
             grid-row: 2/3;
             margin-left: -145px;
             margin-top: -10px;
+          }
+          #footer_phone > a {
+            color: white;
           }
           #footer_email{
             -ms-grid-column:1;

@@ -6421,6 +6421,10 @@ textarea{
       margin-left: -942px !important;
       margin-top: 28px !important;
     }
+    .wrap_everyWeek {
+      position: relative;
+      left: -100px;
+    }
     .wrapMain_header {
       position: relative;
     }
@@ -6473,7 +6477,7 @@ textarea{
       -ms-grid-row:1;
       -ms-grid-row-span:1;
       grid-row:1/2;
-      margin-top: -774px;
+      margin-top: -813px;
       margin-left: 20px;
     }
     .wrap_allEvery {
@@ -6541,7 +6545,7 @@ textarea{
                 box-sizing: border-box;
         cursor: pointer;
         color: #ffffff;
-        margin-top: 274px;
+        margin-top: 309px;
         margin-left: 20px;
       }
       #masks_buy{
@@ -7444,7 +7448,7 @@ textarea{
             margin-left: 20px;
             font-size: 16px;
             line-height: 26px;
-            width: 252px;
+            width: 275px;
           }
           .DeliveryText1 {
             -ms-grid-column: 1;
@@ -7813,6 +7817,7 @@ textarea{
             -webkit-box-pack: center;
                 -ms-flex-pack: center;
                     justify-content: center;
+                    overflow: hidden;
           }
           .footer{
             -ms-grid-columns:300px;
@@ -7888,6 +7893,9 @@ textarea{
             grid-row: 2/3;
             margin-left: -145px;
             margin-top: -10px;
+          }
+          #footer_phone > a {
+            color: white;
           }
           #footer_email{
             -ms-grid-column:1;
@@ -9510,8 +9518,8 @@ textarea{
   .header_logo, .wrap_rosee {
     position: relative;
     width: 54px;
-    left: 236px;
-    top: -6px;
+    left: 472px;
+    top: 11px;
     height: auto;
   }
   .mobile_menu {
@@ -9522,7 +9530,7 @@ textarea{
     height: 300px;
     background: #000000;
     left: -400px;
-    top: 2px;
+    top: 0px;
     z-index: 100;
     color: white;
     -webkit-transition: 0.2s;
@@ -9565,8 +9573,8 @@ textarea{
     -ms-grid-column: 3;
     -ms-grid-column-span: 1;
     grid-column: 3 / 4;
-    left: 263px;
-    top: -8px;
+    left: 741px;
+    top: 24px;
   }
   .clsOrder {
     left: 236px !important;
@@ -9869,7 +9877,8 @@ textarea{
     background: url(/1cdf580ddbd2ba8f10221a72f33bc073.svg);
     background-size: cover;
     position: relative;
-    height: 886x;
+    height: 886px;
+    overflow: hidden;
   }
   .wrap_order_foot {
     top: 130px !important;
