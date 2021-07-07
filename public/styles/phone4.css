@@ -6,6 +6,9 @@
     top: 11px;
     height: auto;
   }
+  .main_wrap {
+    overflow-x: hidden;
+  }
   .mobile_menu {
     display: -ms-grid;
     display: grid;
