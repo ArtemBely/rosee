@@ -77,6 +77,10 @@ body {
   overflow-x: hidden;
   background-color: #fafafa;
 }
+.address_input::placeholder {
+  font-family: 'Manrope-Medium';
+  font-size: 18px;
+}
 .wrap_header{
 	position: absolute;
 	display: -ms-grid;

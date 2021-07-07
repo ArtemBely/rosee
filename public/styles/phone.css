@@ -17,6 +17,10 @@
       margin-left: -942px !important;
       margin-top: 28px !important;
     }
+    .address_input::placeholder {
+      font-family: 'Manrope-Medium';
+      font-size: 12px;
+    }
     .wrap_everyWeek {
       position: relative;
       left: -100px;

@@ -77,6 +77,10 @@ body {
   overflow-x: hidden;
   background-color: #fafafa;
 }
+.address_input::placeholder {
+  font-family: 'Manrope-Medium';
+  font-size: 18px;
+}
 .wrap_header{
 	position: absolute;
 	display: -ms-grid;
@@ -6421,6 +6425,10 @@ textarea{
       margin-left: -942px !important;
       margin-top: 28px !important;
     }
+    .address_input::placeholder {
+      font-family: 'Manrope-Medium';
+      font-size: 12px;
+    }
     .wrap_everyWeek {
       position: relative;
       left: -100px;
@@ -6562,7 +6570,7 @@ textarea{
       }
       .wrap_advantages {
         top: -236px;
-        width: 100%;
+        width: 93%;
         display: -webkit-box;
         display: -ms-flexbox;
         display: flex;
@@ -6582,7 +6590,7 @@ textarea{
         width: 375px;
         height: 900px;
         position: relative;
-        left: -3px;
+        left: 12px;
       }
       .advantages_phone > *:nth-child(1){
         -ms-grid-row: 1;
@@ -7976,6 +7984,10 @@ textarea{
       width: 576px;
       height: 50px;
       margin-left: 90px;
+    }
+    .address_input::placeholder {
+      font-family: 'Manrope-Medium';
+      font-size: 12px;
     }
     .wrap_rosee {
       -ms-grid-column: 1;
@@ -9521,6 +9533,12 @@ textarea{
     left: 472px;
     top: 11px;
     height: auto;
+  }
+  .mobile_rosee_order {
+    left: -2px !important;
+  }
+  .wrap_Order {
+    overflow-x: hidden;
   }
   .mobile_menu {
     display: -ms-grid;

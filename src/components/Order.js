@@ -187,7 +187,7 @@ render() {
                <label htmlFor='radio1' className='radio_label'>Получать письма с акциями</label>
              </div>
 
-             <textarea name='useraddress' className='address_input' required></textarea>
+             <textarea name='useraddress' className='address_input' placeholder='Не забудьте указать индекс' required></textarea>
              <textarea name='comments' className='comments'></textarea>
 
              <div className='wrap_password_field'>
@@ -315,7 +315,7 @@ render() {
                 <label htmlFor='radio1' className='radio_label'>Получать письма с акциями</label>
               </div>
 
-              <textarea name='useraddress' className='address_input' required></textarea>
+              <textarea name='useraddress' className='address_input' placeholder='Не забудьте указать индекс' required></textarea>
               <textarea name='comments' className='comments'></textarea>
 
               <div className='wrap_password_field'>
@@ -443,7 +443,7 @@ render() {
                  <label htmlFor='radio1' className='radio_label'>Получать письма с акциями</label>
                </div>
 
-               <textarea name='useraddress' className='address_input' required></textarea>
+               <textarea name='useraddress' className='address_input' placeholder='Не забудьте указать индекс' required></textarea>
                <textarea name='comments' className='comments'></textarea>
 
                <div className='wrap_password_field'>

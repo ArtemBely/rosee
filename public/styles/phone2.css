@@ -28,6 +28,10 @@
       height: 50px;
       margin-left: 90px;
     }
+    .address_input::placeholder {
+      font-family: 'Manrope-Medium';
+      font-size: 12px;
+    }
     .wrap_rosee {
       -ms-grid-column: 1;
       -ms-grid-column-span: 1;
