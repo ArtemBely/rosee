@@ -158,7 +158,7 @@
       }
       .wrap_advantages {
         top: -236px;
-        width: 100%;
+        width: 93%;
         display: -webkit-box;
         display: -ms-flexbox;
         display: flex;
@@ -178,7 +178,7 @@
         width: 375px;
         height: 900px;
         position: relative;
-        left: -3px;
+        left: 12px;
       }
       .advantages_phone > *:nth-child(1){
         -ms-grid-row: 1;
