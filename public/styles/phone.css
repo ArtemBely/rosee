@@ -6,6 +6,14 @@
   }
 }
 
+@media (min-width: 345px) and (max-width: 374px) {
+  body {
+      -moz-transform: scale(0.93, 0.93); /* Moz-browsers */
+      zoom: 0.93; /* Other non-webkit browsers */
+      zoom: 93%; /* Webkit browsers */
+  }
+}
+
 @media (min-width: 320px) and (max-width: 576px) {
   .wrap_header{
       -ms-grid-columns:55px 200px 80px;
@@ -79,7 +87,7 @@
       -ms-grid-row:1;
       -ms-grid-row-span:1;
       grid-row:1/2;
-      margin-top: -783px;
+      margin-top: -808px;
       margin-left: 20px;
     }
     .wrap_allEvery {
@@ -184,7 +192,10 @@
         width: 375px;
         height: 900px;
         position: relative;
-        left: 12px;
+        left: -6px;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        justify-content: center;
       }
       .advantages_phone > *:nth-child(1){
         -ms-grid-row: 1;
@@ -226,7 +237,7 @@
           font-family: 'Manrope-Regular';
           font-size: 16px;
           line-height: 26px;
-          margin-left: 62px;
+          margin-left: 58px;
           margin-top: 839px;
         }
         .our_advantages_phone{
@@ -241,8 +252,9 @@
           -ms-grid-rows: 216px 35px 62px 35px 130px 35px 130px 35px 104px 35px 104px 35px 78px;
           grid-template-rows: 216px 62px 130px 130px 104px 104px 78px;
           grid-row-gap:35px ;
-          width: 375px;
+          width: 355px;
           position: absolute;
+          overflow: hidden;
         }
         .our_advantages_phone > *:nth-child(1){
           -ms-grid-row: 1;

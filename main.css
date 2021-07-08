@@ -6414,6 +6414,14 @@ textarea{
   }
 }
 
+@media (min-width: 345px) and (max-width: 374px) {
+  body {
+      -moz-transform: scale(0.93, 0.93); /* Moz-browsers */
+      zoom: 0.93; /* Other non-webkit browsers */
+      zoom: 93%; /* Webkit browsers */
+  }
+}
+
 @media (min-width: 320px) and (max-width: 576px) {
   .wrap_header{
       -ms-grid-columns:55px 200px 80px;
@@ -6487,7 +6495,7 @@ textarea{
       -ms-grid-row:1;
       -ms-grid-row-span:1;
       grid-row:1/2;
-      margin-top: -783px;
+      margin-top: -808px;
       margin-left: 20px;
     }
     .wrap_allEvery {
@@ -6592,7 +6600,7 @@ textarea{
         width: 375px;
         height: 900px;
         position: relative;
-        left: 12px;
+        left: -1px;
       }
       .advantages_phone > *:nth-child(1){
         -ms-grid-row: 1;
@@ -6649,8 +6657,9 @@ textarea{
           -ms-grid-rows: 216px 35px 62px 35px 130px 35px 130px 35px 104px 35px 104px 35px 78px;
           grid-template-rows: 216px 62px 130px 130px 104px 104px 78px;
           grid-row-gap:35px ;
-          width: 375px;
+          width: 355px;
           position: absolute;
+          overflow: hidden;
         }
         .our_advantages_phone > *:nth-child(1){
           -ms-grid-row: 1;
@@ -10036,7 +10045,7 @@ textarea{
     .nav_footer {
       font-family: 'Roboto-Light';
       color: white;
-      font-size: 16px;
+      font-size: 16px !important;
     }
     #user {
       position: relative;
@@ -10162,6 +10171,8 @@ textarea{
       grid-column: 1 / 2;
       margin-top: 15px;
       width: 347px;
+      left: -4px;
+      position: relative;
     }
     .second_section > form {
       width: 100%
@@ -10362,7 +10373,7 @@ textarea{
     -ms-grid-row-span: 1;
     grid-row: 3/4;
     position: relative;
-    left: -33px;
+    left: -22px;
     top: -140px;
     color: white;
   }
@@ -10374,7 +10385,7 @@ textarea{
     -ms-grid-row-span: 1;
     grid-row: 1/2;
     top: -30px;
-    left: -49px;
+    left: -21px;
     position: relative;
     color: white;
   }
@@ -10387,7 +10398,7 @@ textarea{
     grid-row: 3/4;
     -webkit-text-decoration-line: underline;
             text-decoration-line: underline;
-    margin-left: -257px;
+    margin-left: -248px;
     top: -103px;
     position: relative;
   }
@@ -10400,7 +10411,7 @@ textarea{
     grid-row: 2/3;
     -webkit-text-decoration-line: underline;
             text-decoration-line: underline;
-    left: -22px;
+    left: -23px;
     position: relative;
     width: 239px;
     top: -23px;

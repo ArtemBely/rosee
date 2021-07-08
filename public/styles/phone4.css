@@ -495,7 +495,7 @@
     .nav_footer {
       font-family: 'Roboto-Light';
       color: white;
-      font-size: 16px;
+      font-size: 16px !important;
     }
     #user {
       position: relative;
@@ -621,6 +621,8 @@
       grid-column: 1 / 2;
       margin-top: 15px;
       width: 347px;
+      left: -4px;
+      position: relative;
     }
     .second_section > form {
       width: 100%
@@ -821,7 +823,7 @@
     -ms-grid-row-span: 1;
     grid-row: 3/4;
     position: relative;
-    left: -33px;
+    left: -22px;
     top: -140px;
     color: white;
   }
@@ -833,7 +835,7 @@
     -ms-grid-row-span: 1;
     grid-row: 1/2;
     top: -30px;
-    left: -49px;
+    left: -21px;
     position: relative;
     color: white;
   }
@@ -846,7 +848,7 @@
     grid-row: 3/4;
     -webkit-text-decoration-line: underline;
             text-decoration-line: underline;
-    margin-left: -257px;
+    margin-left: -248px;
     top: -103px;
     position: relative;
   }
@@ -859,7 +861,7 @@
     grid-row: 2/3;
     -webkit-text-decoration-line: underline;
             text-decoration-line: underline;
-    left: -22px;
+    left: -23px;
     position: relative;
     width: 239px;
     top: -23px;
