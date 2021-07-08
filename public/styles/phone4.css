@@ -9,6 +9,17 @@
   .mobile_rosee_order {
     left: -2px !important;
   }
+  .forMyself {
+    cursor: pointer;
+    text-decoration: none;
+    background-image: -webkit-gradient(linear, left top, right top, color-stop(48%, #54854A), color-stop(0%, rgba(255,255,255,0))) !important;
+    background-image: -o-linear-gradient(left, #54854A 48%, rgba(255,255,255,0) 0%) !important;
+    background-image: linear-gradient(to right, #54854A 48%, rgba(255,255,255,0) 0%) !important;
+    background-position: bottom !important;
+    background-size: 26px 2px !important;
+    background-repeat: repeat-x !important;
+    color: #54854A !important;
+  }
   .wrap_Order {
     overflow-x: hidden;
   }
@@ -109,7 +120,7 @@
     font-size: 35px;
     line-height: 43px;
     color: #54854A;
-    width: 337px;
+    width: 357px;
     font-size: 25px;
     line-height: 38px;
     position: relative;
@@ -625,7 +636,7 @@
     }
     .questions_name, .questions_mail, .questions_input {
       width: 100%;
-      font-size: 12px;
+      font-size: 16px;
       background: white;
     }
     .questions_name, .questions_mail {
@@ -819,7 +830,7 @@
     -ms-grid-row-span: 1;
     grid-row: 3/4;
     position: relative;
-    left: -33px;
+    left: -25px;
     top: -140px;
     color: white;
   }
@@ -831,7 +842,7 @@
     -ms-grid-row-span: 1;
     grid-row: 1/2;
     top: -30px;
-    left: -42px;
+    left: -12px;
     position: relative;
     color: white;
   }
@@ -857,9 +868,9 @@
     grid-row: 2/3;
     -webkit-text-decoration-line: underline;
             text-decoration-line: underline;
-    left: -44px;
+    left: -22px;
     position: relative;
-    width: 195px;
+    width: 239px;
     top: -23px;
   }
   #footer_sentence {
@@ -898,6 +909,9 @@
   .wrap_header {
      margin-left: -94px;
      margin-top: -10px;
+   }
+   #radio1 {
+     border: none;
    }
    .mobile_menu {
      display: -ms-grid;
@@ -1076,7 +1090,7 @@
    }
    .questions_name, .questions_mail, .questions_input {
      width: 100%;
-     font-size: 12px;
+     font-size: 16px;
      background: white;
    }
    .questions_name, .questions_mail {

@@ -17,6 +17,9 @@
       margin-left: -942px !important;
       margin-top: 28px !important;
     }
+    #radio1 {
+      border: none;
+    }
     .address_input::placeholder {
       font-family: 'Manrope-Medium';
       font-size: 12px;
@@ -1195,6 +1198,14 @@
           }
           .presents {
             color: #242424;
+            cursor: pointer;
+            text-decoration: none;
+            background-image: -webkit-gradient(linear, left top, right top, color-stop(48%, #5B5464), color-stop(0%, rgba(255,255,255,0)));
+            background-image: -o-linear-gradient(left, #5B5464 48%, rgba(255,255,255,0) 0%);
+            background-image: linear-gradient(to right, #5B5464 48%, rgba(255,255,255,0) 0%);
+            background-position: bottom;
+            background-size: 26px 2px;
+            background-repeat: repeat-x;
           }
           .payment1 {
             -ms-grid-column: 1;
