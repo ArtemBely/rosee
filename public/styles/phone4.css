@@ -5,7 +5,10 @@
     height: auto;
   }
   .mobile_rosee_order {
-    left: -2px !important;
+    left: 233px !important;
+  }
+  .nav_header_order {
+    display: none;
   }
   .forMyself {
     cursor: pointer;
@@ -73,6 +76,7 @@
     -ms-grid-column-span: 1;
     grid-column: 3 / 4;
     top: 24px;
+    left: -5px;
   }
   .clsOrder {
     left: 236px !important;
@@ -644,7 +648,7 @@
       height: 202px !important;
     }
     .headForOrder {
-      margin-left: 0px !important;
+      margin-left: 237px !important;
     }
     .questions_button {
       width: 156px;
