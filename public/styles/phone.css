@@ -1,8 +1,8 @@
 @media (min-width: 320px) and (max-width: 375px) {
   body {
-      -moz-transform: scale(0.9, 0.9); /* Moz-browsers */
-      zoom: 0.9; /* Other non-webkit browsers */
-      zoom: 90%; /* Webkit browsers */
+      -moz-transform: scale(0.76, 0.76); /* Moz-browsers */
+      zoom: 0.76; /* Other non-webkit browsers */
+      zoom: 76%; /* Webkit browsers */
   }
 }
 
@@ -14,7 +14,7 @@
       margin-top:50px;
       width: 375px;
       height: 50px;
-      margin-left: -942px !important;
+      margin-left: -472px !important;
       margin-top: 28px !important;
     }
     #radio1 {
@@ -602,6 +602,7 @@
           }
           .wrapMain_Envelope {
             top: -220px;
+            left: -7px;
           }
           .inside_title{
             -ms-grid-column:1;
@@ -1096,14 +1097,14 @@
             top: -17px;
           }
           .buyBlock {
-            width: 375px;
+            width: 320px;
             height: 600px;
             -ms-grid-columns: 335px;
             grid-template-columns: 335px;
             -ms-grid-rows: 65px 10px 234px 10px 234px 10px 70px;
             grid-template-rows: 65px 234px 234px 70px;
             grid-row-gap: 10px;
-            left: 10px;
+            left: -8px;
           }
           .buyBlock > *:nth-child(1) {
             -ms-grid-row: 1;
@@ -1330,7 +1331,7 @@
           }
           .wrap_questions2 {
             top: 104px;
-            margin-left: -48px;
+            margin-left: -38px;
           }
           .questions2 {
             width: 351px;
@@ -1448,7 +1449,7 @@
             padding-top:400px;
             width: 351px;
             height: 347px;
-            left: 4px;
+            left: 10px;
           }
           .footer > *:nth-child(1){
             -ms-grid-row: 1;
