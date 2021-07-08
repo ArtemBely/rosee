@@ -1,9 +1,7 @@
 @media (min-width: 320px) and (max-width: 576px) {
   .header_logo, .wrap_rosee {
-    position: relative;
+    position: absolute;
     width: 54px;
-    left: 119px;
-    top: 11px;
     height: auto;
   }
   .mobile_rosee_order {
@@ -70,11 +68,10 @@
     width: 21px;
     height: 21px;
     cursor: pointer;
-    position: relative;
+    position: absolute;
     -ms-grid-column: 3;
     -ms-grid-column-span: 1;
     grid-column: 3 / 4;
-    left: 34px;
     top: 24px;
   }
   .clsOrder {
@@ -499,12 +496,6 @@
       font-family: 'Roboto-Light';
       color: white;
       font-size: 16px;
-    }
-
-
-    .wrap_header {
-      margin-left: -242px;
-      margin-top: -10px;
     }
     #user {
       position: relative;
