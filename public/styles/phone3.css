@@ -5,6 +5,9 @@
     left: 206px;
     top: -6px;
   }
+  .order_addition {
+    display: none;
+  }
   .cls {
    display: -ms-grid;
    display: grid;

@@ -6600,7 +6600,10 @@ textarea{
         width: 375px;
         height: 900px;
         position: relative;
-        left: -1px;
+        left: -6px;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        justify-content: center;
       }
       .advantages_phone > *:nth-child(1){
         -ms-grid-row: 1;
@@ -6642,7 +6645,7 @@ textarea{
           font-family: 'Manrope-Regular';
           font-size: 16px;
           line-height: 26px;
-          margin-left: 62px;
+          margin-left: 58px;
           margin-top: 839px;
         }
         .our_advantages_phone{
@@ -8796,6 +8799,9 @@ textarea{
     left: 206px;
     top: -6px;
   }
+  .order_addition {
+    display: none;
+  }
   .cls {
    display: -ms-grid;
    display: grid;
@@ -9555,7 +9561,10 @@ textarea{
     height: auto;
   }
   .mobile_rosee_order {
-    left: -2px !important;
+    left: 233px !important;
+  }
+  .nav_header_order {
+    display: none;
   }
   .forMyself {
     cursor: pointer;
@@ -9623,6 +9632,7 @@ textarea{
     -ms-grid-column-span: 1;
     grid-column: 3 / 4;
     top: 24px;
+    left: -5px;
   }
   .clsOrder {
     left: 236px !important;
@@ -9674,6 +9684,7 @@ textarea{
     left: 245px;
     font-family: 'Manrope-Bold';
     top: -41px;
+    letter-spacing: -1px;
   }
   .order_title {
     display: none;
@@ -10194,7 +10205,7 @@ textarea{
       height: 202px !important;
     }
     .headForOrder {
-      margin-left: 0px !important;
+      margin-left: 237px !important;
     }
     .questions_button {
       width: 156px;
