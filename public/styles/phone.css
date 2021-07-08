@@ -77,7 +77,7 @@
       -ms-grid-row:1;
       -ms-grid-row-span:1;
       grid-row:1/2;
-      margin-top: -813px;
+      margin-top: -783px;
       margin-left: 20px;
     }
     .wrap_allEvery {
@@ -99,7 +99,7 @@
       grid-row:2/3;
       font-size: 25px;
       line-height: 34px;
-      width: 325px;
+      width: 343px;
       margin: 0;
       margin-left: 20px;
       position: relative;
@@ -113,7 +113,7 @@
         -ms-grid-row:3;
         -ms-grid-row-span:1;
         grid-row:3/4;
-        width: 283px;
+        width: 273px;
         font-size: 16px;
         line-height: 26px;
         margin: 0;
@@ -367,6 +367,8 @@
           color: #161616;
           margin:0px;
           margin-top: 5px;
+          width: 340px;
+          letter-spacing: -1px;
         }
         .OA_phone_subtitle1{
           -ms-grid-column: 1;
@@ -420,7 +422,7 @@
           font-size: 16px;
           line-height: 26px;
           margin-top:26px;
-          width: 295px;
+          width: 270px;
         }
         .OA_phone_subtitle3{
             -ms-grid-column: 1;
@@ -447,7 +449,7 @@
             font-size: 16px;
             line-height: 26px;
             margin-top:26px;
-            width: 310px;
+            width: 300px;
           }
           .OA_phone_subtitle4{
             -ms-grid-column: 1;
@@ -474,7 +476,7 @@
             font-size: 16px;
             line-height: 26px;
             margin-top:26px;
-            width: 270px;
+            width: 250px;
           }
           .OA_phone_subtitle5{
             -ms-grid-column: 1;
@@ -501,7 +503,7 @@
             font-size: 16px;
             line-height: 26px;
             margin-top:26px;
-            width: 280px;
+            width: 270px;
           }
           .advantages_phone_mask6{
             margin-top: -730px;
@@ -640,7 +642,7 @@
             line-height: 26px;
             position: relative;
             left: 22px;
-            width: 291px;
+            width: 251px;
             margin-top: 0;
           }
           .inside_text2{
@@ -1048,7 +1050,7 @@
             margin-left: 20px;
             font-size: 16px;
             line-height: 26px;
-            width: 275px;
+            width: 320px;
           }
           .DeliveryText1 {
             -ms-grid-column: 1;
@@ -1061,7 +1063,7 @@
             margin-top: 26px;
             font-size: 16px;
             line-height: 26px;
-            width: 285px;
+            width: 270px;
           }
           .forRF {
             -ms-grid-column: 1;

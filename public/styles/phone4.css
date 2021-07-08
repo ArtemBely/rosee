@@ -503,6 +503,8 @@
     .wrap_Footer {
       background: url('../images/Без имени-2 2.svg');
       background-size: cover;
+      position: relative;
+      top: 71px;
     }
     .wrap_order_foot {
       top: -215px;
@@ -615,7 +617,7 @@
       -ms-grid-column: 1;
       -ms-grid-column-span: 1;
       grid-column: 1 / 2;
-      margin-top: -33px;
+      margin-top: 15px;
       width: 347px;
     }
     .second_section > form {
@@ -647,13 +649,18 @@
     }
     .have_a_quest2 {
       font-weight: 400;
-      font-size: 12px;
-      line-height: 20px;
+      font-size: 16px;
+      line-height: 25px;
       position: relative;
-      top: -34px;
+      top: -21px;
       font-family: 'Manrope-Light';
-      width: 300;
-      width: 213px;
+      width: 284px;
+    }
+    .br_2 {
+      display: block;
+    }
+    .br_1 {
+      display: none;
     }
     #rating_form {
       display: -ms-grid;
@@ -1090,7 +1097,6 @@
      position: relative;
      top: -34px;
      font-family: 'Manrope-Light';
-     width: 300;
      width: 213px;
    }
    #rating_form {
