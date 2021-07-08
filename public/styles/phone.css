@@ -1,4 +1,4 @@
-@media (min-width: 320px) and (max-width: 375px) {
+@media (min-width: 320px) and (max-width: 345px) {
   body {
       -moz-transform: scale(0.76, 0.76); /* Moz-browsers */
       zoom: 0.76; /* Other non-webkit browsers */
