@@ -3447,7 +3447,7 @@ textarea{
 	background: linear-gradient(
 	227.91deg
 	, #FFFFFF 4.34%, #F0F0F0 104.3%);
-	z-index: 10;
+	z-index: 1000;
 	border: 1px solid #808080;
 	-webkit-box-sizing: border-box;
 	        box-sizing: border-box;
@@ -3644,8 +3644,8 @@ textarea{
   display: none;
 }
 .openSubs {
-  display: -ms-grid;
-  display: grid;
+  display: -ms-grid !important;
+  display: grid !important;
 }
 .userData{
 	position: relative;
@@ -4066,6 +4066,11 @@ textarea{
 		margin-top:25px;
  	 	width: 992px;
  	 	height: 50px;
+	}
+	.wrap_enter {
+		-moz-transform: scale(0.8, 0.8); /* Moz-browsers */
+		zoom: 0.8; /* Other non-webkit browsers */
+		zoom: 80%; /* Webkit browsers */
 	}
 	.user_address {
 		 width: 400px;
@@ -5184,6 +5189,11 @@ textarea{
 	}
 	.order_title2 {
 		font-family: 'Manrope-Regular';
+	}
+	.wrap_enter {
+		-moz-transform: scale(0.5, 0.5); /* Moz-browsers */
+		zoom: 0.5; /* Other non-webkit browsers */
+		zoom: 50%; /* Webkit browsers */
 	}
 }
 @media (min-width: 768px) and (max-width: 1100px) {
@@ -6431,6 +6441,19 @@ textarea{
       width: 375px;
       height: 50px;
       margin-top: 28px !important;
+    }
+    .change_name {
+      width: 130px;
+    }
+    #mob_exit {
+      font-weight: 700;
+      font-family: 'Roboto-Regular';
+      top: 14px !important;
+    }
+    .wrap_enter {
+      -moz-transform: scale(0.5, 0.5); /* Moz-browsers */
+      zoom: 0.5; /* Other non-webkit browsers */
+      zoom: 50%; /* Webkit browsers */
     }
     #radio1 {
       border: none;
@@ -8010,6 +8033,19 @@ textarea{
       height: 50px;
       margin-left: 90px;
     }
+    .change_name {
+      width: 130px;
+    }
+    #mob_exit {
+      font-weight: 700;
+      font-family: 'Roboto-Regular';
+      top: 14px !important;
+    }
+    .wrap_enter {
+      -moz-transform: scale(0.5, 0.5); /* Moz-browsers */
+      zoom: 0.5; /* Other non-webkit browsers */
+      zoom: 50%; /* Webkit browsers */
+    }
     .address_input::placeholder {
       font-family: 'Manrope-Medium';
       font-size: 12px;
@@ -8815,6 +8851,33 @@ textarea{
    left: 132px;
    top: -5px;
  }
+ .cancel_sub {
+   z-index: 999;
+ }
+ .cancel2 {
+   top: 37%;
+   position: -webkit-sticky;
+   position: sticky;
+   background: bisque;
+   width: 300px;
+   z-index: 1000;
+   height: 233px;
+   margin-left: 7%;
+   display: none;
+   -ms-grid-columns: (1fr)[2];
+   grid-template-columns: repeat(2, 1fr);
+   -ms-grid-rows: (1fr)[2];
+   grid-template-rows: repeat(2, 1fr);
+ }
+ .sure_cancel {
+   font-size: 17px;
+ }
+ #cancel_yes {
+   left: 20px;
+ }
+ #cancel_no {
+   left: 31px;
+ }
  #cls1, #cls2, #cls3 {
    position: relative;
    width: 100%;
@@ -9282,6 +9345,7 @@ textarea{
     line-height: 29px;
     color: #808080;
     margin-top: 0px;
+    z-index: 999;
   }
   .rating_title{
     font-size: 18px;
@@ -9511,6 +9575,7 @@ textarea{
       line-height: 26px;
       color: #808080;
       margin-top: 0px;
+      z-index: 999;
     }
     .rating_title{
       font-size: 18px;
@@ -9560,11 +9625,38 @@ textarea{
     width: 54px;
     height: auto;
   }
+  .cancel2 {
+    top: 37%;
+    position: -webkit-sticky;
+    position: sticky;
+    background: bisque;
+    width: 300px;
+    z-index: 1000;
+    height: 233px;
+    margin-left: 7%;
+    display: none;
+    -ms-grid-columns: (1fr)[2];
+    grid-template-columns: repeat(2, 1fr);
+    -ms-grid-rows: (1fr)[2];
+    grid-template-rows: repeat(2, 1fr);
+  }
+  .sure_cancel {
+    font-size: 17px;
+  }
+  #cancel_yes {
+    left: 20px;
+  }
+  #cancel_no {
+    left: 32px;
+  }
   .mobile_rosee_order {
     left: 233px !important;
   }
   .nav_header_order {
     display: none;
+  }
+  .userData {
+    width: 320px;
   }
   .forMyself {
     cursor: pointer;
@@ -9948,14 +10040,14 @@ textarea{
       padding-top: 225px !important;
     }
     .specialHead {
-      margin-left: -1805px !important;
+      margin-left: -1300px !important;
     }
     .clsProf {
       left: 327px !important;
     }
     .wrap_roseeProf, .header_logoProf {
-      left: 18px !important;
-      top: -13px !important;
+      left: -10px !important;
+      top: 3px !important;
     }
     .wrap_footer_rosee {
       top: -79px;
@@ -10062,6 +10154,7 @@ textarea{
       position: relative;
       top: 64px;
       font-size: 17px;
+      width: 100%;
     }
     .wrap_Footer {
       background: url(/1cdf580ddbd2ba8f10221a72f33bc073.svg);
@@ -10138,6 +10231,7 @@ textarea{
       grid-row: 7/8;
       margin-top: 270px;
       color: #808080;
+      z-index: 999;
     }
     .rating {
       width: 366px;

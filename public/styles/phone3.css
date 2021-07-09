@@ -21,6 +21,33 @@
    left: 132px;
    top: -5px;
  }
+ .cancel_sub {
+   z-index: 999;
+ }
+ .cancel2 {
+   top: 37%;
+   position: -webkit-sticky;
+   position: sticky;
+   background: bisque;
+   width: 300px;
+   z-index: 1000;
+   height: 233px;
+   margin-left: 7%;
+   display: none;
+   -ms-grid-columns: (1fr)[2];
+   grid-template-columns: repeat(2, 1fr);
+   -ms-grid-rows: (1fr)[2];
+   grid-template-rows: repeat(2, 1fr);
+ }
+ .sure_cancel {
+   font-size: 17px;
+ }
+ #cancel_yes {
+   left: 20px;
+ }
+ #cancel_no {
+   left: 31px;
+ }
  #cls1, #cls2, #cls3 {
    position: relative;
    width: 100%;
@@ -488,6 +515,7 @@
     line-height: 29px;
     color: #808080;
     margin-top: 0px;
+    z-index: 999;
   }
   .rating_title{
     font-size: 18px;
@@ -717,6 +745,7 @@
       line-height: 26px;
       color: #808080;
       margin-top: 0px;
+      z-index: 999;
     }
     .rating_title{
       font-size: 18px;

@@ -28,6 +28,19 @@
       height: 50px;
       margin-left: 90px;
     }
+    .change_name {
+      width: 130px;
+    }
+    #mob_exit {
+      font-weight: 700;
+      font-family: 'Roboto-Regular';
+      top: 14px !important;
+    }
+    .wrap_enter {
+      -moz-transform: scale(0.5, 0.5); /* Moz-browsers */
+      zoom: 0.5; /* Other non-webkit browsers */
+      zoom: 50%; /* Webkit browsers */
+    }
     .address_input::placeholder {
       font-family: 'Manrope-Medium';
       font-size: 12px;

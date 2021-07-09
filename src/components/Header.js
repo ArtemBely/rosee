@@ -101,20 +101,7 @@ class Header extends React.Component{
                       onSetInactive={this.handleSetInactive}
                       ignoreCancelEvents={false}>
                       Заказать</Link>
-                      <Link activeClass="active"
-                         className='mobile_each'
-                         id='mob_enter'
-                         to="buyImg"
-                         spy={true}
-                         smooth={true}
-                         hashSpy={true}
-                         duration={700}
-                         isDynamic={true}
-                         onSetActive={this.handleSetActive}
-                         onSetInactive={this.handleSetInactive}
-                         ignoreCancelEvents={false}>
-                         Войти</Link>
-
+                   <NavLink to='/enter' id='mob_order' className='mobile_each'>Войти</NavLink>
            </div>
 
         <div className='wrap_header'>

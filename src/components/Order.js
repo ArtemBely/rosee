@@ -132,7 +132,7 @@ render() {
                  <NavLink
                      className='mobile_each'
                      id='mob_enter'
-                     to="/#buyImg">
+                     to="/enter">
                      Войти</NavLink>
               </div>
 

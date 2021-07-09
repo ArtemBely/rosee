@@ -245,7 +245,7 @@ class Profile extends React.Component{
                <p className='mobile_each'>Что внутри</p>
                  <p className='mobile_each'>Доставка</p>
                <p className='mobile_each' id='mob_order'>Заказать</p>
-             <a href='/profile/logout' className='mobile_each' id='mob_enter'>Выйти</a>
+             <a href='/profile/logout' className='mobile_each' id='mob_exit'>Выйти</a>
          </div>
         <p className='wrap_prof_footer'>
             <footer className='wrap_Footer'>

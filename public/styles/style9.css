@@ -103,8 +103,8 @@
   display: none;
 }
 .openSubs {
-  display: -ms-grid;
-  display: grid;
+  display: -ms-grid !important;
+  display: grid !important;
 }
 .userData{
 	position: relative;

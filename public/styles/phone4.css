@@ -4,11 +4,38 @@
     width: 54px;
     height: auto;
   }
+  .cancel2 {
+    top: 37%;
+    position: -webkit-sticky;
+    position: sticky;
+    background: bisque;
+    width: 300px;
+    z-index: 1000;
+    height: 233px;
+    margin-left: 7%;
+    display: none;
+    -ms-grid-columns: (1fr)[2];
+    grid-template-columns: repeat(2, 1fr);
+    -ms-grid-rows: (1fr)[2];
+    grid-template-rows: repeat(2, 1fr);
+  }
+  .sure_cancel {
+    font-size: 17px;
+  }
+  #cancel_yes {
+    left: 20px;
+  }
+  #cancel_no {
+    left: 32px;
+  }
   .mobile_rosee_order {
     left: 233px !important;
   }
   .nav_header_order {
     display: none;
+  }
+  .userData {
+    width: 320px;
   }
   .forMyself {
     cursor: pointer;
@@ -392,14 +419,14 @@
       padding-top: 225px !important;
     }
     .specialHead {
-      margin-left: -1805px !important;
+      margin-left: -1300px !important;
     }
     .clsProf {
       left: 327px !important;
     }
     .wrap_roseeProf, .header_logoProf {
-      left: 18px !important;
-      top: -13px !important;
+      left: -10px !important;
+      top: 3px !important;
     }
     .wrap_footer_rosee {
       top: -79px;
@@ -506,6 +533,7 @@
       position: relative;
       top: 64px;
       font-size: 17px;
+      width: 100%;
     }
     .wrap_Footer {
       background: url('../images/Без имени-2 2.svg');
@@ -582,6 +610,7 @@
       grid-row: 7/8;
       margin-top: 270px;
       color: #808080;
+      z-index: 999;
     }
     .rating {
       width: 366px;

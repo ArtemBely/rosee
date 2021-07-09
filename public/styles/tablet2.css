@@ -10,6 +10,11 @@
 	.order_title2 {
 		font-family: 'Manrope-Regular';
 	}
+	.wrap_enter {
+		-moz-transform: scale(0.5, 0.5); /* Moz-browsers */
+		zoom: 0.5; /* Other non-webkit browsers */
+		zoom: 50%; /* Webkit browsers */
+	}
 }
 @media (min-width: 768px) and (max-width: 1100px) {
 	.wrap_header{
