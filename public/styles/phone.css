@@ -27,6 +27,9 @@
     .change_name {
       width: 130px;
     }
+    .order_special_foot {
+      top: 0px !important;
+    }
     .wrap_ProfHead {
       position: static !important;
     }

@@ -6445,6 +6445,9 @@ textarea{
     .change_name {
       width: 130px;
     }
+    .order_special_foot {
+      top: 0px !important;
+    }
     .wrap_ProfHead {
       position: static !important;
     }
@@ -8038,6 +8041,9 @@ textarea{
     }
     .change_name {
       width: 130px;
+    }
+    .order_special_foot {
+      top: 0px !important;
     }
     .wrap_ProfHead {
       position: static !important;
@@ -9633,6 +9639,7 @@ textarea{
   }
   .rating_input {
     border: none;
+    position: absolute;
   }
   .cancel2 {
     top: 37%;
@@ -10041,10 +10048,10 @@ textarea{
     overflow: hidden;
   }
   .wrap_order_foot {
-    top: 130px !important;
+    top: 20px !important;
   }
   .orderFoot {
-      margin-top: 245px !important;
+      margin-top: 355px !important;
       margin-bottom: 20px !important;
       padding-top: 225px !important;
     }
@@ -10171,9 +10178,7 @@ textarea{
       position: relative;
       top: 71px;
     }
-    .wrap_order_foot {
-      top: -215px;
-    }
+
     .change_email {
       -ms-grid-column: 1;
       -ms-grid-column-span: 1;
@@ -10334,8 +10339,8 @@ textarea{
       display: -ms-grid;
       display: grid;
       margin-top: 50px;
-      -ms-grid-columns: 1fr 2px 1fr 2px 1fr 2px 1fr 2px 1fr 2px 1fr 2px 1fr 2px 1fr 2px 1fr 2px 1fr;
-      grid-template-columns: repeat(10, 1fr);
+      -ms-grid-columns: 1fr 2px 1fr 2px 1fr 2px 1fr 2px 1fr;
+      grid-template-columns: repeat(5, 1fr);
       width: 100%;
       -ms-grid-rows: 1fr 26px 1fr;
       grid-template-rows: repeat(2, 1fr);
@@ -10343,87 +10348,38 @@ textarea{
       grid-gap: 26px 2px;
       position: relative;
       left: 21px;
-    }
-    #rating_form > *:nth-child(1) {
-      -ms-grid-row: 1;
-      -ms-grid-column: 1;
-    }
-    #rating_form > *:nth-child(2) {
-      -ms-grid-row: 1;
-      -ms-grid-column: 3;
-    }
-    #rating_form > *:nth-child(3) {
-      -ms-grid-row: 1;
-      -ms-grid-column: 5;
-    }
-    #rating_form > *:nth-child(4) {
-      -ms-grid-row: 1;
-      -ms-grid-column: 7;
-    }
-    #rating_form > *:nth-child(5) {
-      -ms-grid-row: 1;
-      -ms-grid-column: 9;
-    }
-    #rating_form > *:nth-child(6) {
-      -ms-grid-row: 1;
-      -ms-grid-column: 11;
-    }
-    #rating_form > *:nth-child(7) {
-      -ms-grid-row: 1;
-      -ms-grid-column: 13;
-    }
-    #rating_form > *:nth-child(8) {
-      -ms-grid-row: 1;
-      -ms-grid-column: 15;
-    }
-    #rating_form > *:nth-child(9) {
-      -ms-grid-row: 1;
-      -ms-grid-column: 17;
-    }
-    #rating_form > *:nth-child(10) {
-      -ms-grid-row: 1;
-      -ms-grid-column: 19;
-    }
-    #rating_form > *:nth-child(11) {
-      -ms-grid-row: 3;
-      -ms-grid-column: 1;
-    }
-    #rating_form > *:nth-child(12) {
-      -ms-grid-row: 3;
-      -ms-grid-column: 3;
-    }
-    #rating_form > *:nth-child(13) {
-      -ms-grid-row: 3;
-      -ms-grid-column: 5;
-    }
-    #rating_form > *:nth-child(14) {
-      -ms-grid-row: 3;
-      -ms-grid-column: 7;
-    }
-    #rating_form > *:nth-child(15) {
-      -ms-grid-row: 3;
-      -ms-grid-column: 9;
-    }
-    #rating_form > *:nth-child(16) {
-      -ms-grid-row: 3;
-      -ms-grid-column: 11;
-    }
-    #rating_form > *:nth-child(17) {
-      -ms-grid-row: 3;
-      -ms-grid-column: 13;
-    }
-    #rating_form > *:nth-child(18) {
-      -ms-grid-row: 3;
-      -ms-grid-column: 15;
-    }
-    #rating_form > *:nth-child(19) {
-      -ms-grid-row: 3;
-      -ms-grid-column: 17;
-    }
-    #rating_form > *:nth-child(20) {
-      -ms-grid-row: 3;
-      -ms-grid-column: 19;
-    }
+}
+#rating_form > *:nth-child(1) {
+    -ms-grid-row: 1;
+    -ms-grid-column: 1;
+}  #rating_form > *:nth-child(2) {
+    -ms-grid-row: 1;
+    -ms-grid-column: 3;
+}  #rating_form > *:nth-child(3) {
+    -ms-grid-row: 1;
+    -ms-grid-column: 5;
+}  #rating_form > *:nth-child(4) {
+    -ms-grid-row: 1;
+    -ms-grid-column: 7;
+}  #rating_form > *:nth-child(5) {
+    -ms-grid-row: 1;
+    -ms-grid-column: 9;
+}  #rating_form > *:nth-child(6) {
+    -ms-grid-row: 3;
+    -ms-grid-column: 1;
+}  #rating_form > *:nth-child(7) {
+    -ms-grid-row: 3;
+    -ms-grid-column: 3;
+}  #rating_form > *:nth-child(8) {
+    -ms-grid-row: 3;
+    -ms-grid-column: 5;
+}  #rating_form > *:nth-child(9) {
+    -ms-grid-row: 3;
+    -ms-grid-column: 7;
+}  #rating_form > *:nth-child(10) {
+    -ms-grid-row: 3;
+    -ms-grid-column: 9;
+}
     .rating_title {
       text-align: center;
       font-family: 'Roboto-Regular';
@@ -10630,9 +10586,6 @@ textarea{
    .wrap_Footer {
      background: url(/1cdf580ddbd2ba8f10221a72f33bc073.svg);
      background-size: cover;
-   }
-   .wrap_order_foot {
-     top: -215px;
    }
    .change_email {
      -ms-grid-column: 1;

@@ -491,7 +491,7 @@ render() {
 
        </form>
        </Route>
-       <p className='wrap_order_foot'>
+       <p className='wrap_order_foot order_srecial_foot'>
            <footer className='wrap_Footer'>
              <div className='footer orderFoot'>
                <div className='wrap_footer_rosee'><img src={rosee2} className='footer_logo'/></div>
