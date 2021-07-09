@@ -223,7 +223,7 @@ class Profile extends React.Component{
   render() {
     return (
       <div>
-        <div className='wrapMain_header'>
+        <div className='wrapMain_header wrap_ProfHead'>
           <div className='wrap_header specialHead'>
             <p className='wrap_rosee wrap_roseeProf'><img src={rosee} className='header_logo header_logoProf'/></p>
             <div className='cls clsProf' onClick={this.rot}>

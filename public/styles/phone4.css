@@ -4,6 +4,9 @@
     width: 54px;
     height: auto;
   }
+  .rating_input {
+    border: none;
+  }
   .cancel2 {
     top: 37%;
     position: -webkit-sticky;
@@ -419,7 +422,7 @@
       padding-top: 225px !important;
     }
     .specialHead {
-      margin-left: -1300px !important;
+      margin-left: -650px !important;
     }
     .clsProf {
       left: 327px !important;
@@ -938,6 +941,9 @@
      margin-top: -10px;
    }
    #radio1 {
+     border: none;
+   }
+   .rating_input {
      border: none;
    }
    .mobile_menu {

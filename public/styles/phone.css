@@ -27,6 +27,9 @@
     .change_name {
       width: 130px;
     }
+    .wrap_ProfHead {
+      position: static !important;
+    }
     #mob_exit {
       font-weight: 700;
       font-family: 'Roboto-Regular';
