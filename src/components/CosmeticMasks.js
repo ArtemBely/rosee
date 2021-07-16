@@ -101,7 +101,19 @@ componentDidMount() {
         <div className='mask_phone'>
 			    <img src={mask} className='phone_mask'/>
 		    </div>
-        <NavLink to='#' id='masks_sub_phone'>Оформить подписку</NavLink>
+
+        <Link activeClass="active"
+           id='masks_sub_phone'
+           to="sixtheenId"
+           spy={true}
+           smooth={true}
+           hashSpy={true}
+           duration={700}
+           isDynamic={true}
+           onSetActive={this.handleSetActive}
+           onSetInactive={this.handleSetInactive}
+           ignoreCancelEvents={false}>
+           Оформить подписку</Link>
 
         <Link activeClass="active"
            id='masks_order'

@@ -34,6 +34,7 @@ userSchema.pre('save', function(next){
    })
 });
 module.exports = mongoose.model('User', userSchema);
+
 module.exports.createUser = function(newUser, callback) {
 var bcrypt = require('bcryptjs');
 bcrypt.genSalt(10, function(err, salt) {
@@ -44,6 +45,7 @@ bcrypt.genSalt(10, function(err, salt) {
     });
   });
 }
+
 module.exports.comparePassword = function(candidatePassword, hash, callback) {
   bcrypt.compare(candidatePassword, hash, function(err, isMatch) {
     if (err) throw err;

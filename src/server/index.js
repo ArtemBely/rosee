@@ -169,7 +169,7 @@ function notLoggedIn(req, res, next) {
   res.redirect('/profile');
 }
 
-
+/*
 app.use((error, req, res, next) => {
   res.status(error.status);
 
@@ -179,13 +179,13 @@ app.use((error, req, res, next) => {
     stack: error.stack
   });
 });
+*/
 
-/*
 app.use((req, res, next) => {  //<-- заменить если появится непредвиденная ошибка
    const err = new Error ('Noooo');
      err.status = 404;
      next (err);
-});*/
+});
 var httpServer = http.createServer(app);
 var httpsServer = https.createServer(credentials, app);
 httpServer.listen(8080, () => {console.log('connecteed!')});

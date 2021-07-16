@@ -8,6 +8,7 @@ import { renderToString } from 'react-dom/server';
 import Order from '../../components/Order';
 import User from '../models/User.js';
 const express = require('express');
+import fs from 'fs';
 
 const LocalStrategy = require('passport-local').Strategy;
 const router = express.Router();
@@ -85,6 +86,35 @@ router.get(['/everyMonth', '/everyMonthCombi', '/everyMonthFat', '/everyMonthDry
             </body>
         </html>`
     );
+});
+
+router.get('/findNewOne', (req, res) => {
+  fs.readFile('inquiry.json', function(err, data) {
+    if (err) throw err;
+    else {
+      let userNew = JSON.parse(data);
+      var newUser = new User({
+        username: userNew.username,
+        userphone: userNew.userphone,
+        email: userNew.email,
+        timestamp: userNew.timestamp,
+        adminComment: '',
+        password: userNew.password,
+        useraddress: userNew.useraddress,
+        typeOfPayment: userNew.typeOfPayment,
+        typeOfSkin: userNew.typeOfSkin,
+        comments: userNew.comments,
+        letter: userNew.letter,
+        ipAddress: userNew.ipAddress,
+        cancel: 'no'
+      });
+      User.createUser(newUser, function(err, user) {
+        if (err) throw err;
+        console.log(user);
+      });
+      return res.redirect('/');
+    }
+  });
 });
 
 router.post(['/', '/everyMonth', '/everyYear', '/halfYear'], async (req, res, done) => {
@@ -246,105 +276,38 @@ router.post(['/', '/everyMonth', '/everyYear', '/halfYear'], async (req, res, do
   return done(null, false);
 }
 
-var months = ['января', 'февраля', 'марта', 'апреля', 'мая', 'июня', 'июля', 'августа', 'сентября', 'октября', 'ноября', 'декабря'];
-var newUser = new User({
-  username: username,
-  userphone: userphone,
-  email: email,
-  timestamp: new Date().getDate() + ' ' + months[(new Date().getMonth() + 2)],
-  adminComment: '',
-  password: password,
-  useraddress: useraddress,
-  typeOfPayment: typeOfPayment,
-  typeOfSkin: typeOfSkin,
-  comments: comments,
-  letter: letter,
-  ipAddress: ipAddress,
-  cancel: 'no'
-});
+  var months = ['января', 'февраля', 'марта', 'апреля', 'мая', 'июня', 'июля', 'августа', 'сентября', 'октября', 'ноября', 'декабря'];
+  var newUser = new User({
+    username: username,
+    userphone: userphone,
+    email: email,
+    timestamp: new Date().getDate() + ' ' + months[(new Date().getMonth() + 2)],
+    adminComment: '',
+    password: password,
+    useraddress: useraddress,
+    typeOfPayment: typeOfPayment,
+    typeOfSkin: typeOfSkin,
+    comments: comments,
+    letter: letter,
+    ipAddress: ipAddress,
+    cancel: 'no'
+  });
 
-User.createUser(newUser, function(err, user) {
-  if (err) throw err;
-  console.log(user);
-});
+    fs.writeFile('inquiry.json', JSON.stringify(newUser), 'utf-8', function(err) {
+      if (err) throw err;
+    });
 
-const cond = req.isAuthenticated();
-/*const indicate = 'Вы успешно зарегестрировались и теперь можете войти в личный кабинет!';
-const they = renderToString(
-      <StaticRouter>
-         <Order />
-      </StaticRouter>
-    )*/
-      console.log(req.originalUrl);
       if(req.originalUrl == '/order/halfYear') {
         res.redirect('https://pay.fondy.eu/s/spEFdAgLYkf');
       }
       if(req.originalUrl == '/order/everyMonth') {
-        res.redirect('https://pay.fondy.eu/s/wxz7RJSJ1xX');
+          res.redirect('https://pay.fondy.eu/s/wxz7RJSJ1xX');
       }
       if(req.originalUrl == '/order/everyYear') {
-        res.redirect('https://pay.fondy.eu/s/1AU5ulqIzCO');
+          res.redirect('https://pay.fondy.eu/s/1AU5ulqIzCO');
       }
-    /*res.send(
-      `<!DOCTYPE html>
-            <html>
-                <head>
-                   <title>Speaqiz - Регистрация</title>
-                      <link rel="stylesheet" type="text/css" href="../main.css">
-                       <meta name="viewport" content="width=device-width, initial-scale=1">
-                         <script src='/bundle.js' defer></script>
-                            <script>window.__INITIAL_STATE__ = ${serialize(indicate)}</script>
-                              <script>window.__INITIAL_COND__= ${serialize(cond)}</script>
 
-                                                                  <script>
-                                                                  !function(f,b,e,v,n,t,s)
-                                                                  {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-                                                                  n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-                                                                  if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-                                                                  n.queue=[];t=b.createElement(e);t.async=!0;
-                                                                  t.src=v;s=b.getElementsByTagName(e)[0];
-                                                                  s.parentNode.insertBefore(t,s)}(window, document,'script',
-                                                                  'https://connect.facebook.net/en_US/fbevents.js');
-                                                                  fbq('init', '299294384104664');
-                                                                  fbq('track', 'PageView');
-                                                                  </script>
-                                                                  <noscript><img height="1" width="1" style="display:none"
-                                                                  src="https://www.facebook.com/tr?id=299294384104664&ev=PageView&noscript=1"
-                                                                  /></noscript>
-
-                                                                  <script type="text/javascript" >
-                                                                     (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
-                                                                     m[i].l=1*new Date();k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
-                                                                     (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
-
-                                                                     ym(80629396, "init", {
-                                                                          clickmap:true,
-                                                                          trackLinks:true,
-                                                                          accurateTrackBounce:true,
-                                                                          webvisor:true
-                                                                     });
-                                                                  </script>
-                                                                  <noscript><div><img src="https://mc.yandex.ru/watch/80629396" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
-
-
-                                                                  <script async src="https://www.googletagmanager.com/gtag/js?id=G-S8E1VB6FRK"></script>
-                                                                  <script>
-                                                                    window.dataLayer = window.dataLayer || [];
-                                                                    function gtag(){dataLayer.push(arguments);}
-                                                                    gtag('js', new Date());
-
-                                                                    gtag('config', 'G-S8E1VB6FRK');
-                                                                  </script>
-                              </head>
-                            <body>
-                           <div id="app">
-                        ${they}
-                  </div>
-              </body>
-        </html>
-      `
-    );*/
-  });
+ });
 });
 
 passport.use('local.signin', new LocalStrategy ({

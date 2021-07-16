@@ -1,5 +1,6 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
+import { Link } from 'react-scroll';
 import shop from '../../public/images/image 6.png';
 import minus from '../../public/images/Union1.svg';
 import mask1 from '../../public/images/0180 62.png';
@@ -29,12 +30,22 @@ function Advantages() {
    <div className='wrap_advantages'>
 		 <div className="advantages_phone">
 			 <div className="shop_advantages_phone">
-			 	<img src={advantages} className='advantages_phone_img' id='mobile_Adv'/> 
+			 	<img src={advantages} className='advantages_phone_img' id='mobile_Adv'/>
 			 </div>
 			 <div className="shop_advantages_phone2">
 			 	<img src={advantages2} className='advantages_phone_img2'/>
 			 </div>
-			 <NavLink to='#' className='advantages_phone_btn'>Оформить подписку</NavLink>
+
+       <Link activeClass="active"
+          className='advantages_phone_btn'
+          to="sixtheenId"
+          spy={true}
+          smooth={true}
+          hashSpy={true}
+          duration={700}
+          isDynamic={true}
+          ignoreCancelEvents={false}>
+          Оформить подписку</Link>
 		 </div>
 		 <div className="our_advantages_phone">
 			 <div className="advantages_phone_mask">

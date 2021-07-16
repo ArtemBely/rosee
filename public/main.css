@@ -6424,7 +6424,7 @@ textarea{
   }
 }
 
-@media (min-width: 345px) and (max-width: 374px) {
+@media (min-width: 345px) and (max-width: 410px) {
   body {
       -moz-transform: scale(0.93, 0.93); /* Moz-browsers */
       zoom: 0.93; /* Other non-webkit browsers */
