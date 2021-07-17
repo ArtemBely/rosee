@@ -20,6 +20,7 @@ constructor() {
 }
 
 componentDidMount() {
+  if(window.screen.width > 770) {
   setTimeout(() => {
     var theWindow = $(window);
 
@@ -89,6 +90,7 @@ componentDidMount() {
       this.animation.current.classList.add('animationMove2');
     }
   });
+ }
 }
 
   render() {

@@ -116,7 +116,9 @@ router.get('/findNewOne', (req, res) => {
     }
   });
 });
-
+router.get('/findNewOne/:id', (req, res) => {   //<-- костыль, фонди перенапраыляет на ссылку с credentials of user
+  res.redirect('/findNewOne');
+});
 router.post(['/', '/everyMonth', '/everyYear', '/halfYear'], async (req, res, done) => {
 
   var {
@@ -147,6 +149,7 @@ router.post(['/', '/everyMonth', '/everyYear', '/halfYear'], async (req, res, do
                   <head>
                     <title>Маски по подписке</title>
                          <link rel="stylesheet" type="text/css" href="../main.css">
+                         <link rel="shortcut icon" href="/images/favicon.ico" type="image/x-icon">
                            <meta name="viewport" content="width=device-width, initial-scale=1">
                              <script src='/bundle.js' defer></script>
                              <script>window.__INITIAL_DATA__= ${serialize(err)}</script>
@@ -219,6 +222,7 @@ router.post(['/', '/everyMonth', '/everyYear', '/halfYear'], async (req, res, do
             <head>
               <title>Маски по подписке</title>
                 <link rel="stylesheet" type="text/css" href="../main.css">
+                <link rel="shortcut icon" href="/images/favicon.ico" type="image/x-icon">
                  <meta name="viewport" content="width=device-width, initial-scale=1">
                    <script src='/bundle.js' defer></script>
                      <script>window.__INITIAL_ERRORS__= ${serialize(errors)}</script>
