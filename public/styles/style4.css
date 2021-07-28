@@ -10,7 +10,7 @@
 }
 .wrap_inside {
   position: relative;
-  top: -236px;
+  top: -400px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -27,7 +27,7 @@
 }
 .wrapMain_Envelope{
   position: relative;
-  top: -236px;
+  top: -460px;
 	display: -webkit-box;
 	display: -ms-flexbox;
 	display: flex;

@@ -24,56 +24,56 @@ componentDidMount() {
   setTimeout(() => {
     var theWindow = $(window);
 
-    var winHeight = theWindow.height();
+        var winHeight = theWindow.height();
 
-    var animDuration = winHeight / 2;
+        var animDuration = winHeight / 2;
 
-    var animData = {
+        var animData = {
 
-    container: document.getElementById('lottie-1'),
+        container: document.getElementById('lottie-1'),
 
-    renderer: 'svg',
+        renderer: 'svg',
 
-    loop: false,
+        loop: false,
 
-    autoplay: false,
+        autoplay: false,
 
-    path: 'https://gist.githubusercontent.com/PovetevKirill/c78f8ac9b74bc468307dd7d046ba1df7/raw/a975f3c9d288aeaaf5c72d29a49675b4aaad6542/rosee_site_animation_whitebg.json'
+        path: 'https://gist.githubusercontent.com/PovetevKirill/f50185fc60c9710ad5248ed212650320/raw/57f77c47951a9ca5aa234b184608789c92dbaeca/anim.json'
 
-    };
+        };
 
-    var anim = bodymovin.loadAnimation(animData);
+        var anim = bodymovin.loadAnimation(animData);
 
-    $( window ).scroll(function() {
+        $( window ).scroll(function() {
 
-    animatebodymovin(animDuration, anim);
+        animatebodymovin(animDuration, anim);
 
-    });
+        });
 
-    function animatebodymovin(duration, animObject) {
+        function animatebodymovin(duration, animObject) {
 
-    var scrollPosition = theWindow.scrollTop();
+        var scrollPosition = theWindow.scrollTop();
 
-    var maxFrames = animObject.totalFrames;
+        var maxFrames = animObject.totalFrames;
 
-    var frame = (maxFrames / 100) * (scrollPosition / (duration / 100));
+        var frame = (maxFrames / 100) * (scrollPosition / (duration / 100));
 
-    animObject.goToAndStop(frame, true);
+        animObject.goToAndStop(frame, true);
 
-    }
+        }
 
+        anim.addEventListener("enterFrame", function (animation, animObject) {
 
-    anim.addEventListener("enterFrame", function (animation, animObject) {
+        if (animation.currentTime > (anim.totalFrames - 1)) {
 
-    if (animation.currentTime > (anim.totalFrames - 1)) {
+        animObject.pause();
 
-    animObject.pause();
-    //console.log('1');
-    //anim.pause();
+        //anim.pause();
 
-    }
+        }
 
-  });
+        });
+
   }, 100);
   window.addEventListener('scroll', () => {
     console.log(this.indicate.current.getBoundingClientRect().top);
@@ -130,7 +130,21 @@ componentDidMount() {
            ignoreCancelEvents={false}
            ref={this.order}>
            Заказать</Link>
-        <NavLink to='#' id='masks_buy' ref={this.buy}>Купить в подарок</NavLink>
+
+        <Link activeClass="active"
+           id='masks_buy'
+           to="buyImg"
+           spy={true}
+           smooth={true}
+           hashSpy={true}
+           duration={700}
+           isDynamic={true}
+           onSetActive={this.handleSetActive}
+           onSetInactive={this.handleSetInactive}
+           ignoreCancelEvents={false}
+           ref={this.buy}>
+           Купить в подарок</Link>
+
         </p>
             <div className='wrap_lottie'><div id='lottie-1' ref={this.animation}></div>
             </div>

@@ -128,7 +128,7 @@
 	background: url('../images/Group 34.png') no-repeat center;
 	background-size: cover;
 	position: absolute;
-	margin-top: -100px;
+	margin-top: -464px;
 	-webkit-box-pack: center;
 	    -ms-flex-pack: center;
 	        justify-content: center;
@@ -288,7 +288,7 @@
   	-webkit-box-pack: center;
   	    -ms-flex-pack: center;
   	        justify-content: center;
-  	top: 450px;
+  	top: 97px;
 	z-index: 1;
 }
 .questions2 {

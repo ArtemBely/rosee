@@ -7,7 +7,7 @@
         -ms-flex-pack: center;
             justify-content: center;
     position: absolute;
-    top: 5321px;
+    top: 5100px;
 }
 .DeliverySecrion h2 {
     font-family: 'Manrope';
@@ -167,7 +167,7 @@
 }
 .wrap_Buy {
     position: relative;
-    top: 164px;
+    top: -172px;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -362,6 +362,7 @@
 .payment1 {
   position: relative;
   top: -282px;
+  display: none;
 }
 .payment2 {
   font-weight: 700;
@@ -617,6 +618,9 @@
   line-height: 31px;
   color: #616161;
   text-decoration: line-through;
+}
+#old1 {
+  opacity: 0;
 }
 .sixtheen {
   position: relative;

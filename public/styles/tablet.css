@@ -1,3 +1,9 @@
+@media (min-width: 1100px) and (max-width: 1293px) {
+	.animationMove2 {
+		top: -80px !important;
+		left: -123px !important;
+	}
+}
 @media (min-width: 1100px) and (max-width: 1390px) {
 	.wrap_header{
 		-ms-grid-columns:10% 40px 1fr 40px 1fr 40px 1fr 40px 1fr 40px 1fr 40px 1fr 40px 1fr 40px 7%;
@@ -23,12 +29,10 @@
 	    -webkit-transform: translateY(686px) !important;
 	        -ms-transform: translateY(686px) !important;
 	            transform: translateY(686px) !important;
-	    left: -123px !important;
 	    -webkit-transition: 1.5s;
 	    -o-transition: 1.5s;
 	    transition: 1.5s;
 	    width: 424px !important;
-	    top: -80px !important;
 	}
 	 .nav_header{
 		 font-size: 18px;
@@ -376,6 +380,9 @@
 		grid-row-gap:10px;
 	  	width: 992px;
 	}
+	.wrap_inside {
+		top: -303px;
+	}
 	.MasksInside > *:nth-child(1){
 		-ms-grid-row:1;
 		-ms-grid-column:1;
@@ -521,7 +528,7 @@
 		top: -210px;
 	}
 	.wrapMain_Envelope{
-		top: -330px;
+		top: -384px;
 	 }
 	 .envelope{
 		margin-top:40px;
@@ -699,7 +706,7 @@
 		height: 130px;
 	}
 	.DeliverySection {
-		top: 4250px;
+		top: 4161px;
    }
    .DeliveryGrid {
 		position: relative;
@@ -709,7 +716,7 @@
 		grid-template-rows: 50px 50px 150px;
 		-ms-grid-columns: 240px 66px 240px 66px 240px;
 		grid-template-columns: repeat(3, 240px);
-		grid-column-gap: 66px;
+		grid-column-gap: 159px;
 		grid-row-gap: 10px;
 		-webkit-box-pack: stretch;
 			 -ms-flex-pack: stretch;
@@ -765,7 +772,7 @@
    .DeliveryText1, .DeliveryText2, .DeliveryText3  {
 	  font-size: 18px;
 	  line-height: 29px;
-	  width: 240px;
+	  width: 352px;
    }
 	.DeliveryText2, .DeliveryText3{
 		-ms-grid-row: 2;
@@ -774,7 +781,7 @@
 		margin-top: 58px;
 	}
 	.wrap_Buy {
-		top: -80px;
+		top: -167px;
    }
    .buyBlock {
 		width: 992px;
@@ -967,7 +974,10 @@
 		height: 137px;
 	}
 	.wrap_questions2 {
-	  top: 130px;
+	  top: -127px;
+	}
+	.wrap_Footer {
+		margin-top: -557px;
 	}
 	.questions2 {
 		width: 992px;

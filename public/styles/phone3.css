@@ -1,4 +1,4 @@
-@media (min-width: 576px) and (max-width: 768px) {
+@media (min-width: 576px) and (max-width: 767px) {
   .header_logo, .wrap_rosee {
     position: relative;
     width: 110px;
@@ -321,7 +321,7 @@
       position: relative;
       left: -537px;
       top: -133px;
-      width: 159px;
+      width: 180px;
       height: 50px;
     }
     .order_text3 {

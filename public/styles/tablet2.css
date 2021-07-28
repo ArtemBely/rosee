@@ -1,4 +1,28 @@
-@media (min-width: 768px) and (max-width: 992px) {
+@media (min-width: 886px) and (max-width: 992px) {
+	.advantages_shop, .our_advantages {
+		position: relative;
+		top: 75px;
+	}
+		.animationMove2 {
+	    top: -305px !important;
+	}
+}
+@media (min-width: 768px) and (max-width: 810px) {
+	.DeliveryGrid {
+		top: 49px !important;
+	}
+}
+@media (min-width: 812px) and (max-width: 884px) {
+		.animationMove2 {
+			top: -310px !important;
+	}
+}
+@media (min-width: 996px) and (max-width: 1010px) {
+		.animationMove2 {
+	    top: -237px !important;
+	}
+}
+@media (min-width: 767px) and (max-width: 992px) {
 	body {
 			-moz-transform: scale(0.8, 0.8); /* Moz-browsers */
 			zoom: 0.8; /* Other non-webkit browsers */
@@ -16,6 +40,32 @@
 		zoom: 50%; /* Webkit browsers */
 	}
 }
+@media (min-width: 1293px) and (max-width: 1390px) {
+	.animationMove2 {
+		top: -118px !important;
+		left: -119px !important;
+	}
+}
+@media (min-width: 1012px) and (max-width: 1100px) {
+	.animationMove2 {
+		top: -307px !important;
+	}
+}
+@media (min-width: 811px) and (max-width: 885px) {
+		.animationMove2 {
+	    top: -310px !important;
+	}
+}
+@media (min-width: 767px) and (max-width: 768px) {
+		.animationMove2 {
+	    top: -307px !important;
+	}
+}
+@media (min-width: 769px) and (max-width: 886px) {
+	.animationMove2 {
+		top: -380px !important;
+	}
+}
 @media (min-width: 768px) and (max-width: 1100px) {
 	.wrap_header{
 		-ms-grid-columns:10% 40px 1fr 40px 1fr 40px 1fr 40px 1fr 40px 1fr 40px 1fr 40px 1fr 40px 7%;
@@ -25,12 +75,17 @@
  	 	width: 768px;
  	 	height: 50px;
 	}
+	.wrap_inside {
+		top: -318px;
+	}
+	.wrap_allEvery {
+		top: 100px;
+	}
 	.animationMove2 {
 	    transform: translateY(686px) !important;
 	    left: -162px !important;
 	    transition: 1.5s;
 	    width: 385px !important;
-	    top: -307px !important;
 	}
 	 .nav_header{
 		 font-size: 16px;
@@ -377,6 +432,7 @@
 		padding: 18px 0;
 	}
 	.MasksInside{
+		grid-column-gap: 19px;
 		margin-top:100px;
 		-ms-grid-columns:1% 400px 450px 1%;
 		grid-template-columns:1% 400px 450px 1%;
@@ -535,7 +591,7 @@
 		height: 85px;
 	}
 	.wrapMain_Envelope{
-		top: -450px;
+		top: -606px;
 	 }
 	 .envelope{
 		margin-top:0px;
@@ -712,15 +768,17 @@
 		height: 111px;
 	}
 	.DeliverySection {
-		top: 3300px;
+		top: 3071px;
    }
    .DeliveryGrid {
 		width: 768px;
+		top: -169px;
+		position: relative;
 		-ms-grid-rows: 35px 10px 40px 10px 150px;
 		grid-template-rows: 35px 40px 150px;
 		-ms-grid-columns: 215px 55px 215px 55px 215px;
 		grid-template-columns: repeat(3, 215px);
-		grid-column-gap: 55px;
+    grid-column-gap: 176px;
 		grid-row-gap: 10px;
 		-webkit-box-pack: stretch;
 			 -ms-flex-pack: stretch;
@@ -765,7 +823,7 @@
    .forRF {
 	  font-size: 16px;
 	  line-height: 22px;
-	  width: 96px;
+	  width: 204px;
    }
    .Free {
 	  font-size: 16px;
@@ -775,7 +833,7 @@
    .DeliveryText1, .DeliveryText2, .DeliveryText3  {
 	  font-size: 16px;
 	  line-height: 26px;
-	  width: 213px;
+	  width: 316px;
    }
 	.DeliveryText2, .DeliveryText3{
 		-ms-grid-row: 2;
@@ -784,7 +842,7 @@
 		margin-top: 30px;
 	}
 	.wrap_Buy {
-		top: -200px;
+		top: -471px;
    }
 	.buyBlock {
 		width: 768px;
@@ -980,7 +1038,11 @@
 		height: 118px;
 	}
 	.wrap_questions2 {
-	  top: 130px;
+	  top: -461px;
+	}
+	.wrap_Footer {
+		margin-top: -860px;
+		position: relative;
 	}
 	.questions2 {
 		width: 768px;

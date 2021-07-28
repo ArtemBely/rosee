@@ -8,7 +8,7 @@ import mask2 from '../../public/images/Group 35.png';
 import plus from '../../public/images/Union2.svg';
 import mask3 from '../../public/images/Rectangle 178.svg';
 import mask4 from '../../public/images/Rectangle 243.svg';
-import mask5 from '../../public/images/Rectangle 247.svg';
+import mask5 from '../../public/images/Rectangle 247.png';
 import mask6 from '../../public/images/Rectangle 251.svg';
 import mask7 from '../../public/images/Rectangle 234.svg';
 import mask8 from '../../public/images/Rectangle 244.svg';

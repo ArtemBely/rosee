@@ -1131,8 +1131,8 @@
             height: 600px;
             -ms-grid-columns: 335px;
             grid-template-columns: 335px;
-            -ms-grid-rows: 65px 10px 234px 10px 234px 10px 70px;
-            grid-template-rows: 65px 234px 234px 70px;
+            /*-ms-grid-rows: 65px 10px 234px 10px 234px 10px 70px;
+            grid-template-rows: 65px 234px 234px 70px; --> убрать*/
             grid-row-gap: 10px;
             left: -8px;
           }

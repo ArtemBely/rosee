@@ -96,7 +96,7 @@ render() {
               </NavLink>
             </p>
             <p className='newPrice'><b className='priceNew'>2490.-</b><p className='month1'>в месяц</p></p>
-            <div className='oldPrice'>3990</div>
+            <div className='oldPrice' id='old1'>3990</div>
           </Route>
           <Route exact path='/half'>
             <p className='makePayment'>
@@ -110,8 +110,8 @@ render() {
                 } className='buy_link'>Оформить
               </NavLink>
             </p>
-            <p className='newPrice'><b className='priceNew'>13200.-</b><p className='month1'>в месяц</p></p>
-            <div className='oldPrice'>15000</div>
+            <p className='newPrice'><b className='priceNew'>13200.-</b><p className='month1'>в пол года</p></p>
+            <div className='oldPrice'>14940</div>
           </Route>
           <Route exact path='/year'>
             <p className='makePayment'>
@@ -125,8 +125,8 @@ render() {
               } className='buy_link'>Оформить
               </NavLink>
             </p>
-            <p className='newPrice'><b className='priceNew'>25200.-</b><p className='month1'>в месяц</p></p>
-            <div className='oldPrice'>30000</div>
+            <p className='newPrice'><b className='priceNew'>25200.-</b><p className='month1'>в год</p></p>
+            <div className='oldPrice'>29880</div>
           </Route>
        </div>
       </div>

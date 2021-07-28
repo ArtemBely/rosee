@@ -336,6 +336,7 @@ body {
   -webkit-transition: 0.5s;
   -o-transition: 0.5s;
   transition: 0.5s;
+  cursor: pointer;
 }
 .wrap_allEvery {
   position: -webkit-sticky;
@@ -1486,7 +1487,7 @@ body {
 }
 .wrap_inside {
   position: relative;
-  top: -236px;
+  top: -400px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1503,7 +1504,7 @@ body {
 }
 .wrapMain_Envelope{
   position: relative;
-  top: -236px;
+  top: -460px;
 	display: -webkit-box;
 	display: -ms-flexbox;
 	display: flex;
@@ -1885,7 +1886,7 @@ body {
         -ms-flex-pack: center;
             justify-content: center;
     position: absolute;
-    top: 5321px;
+    top: 5100px;
 }
 .DeliverySecrion h2 {
     font-family: 'Manrope';
@@ -2045,7 +2046,7 @@ body {
 }
 .wrap_Buy {
     position: relative;
-    top: 164px;
+    top: -172px;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -2240,6 +2241,7 @@ body {
 .payment1 {
   position: relative;
   top: -282px;
+  display: none;
 }
 .payment2 {
   font-weight: 700;
@@ -2496,6 +2498,9 @@ body {
   color: #616161;
   text-decoration: line-through;
 }
+#old1 {
+  opacity: 0;
+}
 .sixtheen {
   position: relative;
   top: 54px;
@@ -2639,10 +2644,10 @@ body {
 	display: -ms-flexbox;
 	display: flex;
 	width: 100%;
-	background: url(/7bd38d31fd40219fc3b4d79f52aaf102.png) no-repeat center;
+	background: url("/images/Group 34.png") no-repeat center;
 	background-size: cover;
 	position: absolute;
-	margin-top: -100px;
+	margin-top: -464px;
 	-webkit-box-pack: center;
 	    -ms-flex-pack: center;
 	        justify-content: center;
@@ -2802,7 +2807,7 @@ body {
   	-webkit-box-pack: center;
   	    -ms-flex-pack: center;
   	        justify-content: center;
-  	top: 450px;
+  	top: 97px;
 	z-index: 1;
 }
 .questions2 {
@@ -4058,6 +4063,12 @@ textarea{
   height: 30px;
 }
 
+@media (min-width: 1100px) and (max-width: 1293px) {
+	.animationMove2 {
+		top: -80px !important;
+		left: -123px !important;
+	}
+}
 @media (min-width: 1100px) and (max-width: 1390px) {
 	.wrap_header{
 		-ms-grid-columns:10% 40px 1fr 40px 1fr 40px 1fr 40px 1fr 40px 1fr 40px 1fr 40px 1fr 40px 7%;
@@ -4083,12 +4094,10 @@ textarea{
 	    -webkit-transform: translateY(686px) !important;
 	        -ms-transform: translateY(686px) !important;
 	            transform: translateY(686px) !important;
-	    left: -123px !important;
 	    -webkit-transition: 1.5s;
 	    -o-transition: 1.5s;
 	    transition: 1.5s;
 	    width: 424px !important;
-	    top: -80px !important;
 	}
 	 .nav_header{
 		 font-size: 18px;
@@ -4436,6 +4445,9 @@ textarea{
 		grid-row-gap:10px;
 	  	width: 992px;
 	}
+	.wrap_inside {
+		top: -303px;
+	}
 	.MasksInside > *:nth-child(1){
 		-ms-grid-row:1;
 		-ms-grid-column:1;
@@ -4581,7 +4593,7 @@ textarea{
 		top: -210px;
 	}
 	.wrapMain_Envelope{
-		top: -330px;
+		top: -384px;
 	 }
 	 .envelope{
 		margin-top:40px;
@@ -4759,7 +4771,7 @@ textarea{
 		height: 130px;
 	}
 	.DeliverySection {
-		top: 4250px;
+		top: 4161px;
    }
    .DeliveryGrid {
 		position: relative;
@@ -4769,7 +4781,7 @@ textarea{
 		grid-template-rows: 50px 50px 150px;
 		-ms-grid-columns: 240px 66px 240px 66px 240px;
 		grid-template-columns: repeat(3, 240px);
-		grid-column-gap: 66px;
+		grid-column-gap: 159px;
 		grid-row-gap: 10px;
 		-webkit-box-pack: stretch;
 			 -ms-flex-pack: stretch;
@@ -4825,7 +4837,7 @@ textarea{
    .DeliveryText1, .DeliveryText2, .DeliveryText3  {
 	  font-size: 18px;
 	  line-height: 29px;
-	  width: 240px;
+	  width: 352px;
    }
 	.DeliveryText2, .DeliveryText3{
 		-ms-grid-row: 2;
@@ -4834,7 +4846,7 @@ textarea{
 		margin-top: 58px;
 	}
 	.wrap_Buy {
-		top: -80px;
+		top: -167px;
    }
    .buyBlock {
 		width: 992px;
@@ -5027,7 +5039,10 @@ textarea{
 		height: 137px;
 	}
 	.wrap_questions2 {
-	  top: 130px;
+	  top: -127px;
+	}
+	.wrap_Footer {
+		margin-top: -557px;
 	}
 	.questions2 {
 		width: 992px;
@@ -5178,7 +5193,31 @@ textarea{
 
 }
 
-@media (min-width: 768px) and (max-width: 992px) {
+@media (min-width: 886px) and (max-width: 992px) {
+	.advantages_shop, .our_advantages {
+		position: relative;
+		top: 75px;
+	}
+		.animationMove2 {
+	    top: -305px !important;
+	}
+}
+@media (min-width: 768px) and (max-width: 810px) {
+	.DeliveryGrid {
+		top: 49px !important;
+	}
+}
+@media (min-width: 812px) and (max-width: 884px) {
+		.animationMove2 {
+			top: -310px !important;
+	}
+}
+@media (min-width: 996px) and (max-width: 1010px) {
+		.animationMove2 {
+	    top: -237px !important;
+	}
+}
+@media (min-width: 767px) and (max-width: 992px) {
 	body {
 			-moz-transform: scale(0.8, 0.8); /* Moz-browsers */
 			zoom: 0.8; /* Other non-webkit browsers */
@@ -5196,6 +5235,32 @@ textarea{
 		zoom: 50%; /* Webkit browsers */
 	}
 }
+@media (min-width: 1293px) and (max-width: 1390px) {
+	.animationMove2 {
+		top: -118px !important;
+		left: -119px !important;
+	}
+}
+@media (min-width: 1012px) and (max-width: 1100px) {
+	.animationMove2 {
+		top: -307px !important;
+	}
+}
+@media (min-width: 811px) and (max-width: 885px) {
+		.animationMove2 {
+	    top: -310px !important;
+	}
+}
+@media (min-width: 767px) and (max-width: 768px) {
+		.animationMove2 {
+	    top: -307px !important;
+	}
+}
+@media (min-width: 769px) and (max-width: 886px) {
+	.animationMove2 {
+		top: -380px !important;
+	}
+}
 @media (min-width: 768px) and (max-width: 1100px) {
 	.wrap_header{
 		-ms-grid-columns:10% 40px 1fr 40px 1fr 40px 1fr 40px 1fr 40px 1fr 40px 1fr 40px 1fr 40px 7%;
@@ -5205,12 +5270,17 @@ textarea{
  	 	width: 768px;
  	 	height: 50px;
 	}
+	.wrap_inside {
+		top: -318px;
+	}
+	.wrap_allEvery {
+		top: 100px;
+	}
 	.animationMove2 {
 	    transform: translateY(686px) !important;
 	    left: -162px !important;
 	    transition: 1.5s;
 	    width: 385px !important;
-	    top: -307px !important;
 	}
 	 .nav_header{
 		 font-size: 16px;
@@ -5557,6 +5627,7 @@ textarea{
 		padding: 18px 0;
 	}
 	.MasksInside{
+		grid-column-gap: 19px;
 		margin-top:100px;
 		-ms-grid-columns:1% 400px 450px 1%;
 		grid-template-columns:1% 400px 450px 1%;
@@ -5715,7 +5786,7 @@ textarea{
 		height: 85px;
 	}
 	.wrapMain_Envelope{
-		top: -450px;
+		top: -606px;
 	 }
 	 .envelope{
 		margin-top:0px;
@@ -5892,15 +5963,17 @@ textarea{
 		height: 111px;
 	}
 	.DeliverySection {
-		top: 3300px;
+		top: 3071px;
    }
    .DeliveryGrid {
 		width: 768px;
+		top: -169px;
+		position: relative;
 		-ms-grid-rows: 35px 10px 40px 10px 150px;
 		grid-template-rows: 35px 40px 150px;
 		-ms-grid-columns: 215px 55px 215px 55px 215px;
 		grid-template-columns: repeat(3, 215px);
-		grid-column-gap: 55px;
+    grid-column-gap: 176px;
 		grid-row-gap: 10px;
 		-webkit-box-pack: stretch;
 			 -ms-flex-pack: stretch;
@@ -5945,7 +6018,7 @@ textarea{
    .forRF {
 	  font-size: 16px;
 	  line-height: 22px;
-	  width: 96px;
+	  width: 204px;
    }
    .Free {
 	  font-size: 16px;
@@ -5955,7 +6028,7 @@ textarea{
    .DeliveryText1, .DeliveryText2, .DeliveryText3  {
 	  font-size: 16px;
 	  line-height: 26px;
-	  width: 213px;
+	  width: 316px;
    }
 	.DeliveryText2, .DeliveryText3{
 		-ms-grid-row: 2;
@@ -5964,7 +6037,7 @@ textarea{
 		margin-top: 30px;
 	}
 	.wrap_Buy {
-		top: -200px;
+		top: -471px;
    }
 	.buyBlock {
 		width: 768px;
@@ -6160,7 +6233,11 @@ textarea{
 		height: 118px;
 	}
 	.wrap_questions2 {
-	  top: 130px;
+	  top: -461px;
+	}
+	.wrap_Footer {
+		margin-top: -860px;
+		position: relative;
 	}
 	.questions2 {
 		width: 768px;
@@ -7549,8 +7626,8 @@ textarea{
             height: 600px;
             -ms-grid-columns: 335px;
             grid-template-columns: 335px;
-            -ms-grid-rows: 65px 10px 234px 10px 234px 10px 70px;
-            grid-template-rows: 65px 234px 234px 70px;
+            /*-ms-grid-rows: 65px 10px 234px 10px 234px 10px 70px;
+            grid-template-rows: 65px 234px 234px 70px; --> убрать*/
             grid-row-gap: 10px;
             left: -8px;
           }
@@ -7872,7 +7949,7 @@ textarea{
             display: -ms-flexbox;
             display: flex;
             width: 100%;
-            background: url(/1cdf580ddbd2ba8f10221a72f33bc073.svg) no-repeat -52px 211px;
+            background: url("/images/Без имени-2 2.svg") no-repeat -52px 211px;
             background-size: cover;
             position: absolute;
             margin-top: -402px;
@@ -8024,12 +8101,28 @@ textarea{
      margin-top: 75px !important;
      width: 329px !important;
   }
-  .inside_mask3 {
-    top: 93px !important;
-    left: 428px !important;
-  }
 }
-@media (min-width: 576px) and (max-width: 770px) {
+@media (min-width: 768px) and (max-width: 796px) {
+    .wrap_advantages {
+      top: -341px !important;
+    }
+    .wrap_inside {
+      top: -383px !important;
+    }
+    .wrapMain_Envelope {
+      top: -569px !important;
+    }
+    .wrap_Buy {
+      top: -300px !important;
+    }
+    .wrap_questions2 {
+      top: -219px !important;
+    }
+    .wrap_Footer {
+      margin-top: -560px !important;
+    }
+}
+@media (min-width: 576px) and (max-width: 767px) {
   .wrap_header{
       -ms-grid-columns:55px 200px 80px;
       grid-template-columns:55px 80px;
@@ -8840,7 +8933,7 @@ textarea{
    }
 }
 
-@media (min-width: 576px) and (max-width: 768px) {
+@media (min-width: 576px) and (max-width: 767px) {
   .header_logo, .wrap_rosee {
     position: relative;
     width: 110px;
@@ -9163,7 +9256,7 @@ textarea{
       position: relative;
       left: -537px;
       top: -133px;
-      width: 159px;
+      width: 180px;
       height: 50px;
     }
     .order_text3 {
@@ -10041,7 +10134,7 @@ textarea{
     height: 50px;
   }
   .wrap_Footer {
-    background: url(/1cdf580ddbd2ba8f10221a72f33bc073.svg);
+    background: url("/images/Без имени-2 2.svg");
     background-size: cover;
     position: relative;
     height: 886px;
@@ -10173,7 +10266,7 @@ textarea{
       width: 100%;
     }
     .wrap_Footer {
-      background: url(/1cdf580ddbd2ba8f10221a72f33bc073.svg);
+      background: url("/images/Без имени-2 2.svg");
       background-size: cover;
       position: relative;
       top: 71px;
@@ -10518,7 +10611,7 @@ textarea{
   }
 }
 
-@media (min-width: 576px) and (max-width: 768px) {
+@media (min-width: 576px) and (max-width: 767px) {
   .wrap_header {
      margin-left: -94px;
      margin-top: -10px;
@@ -10584,7 +10677,7 @@ textarea{
      font-size: 17px;
    }
    .wrap_Footer {
-     background: url(/1cdf580ddbd2ba8f10221a72f33bc073.svg);
+     background: url("/images/Без имени-2 2.svg");
      background-size: cover;
    }
    .change_email {

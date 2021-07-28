@@ -24,7 +24,14 @@ var browserConfig = {
           },
           {
             test: /\.(jpe?g|jpg|png|gif|svg|ico)$/i,
-            use: 'url-loader?limit=8192'
+            use: [
+              {
+                loader: 'file-loader',
+                options: {
+                  name: 'images/[name].[ext]'
+                }
+              }
+            ]
           },
           {
             test: /\.(woff(2)?|ttf|eot)$/,
@@ -70,7 +77,14 @@ var serverConfig = {
       },
       {
          test: /\.(jpe?g|jpg|png|gif|svg|ico)$/i,
-         use: 'url-loader?limit=8192'
+         use: [
+           {
+             loader: 'file-loader',
+             options: {
+               name: 'images/[name].[ext]'
+             }
+           }
+         ]
       },
       {
         test: /\.(woff(2)?|ttf|eot)$/,

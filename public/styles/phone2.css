@@ -13,12 +13,28 @@
      margin-top: 75px !important;
      width: 329px !important;
   }
-  .inside_mask3 {
-    top: 93px !important;
-    left: 428px !important;
-  }
 }
-@media (min-width: 576px) and (max-width: 770px) {
+@media (min-width: 768px) and (max-width: 796px) {
+    .wrap_advantages {
+      top: -341px !important;
+    }
+    .wrap_inside {
+      top: -383px !important;
+    }
+    .wrapMain_Envelope {
+      top: -569px !important;
+    }
+    .wrap_Buy {
+      top: -300px !important;
+    }
+    .wrap_questions2 {
+      top: -219px !important;
+    }
+    .wrap_Footer {
+      margin-top: -560px !important;
+    }
+}
+@media (min-width: 576px) and (max-width: 767px) {
   .wrap_header{
       -ms-grid-columns:55px 200px 80px;
       grid-template-columns:55px 80px;
