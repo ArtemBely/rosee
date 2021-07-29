@@ -35,6 +35,7 @@ class Order extends React.Component{
     this.mobile = React.createRef();
   }
 
+
   async componentDidMount() {
        window.scrollTo(0, 0)
        await axios.get('https://api.ipify.org/?format=json')
