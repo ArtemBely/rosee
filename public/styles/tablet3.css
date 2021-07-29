@@ -1,3 +1,15 @@
+@media (min-width: 768px) and (max-width: 797px) {
+  .wrap_order_foot {
+    position: relative;
+    top: 291px;
+  }
+}
+@media (min-width: 797px) and (max-width: 1101px) {
+  .wrap_order_foot {
+    position: relative;
+    top: 559px;
+  }
+}
 @media (min-width: 768px) and (max-width: 1101px) {
   .order_title {
      opacity: 0;
@@ -70,6 +82,10 @@
   }
   .order_addition {
     display: none;
+  }
+  .wrap_order_foot {
+    position: relative;
+    top: 284px;
   }
   .order_text3 {
     width: 400px;

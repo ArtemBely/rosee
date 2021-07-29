@@ -13,6 +13,12 @@
  	 	width: 992px;
  	 	height: 50px;
 	}
+	.wrap_prof_footer {
+		margin-top: 1677px;
+	}
+	.rating, .rating2 {
+		left: -60px;
+	}
 	.wrap_enter {
 		-moz-transform: scale(0.8, 0.8); /* Moz-browsers */
 		zoom: 0.8; /* Other non-webkit browsers */

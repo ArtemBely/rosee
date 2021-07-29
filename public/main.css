@@ -3968,7 +3968,7 @@ textarea{
 	border-bottom: 0.5px solid #000000;
 }
 .wrap_prof_footer {
-  margin-top: 1367px;
+  margin-top: 1553px;
   position: relative;
   width: 100%;
   height: 100%;
@@ -4077,6 +4077,12 @@ textarea{
 		margin-top:25px;
  	 	width: 992px;
  	 	height: 50px;
+	}
+	.wrap_prof_footer {
+		margin-top: 1677px;
+	}
+	.rating, .rating2 {
+		left: -60px;
 	}
 	.wrap_enter {
 		-moz-transform: scale(0.8, 0.8); /* Moz-browsers */
@@ -5193,6 +5199,11 @@ textarea{
 
 }
 
+@media (min-width: 768px) and (max-width: 796px) {
+		.wrap_prof_footer {
+	    margin-top: 1771px !important;
+	}
+}
 @media (min-width: 886px) and (max-width: 992px) {
 	.advantages_shop, .our_advantages {
 		position: relative;
@@ -5269,6 +5280,16 @@ textarea{
 		margin-top:25px;
  	 	width: 768px;
  	 	height: 50px;
+	}
+	.rating, .rating2 {
+		left: -15px;
+	}
+	.wrap_prof_footer {
+		margin-top: 2066px;
+	}
+	.wrap_ProfHead {
+		height: 1795px;
+		overflow: hidden;
 	}
 	.wrap_inside {
 		top: -318px;
@@ -6387,6 +6408,18 @@ textarea{
 
 }
 
+@media (min-width: 768px) and (max-width: 797px) {
+  .wrap_order_foot {
+    position: relative;
+    top: 291px;
+  }
+}
+@media (min-width: 797px) and (max-width: 1101px) {
+  .wrap_order_foot {
+    position: relative;
+    top: 559px;
+  }
+}
 @media (min-width: 768px) and (max-width: 1101px) {
   .order_title {
      opacity: 0;
@@ -6459,6 +6492,10 @@ textarea{
   }
   .order_addition {
     display: none;
+  }
+  .wrap_order_foot {
+    position: relative;
+    top: 284px;
   }
   .order_text3 {
     width: 400px;
@@ -8030,7 +8067,7 @@ textarea{
             -ms-grid-row: 2;
             -ms-grid-row-span: 1;
             grid-row: 2/3;
-            margin-left: -145px;
+            margin-left: -149px;
             margin-top: -10px;
           }
           #footer_phone > a {
@@ -10537,7 +10574,7 @@ textarea{
     grid-row: 3/4;
     position: relative;
     left: -22px;
-    top: -140px;
+    top: -149px;
     color: white;
   }
   #footer_email {

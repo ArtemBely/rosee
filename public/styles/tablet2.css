@@ -1,3 +1,8 @@
+@media (min-width: 768px) and (max-width: 796px) {
+		.wrap_prof_footer {
+	    margin-top: 1771px !important;
+	}
+}
 @media (min-width: 886px) and (max-width: 992px) {
 	.advantages_shop, .our_advantages {
 		position: relative;
@@ -74,6 +79,16 @@
 		margin-top:25px;
  	 	width: 768px;
  	 	height: 50px;
+	}
+	.rating, .rating2 {
+		left: -15px;
+	}
+	.wrap_prof_footer {
+		margin-top: 2066px;
+	}
+	.wrap_ProfHead {
+		height: 1795px;
+		overflow: hidden;
 	}
 	.wrap_inside {
 		top: -318px;
