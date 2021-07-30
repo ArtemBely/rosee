@@ -9,6 +9,7 @@ import Order from '../../components/Order';
 import User from '../models/User.js';
 const express = require('express');
 import fs from 'fs';
+import nodemailer from 'nodemailer';
 
 const LocalStrategy = require('passport-local').Strategy;
 const router = express.Router();
