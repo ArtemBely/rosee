@@ -10,7 +10,6 @@ import User from '../models/User.js';
 const express = require('express');
 import fs from 'fs';
 import nodemailer from 'nodemailer';
-const sendmail = require('sendmail')();
 
 const LocalStrategy = require('passport-local').Strategy;
 const router = express.Router();
@@ -406,7 +405,7 @@ if(err) {
 
     });
 }));
-
+/*
 router.post('/feedBack', (req, res, next) => {
         const output = `
       <p> Данные о заказчике </p>
@@ -448,7 +447,7 @@ router.post('/feedBack', (req, res, next) => {
         main().catch(console.error);
         return res.redirect('/');
 });
-
+*/
 function notLoggedIn(req, res, next) {
   if(!req.isAuthenticated()) {
     return next();
