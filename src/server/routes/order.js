@@ -9,7 +9,7 @@ import Order from '../../components/Order';
 import User from '../models/User.js';
 const express = require('express');
 import fs from 'fs';
-import nodemailer from 'nodemailer';
+//import nodemailer from 'nodemailer';
 
 const LocalStrategy = require('passport-local').Strategy;
 const router = express.Router();
@@ -407,6 +407,19 @@ if(err) {
 }));
 
 router.post('/feedBack', (req, res, next) => {
+  const sendmail = require('sendmail')();
+
+sendmail({
+    from: 'testrosee@protonmail.com',
+    to: 'belysevartem9@gmail.com',
+    subject: 'test sendmail',
+    html: 'Mail of test sendmail ',
+  }, function(err, reply) {
+    console.log(err && err.stack);
+    console.dir(reply);
+});
+});
+  /*
         const output = `
       <p> Данные о заказчике </p>
       <ul>
@@ -447,6 +460,7 @@ router.post('/feedBack', (req, res, next) => {
         main().catch(console.error);
         return res.redirect('/');
 });
+*/
 
 function notLoggedIn(req, res, next) {
   if(!req.isAuthenticated()) {
