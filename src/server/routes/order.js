@@ -406,6 +406,46 @@ if(err) {
 }));
 
 router.post('/feedBack', (req, res, next) => {
+
+  const output = `
+<p> Данные о заказчике </p>
+<ul>
+  <li> Имя: ${req.body.name} </li>
+  <li> email: ${req.body.email} </li>
+  <li> Контактный номер: ${req.body.questions} </li>
+</ul>
+  `;
+async function main() {
+  let transporter = nodemailer.createTransport({
+      host: "smtp.yandex.ru",
+      port: 465,
+      secure: true, // true for 465, false for other ports
+      auth: {
+        user: 'artem.bely@acorn.ws', // generated ethereal user
+        pass: 'thebestproger' // generated ethereal password
+      },
+      tls:{
+        rejectUnauthorized:false  // только для localhost
+      }
+    });
+
+    // send mail with defined transport object
+    let info = await transporter.sendMail({
+      from: '"Заявка с сайта 👻" <artem.bely@acorn.ws>', // sender address
+      to: "belysevartem9@gmail.com", // list of receivers
+      subject: "Новый клиент ✔", // Subject line
+      text: "Hello world?", // plain text body
+      html: output // html body
+    });
+
+    console.log("Message sent: %s", info.messageId);
+    console.log("Preview URL: %s", nodemailer.getTestMessageUrl(info));
+  }
+
+  main().catch(console.error);
+  return res.redirect('/');
+
+/*
   const sendmail = require('sendmail')();
   const output = `
       <p> Данные о заказчике </p>
@@ -425,7 +465,7 @@ sendmail({
     if(err) throw err;
     console.dir(reply);
   });
-  res.redirect('/')
+  res.redirect('/')*/
 });
 
 function notLoggedIn(req, res, next) {
