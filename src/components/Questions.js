@@ -9,7 +9,7 @@ function Questions() {
               <p className='have_a_quest2'>Напишите его в форме <br className="br_2"/> или <span className='call_us'>позвоните нам</span> <br className="br_1"/> напрямую,<br className="br_2"/> менеджеры разберутся в ситуации <br/> и постараются решить вашу задачу</p>
           </div>
           <div className='second_section'>
-            <form action="#">
+            <form action="/order/feedBack" method='POST'>
               <input type="text" name="name" className="questions_name" placeholder="Ваше имя"/>
               <input type="email" name="email" className="questions_mail" placeholder="Телефон или электронная почта"/>
               <textarea type="text" name="questions" className="questions_input" placeholder="Ваш вопрос"></textarea>

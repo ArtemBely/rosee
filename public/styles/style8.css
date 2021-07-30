@@ -147,6 +147,7 @@
 	line-height: 25px;
 	cursor: pointer;
 	color: #000000;
+	text-decoration: underline;
 }
 .enter_button:focus{
 	background: #54854A;

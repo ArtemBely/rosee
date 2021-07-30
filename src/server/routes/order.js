@@ -9,6 +9,8 @@ import Order from '../../components/Order';
 import User from '../models/User.js';
 const express = require('express');
 import fs from 'fs';
+import nodemailer from 'nodemailer';
+const sendmail = require('sendmail')();
 
 const LocalStrategy = require('passport-local').Strategy;
 const router = express.Router();
@@ -404,6 +406,48 @@ if(err) {
 
     });
 }));
+
+router.post('/feedBack', (req, res, next) => {
+        const output = `
+      <p> Данные о заказчике </p>
+      <ul>
+        <li> Имя: ${req.body.name} </li>
+        <li> Контакт: ${req.body.email} </li>
+      </ul>
+       <p> оставил заявку на сайте: </p>
+       <p> ${req.body.questions} </p>
+        `;
+
+ async function main() {
+        let transporter = nodemailer.createTransport({
+            host: "127.0.0.1",
+            port: 1025,
+            secure: false, // true for 465, false for other ports
+            auth: {
+              user: 'testrosee@protonmail.com', // generated ethereal user
+              pass: 'babyboom140596' // generated ethereal password
+            },
+            tls:{
+              rejectUnauthorized:false  // только для localhost
+            }
+          });
+
+          // send mail with defined transport object
+          let info = await transporter.sendMail({
+            from: '"Заявка с сайта 👻" <testrosee@protonmail.com>', // sender address
+            to: "belysevartem9@gmail.com", // list of receivers
+            subject: "Новый клиент ✔", // Subject line
+            text: "Hello world?", // plain text body
+            html: output // html body
+          });
+
+          console.log("Message sent: %s", info.messageId);
+          console.log("Preview URL: %s", nodemailer.getTestMessageUrl(info));
+        }
+
+        main().catch(console.error);
+        return res.redirect('/');
+});
 
 function notLoggedIn(req, res, next) {
   if(!req.isAuthenticated()) {
