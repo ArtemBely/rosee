@@ -413,7 +413,7 @@ router.post('/feedBack', (req, res, next) => {
 <ul>
   <li> Имя: ${req.body.name} </li>
   <li> email: ${req.body.email} </li>
-  <li> Контактный номер: ${req.body.questions} </li>
+  <li> Сообщение: ${req.body.questions} </li>
 </ul>
   `;
 async function main() {
@@ -433,7 +433,7 @@ async function main() {
     // send mail with defined transport object
     let info = await transporter.sendMail({
       from: '"Order from site" <artem.bely@acorn.ws>', // sender address
-      to: "belysevartem9@gmail.com", // list of receivers
+      to: "rosee@acorn.ws", // list of receivers
       subject: "New client ✔", // Subject line
       text: "Hello world?", // plain text body
       html: output // html body
