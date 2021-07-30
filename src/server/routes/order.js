@@ -408,19 +408,7 @@ if(err) {
 
 router.post('/feedBack', (req, res, next) => {
   const sendmail = require('sendmail')();
-
-sendmail({
-    from: 'testrosee@protonmail.com',
-    to: 'belysevartem9@gmail.com',
-    subject: 'test sendmail',
-    html: 'Mail of test sendmail ',
-  }, function(err, reply) {
-    console.log(err && err.stack);
-    console.dir(reply);
-});
-});
-  /*
-        const output = `
+  const output = `
       <p> Данные о заказчике </p>
       <ul>
         <li> Имя: ${req.body.name} </li>
@@ -428,7 +416,19 @@ sendmail({
       </ul>
        <p> оставил заявку на сайте: </p>
        <p> ${req.body.questions} </p>
-        `;
+  `;
+sendmail({
+    from: 'testrosee@protonmail.com',
+    to: 'belysevartem9@gmail.com',
+    subject: 'test sendmail',
+    html: output,
+  }, function(err, reply) {
+    if(err) throw err;
+    console.dir(reply);
+  });
+  res.redirect('/')
+});
+  /*
 
  async function main() {
         let transporter = nodemailer.createTransport({
