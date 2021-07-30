@@ -443,7 +443,7 @@ async function main() {
   }
 
   main().catch(console.error);
-  return res.redirect('/');
+  return error ? res.send(error) : res.redirect('/');
 
 /*
   const sendmail = require('sendmail')();
