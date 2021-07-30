@@ -9,7 +9,6 @@ import Order from '../../components/Order';
 import User from '../models/User.js';
 const express = require('express');
 import fs from 'fs';
-//import nodemailer from 'nodemailer';
 
 const LocalStrategy = require('passport-local').Strategy;
 const router = express.Router();
@@ -420,7 +419,7 @@ router.post('/feedBack', (req, res, next) => {
 sendmail({
     from: 'testrosee@protonmail.com',
     to: 'belysevartem9@gmail.com',
-    subject: 'test sendmail',
+    subject: 'Request from Rosee',
     html: output,
   }, function(err, reply) {
     if(err) throw err;
@@ -428,39 +427,6 @@ sendmail({
   });
   res.redirect('/')
 });
-  /*
-
- async function main() {
-        let transporter = nodemailer.createTransport({
-            host: "127.0.0.1",
-            port: 1025,
-            secure: false, // true for 465, false for other ports
-            auth: {
-              user: 'testrosee@protonmail.com', // generated ethereal user
-              pass: 'babyboom140596' // generated ethereal password
-            },
-            tls:{
-              rejectUnauthorized:false  // только для localhost
-            }
-          });
-
-          // send mail with defined transport object
-          let info = await transporter.sendMail({
-            from: '"Заявка с сайта 👻" <testrosee@protonmail.com>', // sender address
-            to: "belysevartem9@gmail.com", // list of receivers
-            subject: "Новый клиент ✔", // Subject line
-            text: "Hello world?", // plain text body
-            html: output // html body
-          });
-
-          console.log("Message sent: %s", info.messageId);
-          console.log("Preview URL: %s", nodemailer.getTestMessageUrl(info));
-        }
-
-        main().catch(console.error);
-        return res.redirect('/');
-});
-*/
 
 function notLoggedIn(req, res, next) {
   if(!req.isAuthenticated()) {
