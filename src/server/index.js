@@ -212,6 +212,6 @@ app.use((req, res, next) => {  //<-- заменить если появится 
 });
 var httpServer = http.createServer(app);
 var httpsServer = https.createServer(credentials, app);
-httpServer.listen(8080, () => {console.log('connecteed!')});
-httpsServer.listen(443, () => {console.log('connecteed!')});
-//app.listen(port, () => {console.log('done')});
+//httpServer.listen(8080, () => {console.log('connecteed!')});
+//httpsServer.listen(443, () => {console.log('connecteed!')});
+app.listen(port, () => {console.log('done')});
