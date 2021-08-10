@@ -157,6 +157,12 @@ body {
 .inside_spec {
   left: 15px !important;
 }
+.forOrder {
+  background: #54854A !important;
+}
+.opaForOrder {
+  opacity: 0 !important;
+}
 .delivery_spec {
   left: 18px !important;
 }

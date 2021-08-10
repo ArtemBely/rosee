@@ -18,11 +18,15 @@ class Buy extends React.Component{
     this.dry = React.createRef();
     this.once = React.createRef();
     this.forme = React.createRef();
+    this.pres = React.createRef();
   }
 
   componentDidMount() {
     if(window.location.pathname == '/') {
       this.once.current.classList.add('activeOnce');
+    }
+    if(this.pres.current.classList.contains('forMyself')) {
+      this.forme.current.classList.remove('forMyself');
     }
   }
 
@@ -63,7 +67,7 @@ render() {
        <NavLink to='/' className='presents' activeClassName='forMyself' ref={this.forme} onClick={() => {
          this.forme.current.classList.contains('forMyself') ? null : this.forme.current.classList.add('forMyself')
        }}>для себя </NavLink>
-        или <NavLink exact to='/present' className='presents specDashed' activeClassName='forMyself' onClick={() => {
+        или <NavLink exact to='/present' className='presents specDashed' activeClassName='forMyself' ref={this.pres} onClick={() => {
           this.forme.current.classList.contains('forMyself') ? this.forme.current.classList.remove('forMyself') : null
         }}> в подарок </NavLink></p>
        <div className='chooseSecond'>

@@ -27,12 +27,27 @@ class Order extends React.Component{
       typeOfSkin,
       success,
       repeat,
-      ipAddress: 'example'
+      ipAddress: 'example',
+      arr: []
     }
     this.cls1 = React.createRef();
     this.cls2 = React.createRef();
     this.cls3 = React.createRef();
     this.mobile = React.createRef();
+    this.order = React.createRef();
+    this.userName = React.createRef();
+    this.userMail = React.createRef();
+    this.userPhone = React.createRef();
+    this.userAddress = React.createRef();
+    this.userPass = React.createRef();
+    this.userComment = React.createRef();
+    this.looseOf = React.createRef();
+    this.ph = React.createRef();
+    this.passOf = React.createRef();
+    this.willOf = React.createRef();
+    this.adOf = React.createRef();
+    this.ifWant = React.createRef();
+    this.text2 = React.createRef();
   }
 
 
@@ -50,7 +65,7 @@ class Order extends React.Component{
         return currentIp;
       })
       .catch(err => console.log(err))
-  }
+}
 
 errF = () => {
   if(this.state && this.state.error) {
@@ -96,6 +111,65 @@ rot = () => {
     this.cls2.current.classList.remove('disappear');
   }
   this.mobile.current.classList.toggle('mobileAppear');
+}
+
+checkOne = () => {
+  var some = document.querySelectorAll('.commonInput');
+  let i;
+  let arr1 = [];
+  for(i=0; i<5; i++) {
+    if(some[i].value.length > 0) {
+      arr1.push(some[i].value[0]);
+      this.setState({ arr: arr1 });
+    }
+  }
+  setTimeout(() => {
+    if(this.state.arr.length == 5) {
+      this.order.current.classList.add('forOrder');
+      this.text2.current.classList.add('opaForOrder');
+    }
+    else {
+      this.order.current.classList.remove('forOrder');
+      this.text2.current.classList.remove('opaForOrder');
+    }
+  }, 200)
+}
+
+oneF = () => {
+  this.looseOf.current.classList.add('opaForAll');
+}
+twoF = () => {
+  this.looseOf.current.classList.remove('opaForAll');
+}
+threeF = () => {
+  this.ph.current.classList.add('opaForAll');
+}
+fourF = () => {
+  this.ph.current.classList.remove('opaForAll');
+}
+fiveF = () => {
+  this.passOf.current.classList.add('opaForAll');
+}
+sixF = () => {
+  this.passOf.current.classList.remove('opaForAll');
+}
+sevenF = () => {
+  this.willOf.current.classList.add('opaForAll');
+}
+eightF = () => {
+  this.willOf.current.classList.remove('opaForAll');
+}
+nineF = () => {
+  this.adOf.current.classList.add('opaForAll');
+}
+tenF = () => {
+  this.adOf.current.classList.remove('opaForAll');
+}
+elevenF = () => {
+  this.ifWant.current.classList.add('opaForAll');
+}
+twelveF = () => {
+  this.ifWant.current.classList.remove('opaForAll');
 }
 
 render() {
@@ -164,20 +238,20 @@ render() {
              <h4 className='order_address order_text'>Адрес получателя</h4>
              <h4 className='order_comments order_text'>Комментарии</h4>
              <p className='order_title2'>Маски для ухода за кожей лица по подписке</p>
-             <p className='order_addition' id='addition1'>Если посылка потеряется, мы всегда <br/> сможем её найти по вашим данным</p>
-             <p className='order_addition' id='addition2'>Нужен для входа <br/> в аккаунт</p>
-             <p className='order_addition' id='addition3'>Придумайте пароль <br/> для входа в аккаунт</p>
-             <p className='order_addition' id='addition4'>Будем присылать <br/> уведомления об оплате</p>
-             <p className='order_addition' id='addition5'>Введите адрес полностью,<br/> он нужен для отправки посылки</p>
-             <p className='order_addition' id='addition6'>Если у вы хотите нам <br/> что-то сообщить</p>
-             <p className='order_text2'>Заполните все поля, <br/>чтобы продолжить</p>
+             <p className='order_addition' id='addition1' ref={this.looseOf}>Если посылка потеряется, мы всегда <br/> сможем её найти по вашим данным</p>
+             <p className='order_addition' id='addition2' ref={this.ph}>Нужен для входа <br/> в аккаунт</p>
+             <p className='order_addition' id='addition3' ref={this.passOf}>Придумайте пароль <br/> для входа в аккаунт</p>
+             <p className='order_addition' id='addition4' ref={this.willOf}>Будем присылать <br/> уведомления об оплате</p>
+             <p className='order_addition' id='addition5' ref={this.adOf}>Введите адрес полностью,<br/> он нужен для отправки посылки</p>
+             <p className='order_addition' id='addition6' ref={this.ifWant}>Если вы хотите нам <br/> что-то сообщить</p>
+             <p className='order_text2' ref={this.text2}>Заполните все поля, <br/>чтобы продолжить</p>
              <p className='order_text3'>Нажимая кнопку «Оформить», вы соглашаетесь с Политикой <br/> конфиденциальности и даёте согласие на обработку данных</p>
 
 
 
-             <input type='text' name='username' className='name_input' required/>
-             <input type='tel' name='userphone' className='telephone_input' required/>
-             <input type='text' name='email' className='mail_input' required/>
+             <input type='text' name='username' className='name_input commonInput' onInput={this.checkOne} ref={this.userName} onMouseOver={this.oneF} onMouseLeave={this.twoF} required/>
+             <input type='tel' name='userphone' className='telephone_input commonInput' onInput={this.checkOne} ref={this.userPhone} onMouseOver={this.threeF} onMouseLeave={this.fourF} required/>
+             <input type='text' name='email' className='mail_input commonInput' onInput={this.checkOne} ref={this.userMail} onMouseOver={this.sevenF} onMouseLeave={this.eightF} required/>
              <input type='hidden' name='timestamp' />
              <input type='hidden' name='adminComment' />
 
@@ -188,12 +262,12 @@ render() {
                <label htmlFor='radio1' className='radio_label'>Получать письма с акциями</label>
              </div>
 
-             <textarea name='useraddress' className='address_input' placeholder='Не забудьте указать индекс' required></textarea>
-             <textarea name='comments' className='comments'></textarea>
+             <textarea name='useraddress' className='address_input commonInput' onInput={this.checkOne} placeholder='Не забудьте указать индекс' ref={this.userAddress} onMouseOver={this.nineF} onMouseLeave={this.tenF} required></textarea>
+             <textarea name='comments' className='comments' ref={this.userComment} onMouseOver={this.elevenF} onMouseLeave={this.twelveF}></textarea>
 
              <div className='wrap_password_field'>
                <p className='passwordname order_text'>Пароль</p>
-               <input type='text' name='password' className='password_field' required/>
+               <input type='text' name='password' className='password_field commonInput' onInput={this.checkOne} ref={this.userPass} onMouseOver={this.fiveF} onMouseLeave={this.sixF} required/>
              </div>
                <Route path={['/order/everyMonth', '/order/everyMonthCombi',
                  '/order/halfYearCombi', '/order/everyYearCombi']}>
@@ -208,17 +282,17 @@ render() {
 
                <Route path={['/order/everyMonth', '/order/everyMonthCombi', '/order/everyMonthFat', '/order/everyMonthDry']}>
                  <p className='wrap_or'><a href='https://pay.fondy.eu/s/wxz7RJSJ1xX' className='navLinks'>
-                   <button type='submit' id='order_arrange'>Оформить</button>
+                   <button type='submit' id='order_arrange' ref={this.order}>Оформить</button>
                  </a></p>
                </Route>
                <Route path={['/order/halfYear', '/order/halfYearCombi', '/order/halfYearFat', '/order/halfYearDry']}>
                  <p className='wrap_or'><a href='https://pay.fondy.eu/s/spEFdAgLYkf' className='navLinks'>
-                   <button type='submit' id='order_arrange'>Оформить</button>
+                   <button type='submit' id='order_arrange' ref={this.order}>Оформить</button>
                  </a></p>
                </Route>
                <Route path={['/order/everyYear', '/order/everyYearCombi', '/order/everyYearFat', '/order/everyYearDry']}>
                  <p className='wrap_or'><a href='https://pay.fondy.eu/s/1AU5ulqIzCO' className='navLinks'>
-                   <button type='submit' id='order_arrange'>Оформить</button>
+                   <button type='submit' id='order_arrange' ref={this.order}>Оформить</button>
                  </a></p>
                </Route>
 
@@ -295,19 +369,19 @@ render() {
               <h4 className='order_address order_text'>Адрес получателя</h4>
               <h4 className='order_comments order_text'>Комментарии</h4>
               <p className='order_title2'>Маски для ухода за кожей лица по подписке</p>
-              <p className='order_addition' id='addition1'>Если посылка потеряется, мы всегда <br/> сможем её найти по вашим данным</p>
-              <p className='order_addition' id='addition2'>Нужен для входа <br/> в аккаунт</p>
-             <p className='order_addition' id='addition3'>Придумайте пароль <br/> для входа в аккаунт</p>
-             <p className='order_addition' id='addition4'>Будем присылать <br/> уведомления об оплате</p>
-             <p className='order_addition' id='addition5'>Введите адрес полностью,<br/> он нужен для отправки посылки</p>
-             <p className='order_addition' id='addition6'>Если у вы хотите нам <br/> что-то сообщить</p>
-             <p className='order_text2'>Заполните все поля, <br/>чтобы продолжить</p>
+              <p className='order_addition' id='addition1' ref={this.looseOf}>Если посылка потеряется, мы всегда <br/> сможем её найти по вашим данным</p>
+              <p className='order_addition' id='addition2' ref={this.ph}>Нужен для входа <br/> в аккаунт</p>
+              <p className='order_addition' id='addition3' ref={this.passOf}>Придумайте пароль <br/> для входа в аккаунт</p>
+              <p className='order_addition' id='addition4' ref={this.willOf}>Будем присылать <br/> уведомления об оплате</p>
+              <p className='order_addition' id='addition5' ref={this.adOf}>Введите адрес полностью,<br/> он нужен для отправки посылки</p>
+              <p className='order_addition' id='addition6' ref={this.ifWant}>Если вы хотите нам <br/> что-то сообщить</p>
+             <p className='order_text2' ref={this.text2}>Заполните все поля, <br/>чтобы продолжить</p>
              <p className='order_text3'>Нажимая кнопку «Оформить», вы соглашаетесь с Политикой <br/> конфиденциальности и даёте согласие на обработку данных</p>
 
 
-              <input type='text' name='username' className='name_input' required/>
-              <input type='tel' name='userphone' className='telephone_input' required/>
-              <input type='text' name='email' className='mail_input' required/>
+              <input type='text' name='username' className='name_input commonInput' ref={this.userName} onInput={this.checkOne} onMouseOver={this.oneF} onMouseLeave={this.twoF} required/>
+              <input type='tel' name='userphone' className='telephone_input commonInput' ref={this.userPhone} onInput={this.checkOne} onMouseOver={this.threeF} onMouseLeave={this.fourF} required/>
+              <input type='text' name='email' className='mail_input commonInput' ref={this.userMail} onInput={this.checkOne} onMouseOver={this.sevenF} onMouseLeave={this.eightF} required/>
 
               <input type='hidden' name='ipAddress' value={this.state.ipAddress} />
 
@@ -316,12 +390,12 @@ render() {
                 <label htmlFor='radio1' className='radio_label'>Получать письма с акциями</label>
               </div>
 
-              <textarea name='useraddress' className='address_input' placeholder='Не забудьте указать индекс' required></textarea>
-              <textarea name='comments' className='comments'></textarea>
+              <textarea name='useraddress' className='address_input commonInput' ref={this.userAddress} onInput={this.checkOne} onMouseOver={this.nineF} onMouseLeave={this.tenF} placeholder='Не забудьте указать индекс' required></textarea>
+              <textarea name='comments' className='comments' ref={this.userComment} onMouseOver={this.elevenF} onMouseLeave={this.twelveF}></textarea>
 
               <div className='wrap_password_field'>
                 <p className='passwordname order_text'>Пароль</p>
-                <input type='password' name='password' className='password_field' required/>
+                <input type='password' name='password' className='password_field commonInput' ref={this.userPass} onInput={this.checkOne} onMouseOver={this.fiveF} onMouseLeave={this.sixF} required/>
               </div>
                 <Route path={['/order/halfYear', '/order/everyMonthCombi',
                   '/order/halfYearCombi', '/order/everyYearCombi']}>
@@ -336,17 +410,17 @@ render() {
 
                 <Route path={['/order/everyMonth', '/order/everyMonthCombi', '/order/everyMonthFat', '/order/everyMonthDry']}>
                   <p className='wrap_or'><a href='https://pay.fondy.eu/s/A5qqFUTrtDV0J' className='navLinks'>
-                    <button type='submit' id='order_arrange'>Оформить</button>
+                    <button type='submit' id='order_arrange' ref={this.order}>Оформить</button>
                   </a></p>
                 </Route>
                 <Route path={['/order/halfYear', '/order/halfYearCombi', '/order/halfYearFat', '/order/halfYearDry']}>
                   <p className='wrap_or'><a href='https://pay.fondy.eu/s/OnCUN8IoAFd' className='navLinks'>
-                    <button type='submit' id='order_arrange'>Оформить</button>
+                    <button type='submit' id='order_arrange' ref={this.order}>Оформить</button>
                   </a></p>
                 </Route>
                 <Route path={['/order/everyYear', '/order/everyYearCombi', '/order/everyYearFat', '/order/everyYearDry']}>
                   <p className='wrap_or'><a href='https://pay.fondy.eu/s/BQo3bkVg' className='navLinks'>
-                    <button type='submit' id='order_arrange'>Оформить</button>
+                    <button type='submit' id='order_arrange' ref={this.order}>Оформить</button>
                   </a></p>
                 </Route>
 
@@ -424,18 +498,18 @@ render() {
                <h4 className='order_address order_text'>Адрес получателя</h4>
                <h4 className='order_comments order_text'>Комментарии</h4>
                <p className='order_title2'>Маски для ухода за кожей лица по подписке</p>
-               <p className='order_addition' id='addition1'>Если посылка потеряется, мы всегда <br/> сможем её найти по вашим данным</p>
-               <p className='order_addition' id='addition2'>Нужен для входа <br/> в аккаунт</p>
-             <p className='order_addition' id='addition3'>Придумайте пароль <br/> для входа в аккаунт</p>
-             <p className='order_addition' id='addition4'>Будем присылать <br/> уведомления об оплате</p>
-             <p className='order_addition' id='addition5'>Введите адрес полностью,<br/> он нужен для отправки посылки</p>
-             <p className='order_addition' id='addition6'>Если у вы хотите нам <br/> что-то сообщить</p>
-             <p className='order_text2'>Заполните все поля, <br/>чтобы продолжить</p>
+               <p className='order_addition' id='addition1' ref={this.looseOf}>Если посылка потеряется, мы всегда <br/> сможем её найти по вашим данным</p>
+               <p className='order_addition' id='addition2' ref={this.ph}>Нужен для входа <br/> в аккаунт</p>
+               <p className='order_addition' id='addition3' ref={this.passOf}>Придумайте пароль <br/> для входа в аккаунт</p>
+               <p className='order_addition' id='addition4' ref={this.willOf}>Будем присылать <br/> уведомления об оплате</p>
+               <p className='order_addition' id='addition5' ref={this.adOf}>Введите адрес полностью,<br/> он нужен для отправки посылки</p>
+               <p className='order_addition' id='addition6' ref={this.ifWant}>Если вы хотите нам <br/> что-то сообщить</p>
+             <p className='order_text2' ref={this.text2}>Заполните все поля, <br/>чтобы продолжить</p>
              <p className='order_text3'>Нажимая кнопку «Оформить», вы соглашаетесь с Политикой <br/> конфиденциальности и даёте согласие на обработку данных</p>
 
-               <input type='text' name='username' className='name_input' required/>
-               <input type='tel' name='userphone' className='telephone_input' required/>
-               <input type='text' name='email' className='mail_input' required/>
+               <input type='text' name='username' className='name_input commonInput' ref={this.userName} onInput={this.checkOne} onMouseOver={this.oneF} onMouseLeave={this.twoF} required/>
+               <input type='tel' name='userphone' className='telephone_input commonInput' ref={this.userPhone} onInput={this.checkOne} onMouseOver={this.threeF} onMouseLeave={this.fourF} required/>
+               <input type='text' name='email' className='mail_input commonInput' ref={this.userMail} onInput={this.checkOne} onMouseOver={this.sevenF} onMouseLeave={this.eightF} required/>
 
                <input type='hidden' name='ipAddress' value={this.state.ipAddress} />
 
@@ -444,12 +518,12 @@ render() {
                  <label htmlFor='radio1' className='radio_label'>Получать письма с акциями</label>
                </div>
 
-               <textarea name='useraddress' className='address_input' placeholder='Не забудьте указать индекс' required></textarea>
-               <textarea name='comments' className='comments'></textarea>
+               <textarea name='useraddress' className='address_input commonInput' ref={this.userAddress} onInput={this.checkOne} onMouseOver={this.nineF} onMouseLeave={this.tenF} placeholder='Не забудьте указать индекс' required></textarea>
+               <textarea name='comments' className='comments' onMouseOver={this.elevenF} onMouseLeave={this.twelveF} ref={this.userComment}></textarea>
 
                <div className='wrap_password_field'>
                  <p className='passwordname order_text'>Пароль</p>
-                 <input type='text' name='password' className='password_field' required/>
+                 <input type='text' name='password' className='password_field commonInput' ref={this.userPass} onInput={this.checkOne} onMouseOver={this.fiveF} onMouseLeave={this.sixF} required/>
                </div>
                  <Route path={['/order/everyYear', '/order/everyMonthCombi',
                    '/order/halfYearCombi', '/order/everyYearCombi']}>
@@ -464,17 +538,17 @@ render() {
 
                  <Route path={['/order/everyMonth', '/order/everyMonthCombi', '/order/everyMonthFat', '/order/everyMonthDry']}>
                    <p className='wrap_or'><a href='https://pay.fondy.eu/s/A5qqFUTrtDV0J' className='navLinks'>
-                     <button type='submit' id='order_arrange'>Оформить</button>
+                     <button type='submit' id='order_arrange' ref={this.order}>Оформить</button>
                    </a></p>
                  </Route>
                  <Route path={['/order/halfYear', '/order/halfYearCombi', '/order/halfYearFat', '/order/halfYearDry']}>
                    <p className='wrap_or'><a href='https://pay.fondy.eu/s/OnCUN8IoAFd' className='navLinks'>
-                     <button type='submit' id='order_arrange'>Оформить</button>
+                     <button type='submit' id='order_arrange' ref={this.order}>Оформить</button>
                    </a></p>
                  </Route>
                  <Route path={['/order/everyYear', '/order/everyYearCombi', '/order/everyYearFat', '/order/everyYearDry']}>
                    <p className='wrap_or'><a href='https://pay.fondy.eu/s/BQo3bkVg' className='navLinks'>
-                     <button type='submit' id='order_arrange'>Оформить</button>
+                     <button type='submit' id='order_arrange' ref={this.order}>Оформить</button>
                    </a></p>
                  </Route>
 

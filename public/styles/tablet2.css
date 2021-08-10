@@ -83,6 +83,14 @@
 	.rating, .rating2 {
 		left: -15px;
 	}
+	.change_name {
+		top: 38px !important;
+		position: relative;
+	}
+	.user_name {
+		top: 50px;
+		position: relative;
+	}
 	.wrap_prof_footer {
 		margin-top: 2066px;
 	}

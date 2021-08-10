@@ -181,8 +181,15 @@
    font-size: 18px;
    line-height: 25px;
    color: #000000;
-	margin-top: 10px;
-	font-family: 'Manrope-Medium';
+	 margin-top: 10px;
+	 font-family: 'Manrope-Medium';
+	 opacity: 0;
+}
+.commonInput {
+	cursor: pointer;
+}
+.opaForAll {
+	opacity: 1 !important;
 }
 #addition1{
 	-ms-grid-column:3;

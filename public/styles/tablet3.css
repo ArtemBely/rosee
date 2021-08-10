@@ -74,6 +74,11 @@
     top: -40px;
     font-family: 'Manrope-Bold';
   }
+  .change_name {
+    -ms-grid-column: 2 !important;
+    -ms-grid-column-span: 1 !important;
+    grid-column: 2/3 !important;
+  }
   .order_spec {
     left: -355px !important;
   }
