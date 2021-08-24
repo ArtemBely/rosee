@@ -38,6 +38,7 @@ router.get(['/everyMonth', '/everyMonthCombi', '/everyMonthFat', '/everyMonthDry
               <title>Маски по подписке</title>
                    <link rel="stylesheet" type="text/css" href="../main.css">
                      <meta name="viewport" content="width=device-width, initial-scale=1">
+                     <meta name="facebook-domain-verification" content="fkrq79h1cd3seg9l630r9jdzuwkzp5" />
                        <script src='/bundle.js' defer></script>
 
                              <script>
@@ -172,6 +173,7 @@ router.post(['/', '/everyMonth', '/everyYear', '/halfYear'], async (req, res, do
                          <link rel="stylesheet" type="text/css" href="../main.css">
                          <link rel="shortcut icon" href="/images/favicon.ico" type="image/x-icon">
                            <meta name="viewport" content="width=device-width, initial-scale=1">
+                           <meta name="facebook-domain-verification" content="fkrq79h1cd3seg9l630r9jdzuwkzp5" />
                              <script src='/bundle.js' defer></script>
                              <script>window.__INITIAL_DATA__= ${serialize(err)}</script>
                              <script>window.__INITIAL_TYPE__= ${serialize(typeOfSkin)}</script>
@@ -265,6 +267,7 @@ router.post(['/', '/everyMonth', '/everyYear', '/halfYear'], async (req, res, do
                 <link rel="stylesheet" type="text/css" href="../main.css">
                 <link rel="shortcut icon" href="/images/favicon.ico" type="image/x-icon">
                  <meta name="viewport" content="width=device-width, initial-scale=1">
+                 <meta name="facebook-domain-verification" content="fkrq79h1cd3seg9l630r9jdzuwkzp5" />
                    <script src='/bundle.js' defer></script>
                      <script>window.__INITIAL_ERRORS__= ${serialize(errors)}</script>
                      <script>window.__INITIAL_COND__= ${serialize(cond)}</script>

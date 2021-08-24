@@ -23,6 +23,7 @@ router.get('/', notLoggedIn, (req, res) => {
                    <link rel="stylesheet" type="text/css" href="../main.css">
                    <link rel="shortcut icon" href="/images/favicon.ico" type="image/x-icon">
                      <meta name="viewport" content="width=device-width, initial-scale=1">
+                     <meta name="facebook-domain-verification" content="fkrq79h1cd3seg9l630r9jdzuwkzp5" />
                        <script src='/bundle.js' defer></script>
                        <script>window.__INITIAL_MESSAGES__ = ${serialize(errors)}</script>
 
