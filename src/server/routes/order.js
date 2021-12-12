@@ -425,8 +425,8 @@ async function main() {
       port: 465,
       secure: true, // true for 465, false for other ports
       auth: {
-        user: 'artem.bely@acorn.ws', // generated ethereal user
-        pass: 'thebestproger' // generated ethereal password
+        user: 'project1@acorn.ws', // generated ethereal user
+        pass: 'qwertyuiop987654321' // generated ethereal password
       },
       tls:{
         rejectUnauthorized:false  // только для localhost
@@ -436,7 +436,7 @@ async function main() {
     // send mail with defined transport object
     let info = await transporter.sendMail({
       from: '"Order from site" <artem.bely@acorn.ws>', // sender address
-      to: "rosee@acorn.ws", // list of receivers
+      to: "belysevartem9@gmail.com", // list of receivers
       subject: "New client ✔", // Subject line
       text: "Hello world?", // plain text body
       html: output // html body

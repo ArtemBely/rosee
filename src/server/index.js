@@ -47,7 +47,7 @@ mongoose.connect(
     useCreateIndex: true
   },
   () => {
-    console.log('Connection with database rosee_customers completed');
+    console.log('Connection with database davos_customers completed');
   }
 );
 
